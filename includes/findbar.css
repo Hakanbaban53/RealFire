@@ -1,0 +1,87 @@
+findbar {
+  border: none !important;
+  padding: 6px !important;
+  background: var(--back-color1) !important;
+}
+
+.findbar-textbox {
+  border: 2px solid rgba(217, 217, 217, 0.5) !important;
+  border-radius: 8px !important;
+}
+
+.findbar-textbox:focus {
+  transition: transform 13555ms !important;
+  border: 2px solid AccentColor !important;
+  border-radius: 8px !important;
+}
+
+.findbar-button:hover {
+  background: var(--back-color3) !important;
+}
+
+.findbar-textbox {
+  background-color: transparent !important;
+  background-image: url(../icons/search.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: 5px center !important;
+  fill-opacity: 1 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin-inline-start: 2px !important;
+  padding-inline-start: 28px !important;
+}
+
+.findbar-find-status:not([status="notfound"]) {
+  display: none !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"] {
+  background-color: var(--back-color1) !important;
+  border-radius: 16px !important;
+  height: 28px !important;
+  transition: background-color 0.2s cubic-bezier(0, -0.74, 0.25, 1) !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"]:hover {
+  background-color: var(--back-color2) !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"]:focus-within {
+  border: 1px solid var(--gtk-color) !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"] toolbarbutton {
+  border-radius: 99px !important;
+  border: 0 !important;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 0 !important;
+  display: flex !important;
+  background: 0 !important;
+  transition: background-color 0.2s var(--ease-basic) !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  opacity: 0.5 !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"] toolbarbutton[disabled] {
+  display: none !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"] toolbarbutton .toolbarbutton-text {
+  visibility: collapse !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"] toolbarbutton:not([disabled]):hover {
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"]
+  toolbarbutton:not([disabled]):hover:active {
+  background-color: transparent !important;
+  transition-duration: 0 !important;
+  opacity: 1 !important;
+}
+
+

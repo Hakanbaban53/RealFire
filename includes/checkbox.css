@@ -1,0 +1,12 @@
+.checkbox-check[checked] {
+    color: var(--button-text-white) !important;
+  background-color: color-mix(in srgb, field 10%, AccentColor ) !important;
+  /* background-image: url(../icons/checked.svg) !important; */
+}
+.checkbox-check {
+    border-radius: 4px !important;
+}
+button:not([disabled])[default] {
+  color: var(--button-text-white) !important;
+  background-color: AccentColor !important;
+}
