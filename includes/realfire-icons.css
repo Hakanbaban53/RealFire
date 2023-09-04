@@ -13,7 +13,9 @@ menupopup:not(.in-menulist, [aria-label])
 }
 
 #PanelUI-fxa-menu-sendtab-button {
+  list-style-image: url(../icons/send-tab.svg);
 }
+
 .subviewbutton[data-l10n-id$="appmenuitem-more-tools"] {
   list-style-image: url(../icons/toolbox.svg);
 }
