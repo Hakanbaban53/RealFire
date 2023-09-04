@@ -95,7 +95,7 @@
 
 /* Sidebar doesn't have any height variable for different densities */
   --accent-color: AccentColor;
-  --Accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
+  --accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
   --button-text-white: #ffffff;
 
   --lwt-frame: var(--uc-base-colour) !important;

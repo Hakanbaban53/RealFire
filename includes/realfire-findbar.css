@@ -1,22 +1,17 @@
 findbar {
   border: none !important;
   padding: 6px !important;
-  background: var(--back-color1) !important;
+  background: var(--uc-base-colour) !important;
 }
 
-.findbar-textbox {
-  border: 2px solid rgba(217, 217, 217, 0.5) !important;
-  border-radius: 8px !important;
-}
 
 .findbar-textbox:focus {
   transition: transform 13555ms !important;
-  border: 2px solid var(--accent-color) !important;
-  border-radius: 8px !important;
+  border-radius: var(--uc-border-radius) !important;
 }
 
 .findbar-button:hover {
-  background: var(--back-color3) !important;
+  background: var(--uc-highlight-colour) !important;
 }
 
 .findbar-textbox {
@@ -25,7 +20,7 @@ findbar {
   background-repeat: no-repeat !important;
   background-position: 5px center !important;
   fill-opacity: 1 !important;
-  outline: none !important;
+  border: none !important;
   box-shadow: none !important;
   margin-inline-start: 2px !important;
   padding-inline-start: 28px !important;
@@ -36,18 +31,19 @@ findbar {
 }
 
 hbox[anonid="findbar-textbox-wrapper"] {
-  background-color: var(--back-color1) !important;
-  border-radius: 16px !important;
+  border: 2px solid rgba(217, 217, 217, 0.5) !important;
+  background-color: var(--uc-base-colour) !important;
+  border-radius: var(--uc-border-radius) !important;
   height: 28px !important;
   transition: background-color 0.2s cubic-bezier(0, -0.74, 0.25, 1) !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"]:hover {
-  background-color: var(--back-color2) !important;
+  background-color: var(--uc-highlight-colour) !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"]:focus-within {
-  border: 1px solid var(--gtk-color) !important;
+  border: 2px solid var(--accent-color) !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"] toolbarbutton {
@@ -58,7 +54,7 @@ hbox[anonid="findbar-textbox-wrapper"] toolbarbutton {
   padding: 0 !important;
   display: flex !important;
   background: 0 !important;
-  transition: background-color 0.2s var(--ease-basic) !important;
+  transition: background-color 0.5s ease !important;
   margin: 0 !important;
   box-shadow: none !important;
   opacity: 0.5 !important;
