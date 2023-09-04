@@ -24,7 +24,7 @@
 
   #PersonalToolbar {
     order: var(--uc-toolbar-position) !important;
-    width: auto !important;
+    width: 100% !important;
   }
 
   /* Hide buttons */
