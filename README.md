@@ -243,33 +243,15 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 4) Hide menu icons by commenting [Line 9](https://github.com/Hakanbaban53/RealFire/blob/master/userChrome.css#L9) in [`userChrome.css`](./userChrome.css).
 
-5) You can disable any of the `script/*.uc.js` from `Toolbar Menu > Tools > userscripts > script`. Restart ***twice***, every time you enable/disable the script.
-
-6) You can also edit `hideScrollbar.uc.js` to customize the scrollbars according to your taste.
-
-7) For adding your own customizations make changes in `myChanges.css` file under `css` folder.
-
-8) If something breaks on your system then please raise a issue
+5) If something breaks on your system then please raise a issue
 
 
 ## Credits
-- I started with this amazing material theme : [MaterialFox](https://github.com/muckSponge/MaterialFox) by [muckSponge](https://github.com/muckSponge)
+- I started with this amazing material theme : [Sweet_Pop!](https://github.com/PROxZIMA/Sweet-Pop) by [PROxZIMA](https://github.com/PROxZIMA)
 
 - One of the best dark theme for Firefox : [ShadowFox](https://overdodactyl.github.io/ShadowFox) by [overdodactyl](https://github.com/overdodactyl)
 
-- Floating Toolbox : [u/oldworlds](https://www.reddit.com/r/FirefoxCSS/comments/koa71w/minimalfox_a_compact_and_minimal_theme/)
-
 - [Theme inspiration](https://www.reddit.com/r/FirefoxCSS/comments/ci7i69/another_oneline_theme/) by [u/SENDMEJUDES](https://www.reddit.com/user/SENDMEJUDES/)
-
-- [u/It_Was_The_Other_Guy](https://www.reddit.com/user/It_Was_The_Other_Guy) helped me a lot on [r/FirefoxCSS](https://www.reddit.com/r/FirefoxCSS/)<br>
-Also this theme uses his [`fx-autoconfig`](https://github.com/MrOtherGuy/fx-autoconfig) to load the javascripts files.
-
-- [`navbarToolbarButtonSlider.uc.js`](https://github.com/aminomancer/uc.css.js#navbar-toolbar-button-slider) script by [u/MotherStylus](https://www.reddit.com/user/MotherStylus) adds button slider to navbar toolbar. More details [here](https://www.reddit.com/r/FirefoxCSS/comments/n9asta/addons_width_changes_to_a_fixed_value_when_placed/)
-
-- [Setting local page as homepage](https://www.reddit.com/r/firefox/comments/ge86z4/newtab_page_to_local_file_firefox_76_redux/)
-
-- Auto hide scrollbars : details [here](https://www.reddit.com/r/FirefoxCSS/comments/jptrf8/is_it_still_possible_to_autohide_and_show/) by [u/mimecry](https://www.reddit.com/user/mimecry/)
-
 
 - [Installation script](https://github.com/rafaelmardojai/firefox-gnome-theme) details.
 ___
