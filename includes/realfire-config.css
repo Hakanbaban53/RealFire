@@ -25,9 +25,11 @@
 #PanelUI-menu-button {
   padding: 8px !important;
 }
+
 /*#PanelUI-menu-button .toolbarbutton-icon { width: 1px !important; }*/
+
 #PanelUI-menu-button .toolbarbutton-badge-stack {
-  padding: 0px !important;
+  padding: 8px !important;
 }
 
 /*---+---+---+---+---+---+---+

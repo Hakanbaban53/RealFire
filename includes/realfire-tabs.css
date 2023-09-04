@@ -81,7 +81,7 @@
   background: transparent !important;
   opacity: 1 !important;
   fill-opacity: 0.8 !important;
-  color: currentColor !important;
+  color: var(--accent-color) !important;
   stroke: var(--toolbar-bgcolor) !important;
   background-color: var(--toolbar-bgcolor) !important;
 }
@@ -116,7 +116,7 @@
 .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 .tab-icon-overlay:not([crashed])[muted]:hover,
 .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: currentColor !important;
+  color: var(--accent-color) !important;
   stroke: var(--toolbar-color) !important;
   background-color: var(--toolbar-color) !important;
   fill-opacity: 0.95 !important;
@@ -126,11 +126,12 @@
 .tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[muted]:hover,
 .tabbrowser-tab[selected]
   .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: currentColor !important;
+  color: var(--accent-color) !important;
   stroke: var(--toolbar-color) !important;
   background-color: var(--toolbar-color) !important;
   fill-opacity: 0.95 !important;
 }
+
 #PersonalToolbar:not([customizing]) {
   /* The following properties should allow the themes with trasparent toolbars to work */
   background-color: transparent !important;
@@ -153,6 +154,7 @@
 #PersonalToolbar:not([customizing]):-moz-window-inactive {
   border: 1.5px solid var(--Accent-field-color) !important;
 }
+
 .tabbrowser-tab .tab-background[selected="true"] {
   border: 2px solid var(--accent-color) !important;
 }
@@ -169,6 +171,7 @@
 .tabbrowser-tab .tab-background:not([selected]):-moz-window-inactive {
   border: 2px solid color-mix(in srgb, field 99%, var(--accent-color)) !important;
 }
+
 /* Fixing Multiselect */
 .tab-background[multiselected="true"]:not([selected="true"])
   > .tab-background-inner {

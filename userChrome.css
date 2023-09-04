@@ -13,6 +13,10 @@
 @import 'includes/realfire-nav-bar.css';
 @import 'includes/realfire-tabs.css';
 
-
+ #navigator-toolbox vbox.notificationbox-stack.global-notificationbox {
+    position: absolute;
+    top: 5vw;
+    width: auto;
+}
 
 

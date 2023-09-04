@@ -44,7 +44,7 @@ menupopup menuseparator {
   margin: 6px 6px !important;
   padding: 0 !important;
   height: 1px !important;
-  background: currentColor !important;
+  background: var(--accent-color) !important;
   opacity: 0.12 !important;
 }
 
@@ -71,8 +71,7 @@ menupopup:not(.in-menulist, [aria-label]) > menuitem:not(.menuitem-iconic) {
   background-repeat: no-repeat;
   background-size: 16px;
   -moz-context-properties: fill, fill-opacity;
-  fill: currentColor;
-  /*! gap: 15px; */
+  fill: var(--accent-color);
 }
 
 /* , [type="checkbox"] */
@@ -86,7 +85,7 @@ menuitem:not([type="checkbox"], [type="radio"]) > .menu-iconic-left {
   height: 16px;
   margin-inline-end: 8px !important;
   -moz-context-properties: fill, fill-opacity;
-  fill: currentColor;
+  fill: var(--accent-color);
 }
 
 #appMenu-zoom-controls2 > label,
@@ -111,7 +110,7 @@ menuitem:not([type="checkbox"], [type="radio"]) > .menu-iconic-left {
   border-radius: 50%;
   background: var(--avatar-image-url) no-repeat center/contain;
   -moz-context-properties: fill;
-  fill: currentColor;
+  fill: var(--accent-color);
 }
 
 #appMenu-fxa-label2::before {
@@ -235,7 +234,7 @@ menuitem[type="checkbox"] .menu-iconic-icon {
 }
 
 .menu-iconic-icon {
-  fill: currentColor !important;
+  fill: var(--accent-color) !important;
   -moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
 }
 
@@ -251,7 +250,7 @@ menuitem .menu-text {
   width: calc(var(--menupopup-height) / 3.5) !important;
   height: calc(var(--menupopup-height) / 3.5) !important;
   -moz-context-properties: fill !important;
-  fill: currentColor !important;
+  fill: var(--accent-color) !important;
   margin-right: 0px !important;
 }
 
@@ -325,7 +324,7 @@ panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
   /*    margin: 8px 0 !important;*/
   padding: 8px 0 !important;
   border-radius: var(--uc-border-radius) !important;
-  color: inherit !important;
+  color: var(--uc-inverted-colour) !important;
   border: 2px solid var(--accent-color) !important;
 
 }
@@ -909,7 +908,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   height: 32px !important;
   min-width: 32px !important;
   border-radius: 16px !important;
-  fill: currentColor !important;
+  fill: var(--accent-color) !important;
   -moz-context-properties: fill, fill-opacity !important;
   display: block !important;
 }
@@ -969,7 +968,7 @@ button .customizationmode-button:hover:active {
 .customization-lwtheme-menu-theme[active]::after,
 .customization-uidensity-menuitem[active]::after {
   -moz-context-properties: fill, fill-opacity !important;
-  fill: currentColor !important;
+  fill: var(--accent-color) !important;
   display: -moz-box !important;
   width: 18px !important;
   height: 18px !important;
@@ -1084,7 +1083,7 @@ richlistitem:-moz-any(
   display: block !important;
   align-self: center !important;
   margin-inline: 0 16px !important;
-  fill: currentColor !important;
+  fill: var(--accent-color) !important;
 }
 
 richlistitem[originaltype="loginsFooter"] .ac-site-icon {
