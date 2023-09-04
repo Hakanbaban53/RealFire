@@ -41,11 +41,12 @@
 .urlbar-page-action {
   padding: 0 inherit !important;
 }
-.urlbar-page-action .urlbar-icon {
+/* .urlbar-page-action .urlbar-icon {
   margin-top: 6px !important;
-}
+} */
 
 /* autohide back&forward button */
+#back-button,
 #forward-button {
   transform: scale(1, 1) !important;
   transition: margin-left 150ms var(--animation-easing-function),
@@ -53,24 +54,11 @@
     transform 350ms var(--animation-easing-function) !important;
 }
 
-#forward-button[disabled="true"] {
-  /*margin-top: 1.2px !important;*/
-  margin-left: -40px !important;
-  opacity: 0 !important;
-  transform: scale(0.6, 0.6) !important;
-  pointer-events: none !important;
-}
-
-#back-button {
-  transform: scale(1, 1) !important;
-  transition: margin-left 150ms var(--animation-easing-function),
-    opacity 250ms var(--animation-easing-function),
-    transform 350ms var(--animation-easing-function) !important;
-}
-
+#forward-button[disabled="true"],
 #back-button[disabled="true"] {
   /*margin-top: 1.2px !important;*/
-  margin-left: -36px !important;
+  /* margin-left: -36px !important; */
+  display: none;
   opacity: 0 !important;
   transform: scale(0.6, 0.6) !important;
   pointer-events: none !important;

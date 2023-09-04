@@ -11,7 +11,7 @@ findbar {
 
 .findbar-textbox:focus {
   transition: transform 13555ms !important;
-  border: 2px solid AccentColor !important;
+  border: 2px solid var(--accent-color) !important;
   border-radius: 8px !important;
 }
 

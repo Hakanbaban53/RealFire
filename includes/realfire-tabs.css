@@ -6,7 +6,7 @@
 /* remove tab shadow */
 .tabbrowser-tab > .tab-stack > .tab-background {
   box-shadow: none !important;
-  border-radius: 8px !important;
+  border-radius: var(--uc-border-radius) !important;
   /* margin-block: 0px !important; */
 }
 
@@ -44,6 +44,14 @@
   height: 1px !important;
 
   box-shadow: var(--uc-identity-glow) var(--identity-tab-color) !important;
+}
+
+.tab-icon-pending:not([pinned]) {
+  list-style-image: url("../icons/tab-loading.png") !important;
+}
+
+.tab-throbber:not([pinned]) {
+  list-style-image: url("../icons/tab-loading.png") !important;
 }
 
 /* show favicon when media is playing but tab is hovered */
@@ -135,18 +143,18 @@
   );
   background-position: top left, top left,
     var(--lwt-background-alignment, top left);
-    padding-inline: 2px !important;
-  /* background-color: color-mix(in srgb, field 68%, AccentColor) !important; */
-}
-#personal-bookmarks {
-  border: 1.5px solid AccentColor !important;
+    /* margin-inline: 2px !important;
+    padding-inline: 2px !important; */
+  /* background-color: color-mix(in srgb, field 68%, var(--accent-color)) !important; */
+  border: 1.5px solid var(--accent-color) !important;
   border-radius: var(--uc-border-radius) !important;
 }
-#personal-bookmarks:-moz-window-inactive {
+
+#PersonalToolbar:not([customizing]):-moz-window-inactive {
   border: 1.5px solid var(--Accent-field-color) !important;
 }
 .tabbrowser-tab .tab-background[selected="true"] {
-  border: 2px solid AccentColor !important;
+  border: 2px solid var(--accent-color) !important;
 }
 
 .tabbrowser-tab .tab-background[selected="true"]:-moz-window-inactive {
@@ -155,11 +163,11 @@
 
 /* Background tabs design */
 .tabbrowser-tab .tab-background:not([selected]) {
-  border: 2px solid color-mix(in srgb, field 95%, AccentColor) !important;
+  border: 2px solid color-mix(in srgb, field 95%, var(--accent-color)) !important;
 }
 
 .tabbrowser-tab .tab-background:not([selected]):-moz-window-inactive {
-  border: 2px solid color-mix(in srgb, field 99%, AccentColor) !important;
+  border: 2px solid color-mix(in srgb, field 99%, var(--accent-color)) !important;
 }
 /* Fixing Multiselect */
 .tab-background[multiselected="true"]:not([selected="true"])

@@ -30,8 +30,8 @@ menupopup #contentAreaContextMenu {
 menuitem[type="checkbox"] > .menu-iconic-left,
 menuitem[type="radio"] > .menu-iconic-left {
   display: -moz-box !important;
-  padding-inline-end: 1em !important;
-  margin-inline-end: 0px !important;
+  padding-inline-end: 0px !important;
+  margin-inline-end: 6px !important;
 }
 
 menuitem:not([type="checkbox"], [type="radio"]) > .menu-iconic-left {
@@ -52,7 +52,7 @@ menupopup menuitem,
 menupopup menu,
 .autocomplete-richlistitem {
   height: var(--menupopup-height) !important;
-  padding: 2px 0 2px 0 !important;
+  padding: 2px 10px 0px 0 !important;
   margin: 0 4px !important;
   /* background: 0 !important; */
   color: var(--uc-inverted-colour) !important;
@@ -230,7 +230,8 @@ menuitem[type="checkbox"]:not([checked="true"]) > .menu-iconic-left::before {
 
 menuitem[type="radio"] .menu-iconic-icon,
 menuitem[type="checkbox"] .menu-iconic-icon {
-  max-width: 0px !important;
+  display: none;
+  /* max-width: 0px !important; */
 }
 
 .menu-iconic-icon {
@@ -313,7 +314,7 @@ panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
   background: var(--uc-base-colour) !important;
   border-radius: var(--uc-border-radius) !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
-  border: 1.5px solid AccentColor !important;
+  border: 1.5px solid var(--accent-color) !important;
 }
 
 /* themes a menupopup (or other root level / shadow dom popup) as a panel */
@@ -325,7 +326,7 @@ panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
   padding: 8px 0 !important;
   border-radius: var(--uc-border-radius) !important;
   color: inherit !important;
-  border: 2px solid AccentColor !important;
+  border: 2px solid var(--accent-color) !important;
 
 }
 
@@ -378,7 +379,7 @@ panel[type="arrow"] {
   padding: 1px 14px 18px !important; */
   background: var(--uc-base-colour) !important;
   border-radius: var(--uc-border-radius) !important;
-  border: 1.5px solid AccentColor !important;
+  border: 1.5px solid var(--accent-color) !important;
   
 }
 
@@ -1040,7 +1041,7 @@ button .customizationmode-button:hover:active {
   top: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  border: 1px solid AccentColor !important;
+  border: 1px solid var(--accent-color) !important;
   opacity: 0.42 !important;
   box-sizing: border-box !important;
 }
