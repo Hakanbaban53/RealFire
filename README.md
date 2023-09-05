@@ -15,6 +15,9 @@
 <h3 align="center">Library</h3>
 <p align="center"><img src="./assets/library.png"></p>
 
+<h3 align="center">Adaptive Window Color With Windows</h3>
+<p align="center"><img src="./assets/adaptive.gif"></p>
+
 ## Folder structure
 
 ```css
@@ -55,15 +58,7 @@ This helps to customize web content like a specific site.
 Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is loaded using [`local-settings.js`](./programs/local-settings.js). This startup-script adds "loader" scripts from `utils` folder that loads arbitrary javascript files from the `script` folder into Firefox<br>
 `mozilla.cfg` also helps in setting local webpage as your homepage. Details in [Installation](#Installation).
 
-> **Note**
->
-> Firefox team has removed XBL from Firefox starting with version 72, so userChrome.js would not work :/
-
 # Installation
-
-> **Note**
->
-> If you are planning to set a local page as home page then in [`mozilla.cfg`](https://github.com/PROxZIMA/Sweet-Pop/blob/4ec550b7d7fb6a56d247385763a80a5da7efa2e0/programs/mozilla.cfg#L12-L14), uncomment line `12, 13, 14` and at line `13` change `newTabURL_` to the local page location.
 
 <details><summary>Script Installation</summary>
 
@@ -140,9 +135,6 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
     ```
     </details>
-
-    This will download the master branch and run the installation script.
-    `mozilla.cfg` can be configured after complete installation
 </details>
 
 <details><summary>Manual Installation</summary>
@@ -161,27 +153,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
     $ cd chrome
     ```
 
-3) Install `boot.jsm` file from [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig/tree/master/profile/chrome/utils) in the `chrome/utils` folder (make sure it matches above Folder Structure).
 
-    ```console
-    $ curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.jsm" > "utils/boot.jsm"
-    ```
-
-4) Move `user.js`, `mozilla.cfg` and `local-settings.js` to their destination.
-
-    <details><summary>Linux</summary><br>
-
-    - `about:support` > `Application Binary` > `{Installation folder}firefox-bin`<br>
-    Generally `Installation folder` is `/usr/lib/firefox/`
-
-    ```console
-    $ ln -s "`pwd`/programs/user.js" ../user.js
-
-    $ cp ./programs/mozilla.cfg /usr/lib/firefox/
-
-    $ cp ./programs/local-settings.js /usr/lib/firefox/defaults/pref/
-    ```
-    </details>
 
    <details><summary>MacOS</summary><br>
 
@@ -225,20 +197,20 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 1) In Firefox
     - Right click hamburger button > `customize toolbar` disable `Title Bar`, `Drag Space`.
     - Remove `Flexible Space` from urlbar.
-    - Set Density to `Compact/Normal/Touch` and Themes to `Dark` or `Light` (`Compact` is buggy in Windows).
+    - Set Density to `Compact/Normal/Touch` and Themes to `Dark` or `Light`.
 
 2) Open `about:support` > `Clear startup cache...` > `Restart` ***twice***
 
 3) ### **Voilà**
 
 ## Configuration
-1) `programs/user.js` contains user preferences that are automatically loaded at startup. So no need to manually set them during installation
+1) 
 
-2) You can set any background in the toolbox. Edit `--tabbar-gradient-color` in [`userChrome.css`](./userChrome.css) to a static color or linear-background or any SVG `¯\_༼ •́ ͜ʖ •̀ ༽_/¯`.
+2) 
 
-3) You can change `--tab-radius` and `--tab-border-width` to increase/decrease tab border radius and width respectively to match `normal` and `touch` density.
+3) 
 
-4) Hide menu icons by commenting [Line 9](https://github.com/Hakanbaban53/RealFire/blob/master/userChrome.css#L9) in [`userChrome.css`](./userChrome.css).
+4) 
 
 5) If something breaks on your system then please raise a issue
 
