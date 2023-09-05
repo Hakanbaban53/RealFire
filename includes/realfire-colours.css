@@ -20,7 +20,7 @@
     --uc-base-colour: #000000;
     --uc-highlight-colour: #191b1c;
     --uc-inverted-colour: #fafafc;
-    --uc-muted-colour: #aaaaac;
+    --uc-muted-colour: #515151;
     --uc-accent-colour: var(--uc-identity-colour-purple);
   }
 }
@@ -42,7 +42,7 @@
     --uc-base-colour: #fafafc;
     --uc-highlight-colour: #dadadc;
     --uc-inverted-colour: #1e2021;
-    --uc-muted-colour: #191b1c;
+    --uc-muted-colour: #292929;
     --uc-accent-colour: var(--uc-identity-colour-purple);
   }
 }

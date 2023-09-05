@@ -14,6 +14,8 @@ findbar {
   background: var(--uc-highlight-colour) !important;
 }
 
+.textbox-search-sign,
+.textbox-search-icon,
 .findbar-textbox {
   background-color: transparent !important;
   background-image: url(../icons/search.svg) !important;
@@ -25,6 +27,8 @@ findbar {
   margin-inline-start: 2px !important;
   padding-inline-start: 28px !important;
 }
+
+
 
 .findbar-find-status:not([status="notfound"]) {
   display: none !important;

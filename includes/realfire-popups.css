@@ -279,7 +279,6 @@ menubar > menu[open] {
 
 #context-navigation > .menuitem-iconic {
   background: 0 !important;
-  border-radius: 100px !important;
   flex: 1 !important;
 }
 
@@ -299,11 +298,11 @@ menubar > menu[open] {
 } */
 
 /* needs to align with textbox/bookmark-button but can't overlap it */
-panel[type="autocomplete-richlistbox"],
+/* panel[type="autocomplete-richlistbox"],
 .bookmark-item:not(menu) > menupopup[placespopup] {
   padding: 1px 14px 18px !important;
   margin: 0 -14px 0 !important;
-}
+} */
 
 /* Box Background*/
 .popup-internal-box,
@@ -436,6 +435,7 @@ panelview > toolbarseparator {
   display: none !important;
 }
 
+#context-navigation:not([hidden]) > .menuitem-iconic:hover,
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
 menuitem:where([_moz-menuactive="true"]:not([disabled="true"])),
 panelview .toolbarbutton-1:not([disabled], [open], :active):is(:hover, :focus),
