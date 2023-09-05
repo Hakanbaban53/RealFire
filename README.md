@@ -7,7 +7,7 @@
 <p align="center"><img src="./assets/preview.png"></p>
 
 <h3 align="center">Animated Background</h3>
-<p align="center"><img src="./assets/navbar.gif"></p>
+<p align="center" style="max-heigh:200px"><img src="./assets/navbar.gif"></p>
 
 <h3 align="center">Context Menu</h3>
 <p align="center"><img src="./assets/context.png"></p>
