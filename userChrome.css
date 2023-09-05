@@ -13,6 +13,7 @@
 @import 'includes/realfire-nav-bar.css';
 @import 'includes/realfire-tabs.css';
 @import 'includes/realfire-side-bar.css';
+@import 'includes/realfire-library.css';
 
  #navigator-toolbox vbox.notificationbox-stack.global-notificationbox {
     position: absolute;

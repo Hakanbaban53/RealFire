@@ -1,6 +1,6 @@
 <div align="center">
 
-  # [RealFire_🔥](https://github.com/Hakanbaban53/RealFire)
+  # [RealFire 🔥](https://github.com/Hakanbaban53/RealFire)
   **A minimalist animated oneliner theme for Firefox perfectly matching Sweet Dark**
 </div>
 
