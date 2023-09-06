@@ -16,9 +16,9 @@
 @import 'includes/realfire-library.css';
 
  #navigator-toolbox vbox.notificationbox-stack.global-notificationbox {
-    position: absolute;
-    top: 5vw;
-    width: auto;
+    position: absolute !important;
+    top: 8vw !important;
+    width: auto !important;
 }
 
 
