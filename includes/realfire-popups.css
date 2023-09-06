@@ -11,7 +11,7 @@ panel[type="autocomplete-richlistbox"] {
   -moz-window-shadow: none !important;
   /*! background: 0 !important; */
   border: none !important;
-  color: var(--uc-inverted-colour) !important;
+  /*! color: var(--uc-inverted-colour) !important; */
   /*! box-sizing: content-box !important; */
 }
 
@@ -417,10 +417,10 @@ panelview .toolbarbutton-1,
 .subviewbutton,
 .widget-overflow-list .toolbarbutton-1,
 .panel-banner-item {
-  background: transparent !important;
+  background-color: transparent !important;
   min-height: var(--subview-height) !important;
-  border-radius: 0px !important;
-  /* padding: 0 4px !important; */
+  border-radius: var(--uc-border-radius) !important;
+  background-image: none !important;
 }
 
 
@@ -858,24 +858,22 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
 #protections-popup-main-header-label {
   color: var(--uc-inverted-colour) !important;
 }
-
+/*
 #downloadsPanel-multiView {
   padding-top: 8px !important;
-}
+}*/
 
 #downloadsListBox .download-state {
-  display: flex !important;
-  width: 100% !important;
-  align-items: center !important;
+  padding-top: 8px !important;
 }
 
 #downloadsListBox .downloadMainArea {
   padding: 0 !important;
-  display: flex !important;
+  /*! /*! display: flex !important; */ */
   flex: 1 !important;
-  margin-inline-end: -48px !important;
-  padding-inline-end: 48px !important;
-  padding-inline-start: 16px !important;
+  /*! /*! margin-inline-end: -48px !important; */ */
+  /*! padding-inline-end: 48px !important; */
+  /*! padding-inline-start: 16px !important; */
   height: 100% !important;
   align-items: center !important;
 }
@@ -904,13 +902,12 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
 }
 
 #downloadsListBox .downloadButton {
-  margin-inline-end: 16px !important;
+  /*! margin-inline-end: 16px !important; */
   height: 32px !important;
   min-width: 32px !important;
   border-radius: 16px !important;
   fill: var(--accent-color) !important;
   -moz-context-properties: fill, fill-opacity !important;
-  display: block !important;
 }
 
 #downloadsListBox .downloadButton .button-box {
@@ -1055,6 +1052,11 @@ button .customizationmode-button:hover:active {
   border-width: 0 !important;
   background: #002275 !important;
   color: #fff !important;
+}
+
+panel toolbarseparator {
+  border-top: 1px solid var(--uc-inverted-colour) !important;
+  margin-block: 10px !important;
 }
 
 #PopupAutoComplete

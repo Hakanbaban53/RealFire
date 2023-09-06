@@ -304,11 +304,13 @@
   #infoBox listbox,
   #editBMPanel_namePicker,
   #editBMPanel_tagsField,
-  #editBMPanel_tagsSelector {
+  #editBMPanel_tagsSelector,
+  #editBMPanel_locationField,
+  #editBMPanel_keywordField {
     transition: all 0.25s ease-in-out !important;
     -moz-appearance: none !important;
-    border: 1px solid var(--accent-color) !important;
-    background-color: var(--uc-base-colour) !important;
+    border: 1px solid var(--uc-muted-colour) !important;
+    border-radius: var(--uc-border-radius) !important;
     color: var(--uc-inverted-colour) !important;
   }
 
@@ -316,18 +318,24 @@
   #bookmarkproperties #editBMPanel_namePicker,
   #bookmarkproperties #editBMPanel_tagsField,
   #bookmarkproperties #editBMPanel_tagsSelector {
-    background-color: var(--uc-base-colour) !important;
+  border: 1px solid var(--accent-color) !important;
+    border-radius: var(--uc-border-radius) !important;
   }
 
+  
+  
   /* This changes the same text boxes on hover */
-  #infoBox textbox[focused="true"],
-#infoBox listbox[focused="true"],
 /* This changes the same url bookmarking popup text boxes on hover */
-#editBMPanel_namePicker[focused="true"],
-#editBMPanel_tagsField[focused="true"],
-#infoBox #bookmarkproperties #editBMPanel_namePicker[focused="true"],
-#infoBox #bookmarkproperties #editBMPanel_tagsField[focused="true"] {
+  #infoBox textbox:hover,
+#infoBox listbox:hover,
+#editBMPanel_namePicker:hover,
+#editBMPanel_tagsField:hover,
+    #editBMPanel_locationField:hover,
+  #editBMPanel_keywordField:hover,
+#infoBox #bookmarkproperties #editBMPanel_namePicker:hover,
+#infoBox #bookmarkproperties #editBMPanel_tagsField:hover {
     box-shadow: var(--Input-field-focus-shadow) !important;
+    border: 1.5px solid var(--accent-color) !important;
     background-color: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
   }
@@ -341,9 +349,7 @@
   #tracking-action-block,
   #tracking-action-unblock {
     -moz-appearance: none !important;
-    border-radius: 8px !important;
     background: var(--uc-base-colour) !important;
-    border: 0px !important;
     color: var(--uc-inverted-colour) !important;
     padding: 0.3em !important;
     margin-top: 0.5em !important;
@@ -357,7 +363,7 @@
   #identity-popup-popup-menulist:hover,
   #tracking-action-block:hover,
   #tracking-action-unblock:hover {
-    background: var(--uc-base-colour) !important;
+    background: var(--uc-muted-colour) !important;
     color: var(--uc-inverted-colour) !important;
   }
 
@@ -371,21 +377,21 @@
   #editBMPanel_foldersExpander,
   #detailsDeck button {
     -moz-appearance: none !important;
-    border: 3px solid var(--uc-base-colour) !important;
+    border: 1px solid var(--uc-inverted-colour) !important;
     background: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
-  }
-
-  #BMB_bookmarksPopup {
-    margin-top: -9px !important;
   }
 
   #editBMPanel_folderMenuList:hover,
   #editBMPanel_tagsSelectorExpander:hover,
   #editBMPanel_foldersExpander:hover,
   #detailsDeck button:hover {
-    background: var(--uc-base-colour) !important;
-    color: var(--uc-inverted-colour) !important;
+    border: 1px solid var(--accent-color) !important;
+    background: var(--uc-muted-colour) !important;
+  }
+  
+  #BMB_bookmarksPopup {
+    margin-top: -9px !important;
   }
 
   #editBMPanel_folderMenuList {
