@@ -230,6 +230,7 @@ ___
 [![Stargazers over time](https://starchart.cc/Hakanbaban53/RealFire.svg)](https://starchart.cc/Hakanbaban53/RealFire)
 
 [Back to top](#RealFire_🔥)
-___
-<p align="center">Made with ❤️</p>
-<h2 align="center">Hakan İSMAİL</h2>
+
+-----
+
+<h2 align="center">Hakan İSMAİL ❤</h2>
