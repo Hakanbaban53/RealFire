@@ -1,72 +1,38 @@
 #!/usr/bin/env bash
 
 THEMEDIRECTORY=$(cd `dirname "$0"` && cd .. && pwd);
-
-case "$(uname -s)" in
-    Darwin*)    FIREFOXFOLDER=~/Library/Application\ Support/Firefox/;;
-    *)          FIREFOXFOLDER=~/.mozilla/firefox/;;
-esac
-
-APPLICATIONFOLDER=$(readlink -f `which firefox` | xargs -I{} dirname {})
-PROFILENAME="";
-FXACEXTRAS=true;
+FIREFOXFOLDER=~/snap/firefox/common/.mozilla/firefox/
+PROFILENAME=""
+THEME="DEFAULT"
 CHROMEFOLDER="chrome";
 
 
-# Get installation options
-while getopts 'f:p:eh' flag; do
-    case "${flag}" in
-        b) APPLICATIONFOLDER="${OPTARG}" ;;
-        f) FIREFOXFOLDER="${OPTARG}" ;;
-        p) PROFILENAME="${OPTARG}" ;;
-        e) FXACEXTRAS=false ;;
-        h)
-            echo "Sweet_Pop! Install script usage: ./install.sh [ options ... ]"
-            echo "where options include:"
-            echo
-            echo "  -b <binary_folder>  (Set custom Firefox binary folder path)"
-            echo "  -f <firefox_folder> (Set custom Firefox folder path)"
-            echo "  -p <profile_name>   (Set custom profile name)"
-            echo "  -e                  (Install fx-autoconfig - Runs sudo to copy mozilla.cfg and local-settings.js to Application Binary folder)"
-            echo "  -h                  (Show help message)"
-            exit 0
-            ;;
-    esac
+# Get options.
+while getopts 'f:p:t:' flag; do
+	case "${flag}" in
+	f) FIREFOXFOLDER="${OPTARG}" ;;
+	p) PROFILENAME="${OPTARG}" ;;
+	t) THEME="${OPTARG}" ;;
+	*)
+		echo "Gnome Theme Install Script:"
+		echo "  -f <firefox_folder_path>. Set custom Firefox folder path."
+		echo "  -p <profile_name>. Set custom profile name."
+		echo "  -t <theme_name>. Set the colors used in the theme."
+		echo "  -h to show this message."
+		exit 0
+		;;
+	esac
 done
 
+function saveProfile(){
+	local PROFILE_PATH="$1"
 
-# Check if Firefox profiles.ini is installed or not
-PROFILES_FILE="${FIREFOXFOLDER}/profiles.ini"
-if [ ! -f "${PROFILES_FILE}" ]; then
-    >&2 echo "Failed to locate profiles.ini in ${FIREFOXFOLDER}
-Exiting..."
-    exit 1
-fi
-
-echo
-echo "Profiles file found..."
+	cd "$FIREFOXFOLDER/$PROFILE_PATH" || { echo "FAIL, Firefox profile path was not found."; exit 1; }
+	echo "Installing theme in $PWD" >$(tty)
 
 
-# Define default Profile folder path else use -p option
-if [ -z "$PROFILENAME" ]; then
-    PROFILEFOLDER="${FIREFOXFOLDER}/$(grep -zoP '\[Install.*?\]\nDefault=\K(.*?)\n' $PROFILES_FILE | tr -d '\0')"
-else
-    PROFILEFOLDER="${FIREFOXFOLDER}/${PROFILENAME}"
-fi
+	# Copy theme repo inside
 
-
-# Enter Firefox profile folder if it exists
-if [ ! -d "$PROFILEFOLDER" ]; then
-    >&2 echo "Failed to locate Profile folder at ${PROFILEFOLDER}
-Exiting..."
-    exit 1
-fi
-
-cd $PROFILEFOLDER
-
-
-# Copy theme repository inside chrome folder
-echo
 echo "Installing RealFire! in ${PWD}"
 
 # Create a chrome directory if it doesn't exist else take a backupold chrome folder
@@ -80,35 +46,43 @@ cd $CHROMEFOLDER
 
 cp -a "${THEMEDIRECTORY}/." $PWD
 
+}
 
-# Symlink user.js to that of Sweet_Pop!
-echo
-echo "Setting configuration user.js file..."
+PROFILES_FILE="${FIREFOXFOLDER}/profiles.ini"
+if [ ! -f "${PROFILES_FILE}" ]; then
+	>&2 echo "FAIL, please check Firefox installation, unable to find 'profile.ini' at ${FIREFOXFOLDER}."
+	exit 1
+fi
+echo "'profiles.ini' found in ${FIREFOXFOLDER}"
 
-if [ -f ../user.js ]; then
-    echo "Moving existing user.js to user.js.bak"
-    mv --backup=t ../user.js ../user.js.bak || { exit 1; }
+PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' ))
+PROFILES_PATHS+=::
+
+PROFILES_ARRAY=()
+if [ "${PROFILENAME}" != "" ];
+	then
+		echo "Using ${PROFILENAME} profile"
+		PROFILES_ARRAY+=${PROFILENAME}
+else
+	echo "Finding all available profiles";
+	while [[ "$PROFILES_PATHS" ]]; do
+		PROFILES_ARRAY+=( "${PROFILES_PATHS%%::*}" )
+		PROFILES_PATHS=${PROFILES_PATHS#*::}
+	done
 fi
 
-ln -fs "`pwd`/programs/user.js" ../user.js
 
 
-# If FXACEXTRAS extras enabled, install necessary files
-if [ "$FXACEXTRAS" = true ] ; then
-    echo
-    echo "Enabling userChrome.js manager (fx-autoconfig)..."
+if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
+	echo "FAIL, no Firefox profile found in $PROFILES_FILE".;
 
-    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.jsm" > "utils/boot.jsm" || { echo "Failed to fetch fx-autoconfig"; echo "Exiting..."; exit 1; }
-
-    echo "Enabling Navbar Toolbar Button Slider..."
-    curl -sL "https://raw.githubusercontent.com/aminomancer/uc.css.js/master/JS/navbarToolbarButtonSlider.uc.js" > "script/navbarToolbarButtonSlider.uc.js" || { echo "Failed to fetch Navbar Toolbar Button Slider"; echo "Exiting..."; exit 1; }
-
-    echo
-    echo "Copying mozilla.cfg and local-settings.js to ${APPLICATIONFOLDER}"
-    chmod +x "${PWD}/programs/install-cfg.sh"
-    sudo "${PWD}/programs/install-cfg.sh" $APPLICATIONFOLDER || { echo "Exiting..."; exit 1; }
+else
+	for i in "${PROFILES_ARRAY[@]}"
+	do
+		if [[ -n "$i" ]];
+		then
+			echo "Installing ${THEME} theme for $(sed 's/SPACECHARACTER/ /g' <<< $i) profile.";
+			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
+		fi;
+	done
 fi
-
-echo
-echo "Done!"
-echo "Note: Restart twice to apply changes"
