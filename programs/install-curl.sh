@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-VERSION=$(curl -s "https://github.com/PROxZIMA/Sweet-Pop/releases/latest/download" 2>&1 | sed "s/^.*download\/\([^\"]*\).*/\1/")
+VERSION=$(curl -s "https://github.com/Hakanbaban53/RealFire/releases/latest/download" 2>&1 | sed "s/^.*download\/\([^\"]*\).*/\1/")
 FILENAME=Sweet-Pop-$VERSION.zip
 FOLDERPATH=$PWD/Sweet-Pop-master
 
 if [ -d "$FOLDERPATH" ]; then rm -Rf $FOLDERPATH; fi
 
-curl -LJo $FILENAME https://github.com/PROxZIMA/Sweet-Pop/archive/refs/heads/master.zip
+curl -LJo $FILENAME https://github.com/Hakanbaban53/RealFire/archive/refs/heads/main.zip
 
 unzip $FILENAME
 
