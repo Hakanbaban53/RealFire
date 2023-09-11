@@ -125,23 +125,23 @@ goto :init
     mklink ..\user.js "%cd%\programs\user.js"
 
     REM If FXACEXTRAS extras enabled, install necessary files
-    if not defined FXACEXTRAS (
-        goto :done
-    )
+    @REM if not defined FXACEXTRAS (
+    @REM     goto :done
+    @REM )
 
-    echo.
-    echo Enabling userChrome.js manager (fx-autoconfig)...
-    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.jsm" > "utils\boot.jsm" || (echo Failed to fetch fx-autoconfig && echo Exiting... && goto :end)
+    @REM echo.
+    @REM echo Enabling userChrome.js manager (fx-autoconfig)...
+    @REM curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.sys.mjs" > "utils\boot.jsm" || (echo Failed to fetch fx-autoconfig && echo Exiting... && goto :end)
 
-    echo Enabling Navbar Toolbar Button Slider...
-    curl -sL "https://raw.githubusercontent.com/aminomancer/uc.css.js/master/JS/navbarToolbarButtonSlider.uc.js" > "script\navbarToolbarButtonSlider.uc.js" || (echo Failed to fetch Navbar Toolbar Button Slider && echo Exiting... && goto :end)
+    @REM echo Enabling Navbar Toolbar Button Slider...
+    @REM curl -sL "https://raw.githubusercontent.com/aminomancer/uc.css.js/master/JS/navbarToolbarButtonSlider.uc.js" > "script\navbarToolbarButtonSlider.uc.js" || (echo Failed to fetch Navbar Toolbar Button Slider && echo Exiting... && goto :end)
 
-    echo.
-    echo Copying mozilla.cfg and local-settings.js to %APPLICATIONFOLDER%
-    copy .\programs\mozilla.cfg "%APPLICATIONFOLDER%"
-    copy .\programs\local-settings.js "%APPLICATIONFOLDER%\defaults\pref\"
+    @REM echo.
+    @REM echo Copying mozilla.cfg and local-settings.js to %APPLICATIONFOLDER%
+    @REM copy .\programs\mozilla.cfg "%APPLICATIONFOLDER%"
+    @REM copy .\programs\local-settings.js "%APPLICATIONFOLDER%\defaults\pref\"
 
-    goto :done
+    @REM goto :done
 
 :done
     echo.

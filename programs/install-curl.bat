@@ -2,7 +2,7 @@
 
 cd %TEMP%
 
-set "VERSION=4.0.0"
+set "VERSION=0.0.1"
 set "FILENAME=RealFire-%VERSION%.tar.gz"
 set "FOLDERPATH=RealFire-master"
 
@@ -10,7 +10,7 @@ if exist "%FOLDERPATH%"\* (
     rd /s /q %FOLDERPATH%
 )
 
-curl -LJo %FILENAME% xxx || (echo Failed to fetch RealFire^! theme && echo Exiting... && goto :eof)
+curl -LJo %FILENAME% https://github.com/Hakanbaban53/RealFire/archive/refs/heads/master.tar.gz || (echo Failed to fetch RealFire^! theme && echo Exiting... && goto :eof)
 
 tar -xvf %FILENAME% || echo.
 
