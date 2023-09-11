@@ -201,6 +201,16 @@ menuitem[data-l10n-id*="-customize-toolbar"],
   list-style-image: url("chrome://global/skin/icons/help.svg");
 }
 
+#appMenu-restart-button2 {
+  background-image: url(../icons/reload.svg);
+  list-style-image: url(../icons/reload.svg);
+}
+
+#appMenu-userChrome-button {
+  background-image: url(chrome://browser/skin/trending.svg);
+  list-style-image: url(chrome://browser/skin/trending.svg);
+}
+
 #menu_HelpPopup_reportPhishingtoolmenu,
 #appMenu_menu_HelpPopup_reportPhishingtoolmenu {
   background-image: url("chrome://global/skin/icons/lightbulb.svg");

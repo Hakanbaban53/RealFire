@@ -15,9 +15,15 @@
 @import 'includes/realfire-side-bar.css';
 @import 'includes/realfire-library.css';
 
- #navigator-toolbox vbox.notificationbox-stack.global-notificationbox {
+.container.infobar {
+  background:black !important;
+}
+
+.notificationbox-stack {
+  border-radius: 8px !important;
     position: absolute !important;
-    top: 8vw !important;
+    top: 50vw !important;
+  
     width: auto !important;
 }
 

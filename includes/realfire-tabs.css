@@ -10,6 +10,11 @@
   /* margin-block: 0px !important; */
 }
 
+#private-mask,
+#private-mask:is([enabled="false"]) {
+  display: none !important;
+}
+
 /* multi tab selection */
 #tabbrowser-tabs:not([noshadowfortests])
   .tabbrowser-tab:is([multiselected])
