@@ -3,6 +3,7 @@ user_pref("svg.context-properties.content.enabled", true);
 user_pref("browser.tabs.tabMinWidth", 76);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.proton.enabled", false);
+user_pref("ui.popup.disable_autohide", false);
 user_pref("browser.startup.preXulSkeletonUI", false);
 // user_pref("browser.uidensity", 1);
 user_pref("userChrome.toolbarSlider.width", 2);
