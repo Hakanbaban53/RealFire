@@ -869,9 +869,9 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
 
 #downloadsListBox .downloadMainArea {
   padding: 0 !important;
-  /*! /*! display: flex !important; */ */
+  /*! /*! display: flex !important; */
   flex: 1 !important;
-  /*! /*! margin-inline-end: -48px !important; */ */
+  /*! /*! margin-inline-end: -48px !important; */ 
   /*! padding-inline-end: 48px !important; */
   /*! padding-inline-start: 16px !important; */
   height: 100% !important;

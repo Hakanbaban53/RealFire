@@ -9,6 +9,10 @@
   background: transparent !important;
 }
 
+#nav-bar-toolbarbutton-slider-container {
+  max-width: 64px !important;
+}
+
 #urlbar,
 #urlbar * {
   padding-block-start: var(--uc-urlbar-top-spacing) !important;

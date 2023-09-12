@@ -46,21 +46,27 @@
   :root:not([customizing])
     #nav-bar:hover
     .customization-target
-    > :not(#urlbar-container),
+    > :not(#urlbar-container,#nav-bar-toolbarbutton-slider-container),
   :root:not([customizing])
     #nav-bar:focus-within
     .customization-target
-    > :not(#urlbar-container) {
+    > :not(#urlbar-container,#nav-bar-toolbarbutton-slider-container) {
     opacity: 1 !important;
     min-width: 28px !important;
     transition: all 200ms !important;
   }
 
   :root:not([customizing])
-    #nav-bar:hover
+  #nav-bar:hover
+  .customization-target
+  > #nav-bar-toolbarbutton-slider-container,
+  :root:not([customizing])
+    #nav-bar:focus-within
     .customization-target
     > #nav-bar-toolbarbutton-slider-container {
-    width: auto !important;
+    width: 64px !important;
+    opacity: 1 !important;
+    transition: all 200ms !important;
   }
 
   /* autohide back&forward button */
