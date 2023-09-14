@@ -15,6 +15,11 @@
   display: none !important;
 }
 
+#private-mask[enabled="true"] {
+  align-items: center;
+  display: flex !important;
+}
+
 /* multi tab selection */
 #tabbrowser-tabs:not([noshadowfortests])
   .tabbrowser-tab:is([multiselected])

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 VERSION=$(curl -s "https://github.com/Hakanbaban53/RealFire/releases/latest/download" 2>&1 | sed "s/^.*download\/\([^\"]*\).*/\1/")
-FILENAME=Sweet-Pop-$VERSION.zip
-FOLDERPATH=$PWD/Sweet-Pop-master
+FILENAME=RealFire-$VERSION.zip
+FOLDERPATH=$PWD/RealFire-master
 
 if [ -d "$FOLDERPATH" ]; then rm -Rf $FOLDERPATH; fi
 
