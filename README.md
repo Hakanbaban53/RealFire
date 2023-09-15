@@ -24,14 +24,19 @@
  .
 ├──  assets
 │  └──  preview images
-├──  css
+├──  img
+│  └──  new tab background image
+├──  icons
+│  ├──  animation.svg
+│  └──  many icons in .svg format
+├──  includes
 │  ├──  realfire-checkbox.css
 │  ├──  realfire-icons.css
 │  ├──  realfire-config.css
 │  └──  other .css files
-├──  icons
-│  ├──  animation.svg
-│  └──  many icons in .svg format
+├──  JS
+│  ├──  navbarToolbarButtonSlider.uc.js
+│  └──  many script in .uc.js format
 ├──  programs
 │  ├──  install-cfg.sh
 │  ├──  install-curl.sh
@@ -41,6 +46,14 @@
 │  ├──  local-settings.js
 │  ├──  mozilla.cfg
 │  └──  user.js
+├──  resources
+│  └──  userchrome Manager page files
+├──  utils
+│  ├──  .editorconfig
+│  ├──  boot.sys.mjs
+│  ├──  chrome.manifest
+│  ├──  fs.sys.mjs
+│  └──  utils.sys.mjs
 ├──  README.md
 ├──  userChrome.css
 └──  userContent.css
@@ -204,15 +217,11 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 3) ### **Voilà**
 
 ## Configuration
-1) 
+1) You can use the realfire-config.css(https://github.com/Hakanbaban53/RealFire/blob/main/includes/realfire-config.css) change the a lot of variables.
 
-2) 
+2) If you run the automatic installation script, it will install all the files in the folders where they need to be installed. 
 
-3) 
-
-4) 
-
-5) If something breaks on your system then please raise a issue
+3) If something breaks on your system then please raise a issue
 
 
 ## Credits
