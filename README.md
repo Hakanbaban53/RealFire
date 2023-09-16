@@ -64,7 +64,7 @@
 This helps to customize Firefox User Interface.
 
 ### [`userContent.css`](./userContent.css)
-This helps to customize web content like a specific site.
+This helps to customize new tab page.
 
 
 ## **But how does it work?**
@@ -197,11 +197,6 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
     > copy .\programs\local-settings.js "C:\Program Files\Mozilla Firefox\defaults\pref\"
     ```
     </details>
-
-5) Download [`navbarToolbarButtonSlider.uc.js`](https://github.com/aminomancer/uc.css.js/blob/master/JS/navbarToolbarButtonSlider.uc.js) and place it in `script` folder along with `hideScrollbar.uc.js`.
-
-    ```console
-    $ curl -sL "https://raw.githubusercontent.com/aminomancer/uc.css.js/master/JS/navbarToolbarButtonSlider.uc.js" > "script/navbarToolbarButtonSlider.uc.js"
     ```
 
 </details>
@@ -217,7 +212,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 3) ### **Voilà**
 
 ## Configuration
-1) You can use the realfire-config.css(https://github.com/Hakanbaban53/RealFire/blob/main/includes/realfire-config.css) change the a lot of variables.
+1) You can use the [ realfire-config.css ](https://github.com/Hakanbaban53/RealFire/blob/main/includes/realfire-config.css) change the a lot of variables.
 
 2) If you run the automatic installation script, it will install all the files in the folders where they need to be installed. 
 
