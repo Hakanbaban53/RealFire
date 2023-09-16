@@ -90,6 +90,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
     ```console
     $ ./programs/install.sh # Standard
     $ ./programs/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+    $ ./programs/install.sh -f ~/snap/firefox/common/.mozilla/firefox/ # Snap
     ```
     </details>
 
