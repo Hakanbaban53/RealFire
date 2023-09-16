@@ -15,7 +15,7 @@
 
 #urlbar,
 #urlbar * {
-  padding-block-start: var(--uc-urlbar-top-spacing) !important;
+  /* padding-block-start: var(--uc-urlbar-top-spacing) !important; */
   outline: none !important;
   box-shadow: none !important;
 }

@@ -131,7 +131,7 @@ goto :init
 
     echo.
     echo Enabling userChrome.js manager (fx-autoconfig)...
-    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.sys.mjs" > "utils\boot.jsm" || (echo Failed to fetch fx-autoconfig && echo Exiting... && goto :end)
+    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.sys.mjs" > "utils\boot.sys.mjs" || (echo Failed to fetch fx-autoconfig && echo Exiting... && goto :end)
 
     echo.
     echo Downloading config-pref.js (fx-autoconfig)...
