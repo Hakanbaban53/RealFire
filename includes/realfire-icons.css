@@ -8,6 +8,10 @@ menupopup:not(.in-menulist, [aria-label])
   display: -moz-inline-box !important;
 }
 
+#appMenu-translate-button {
+  list-style-image: url(chrome://userchrome/content/material/translate.svg);
+}
+
 menuitem[data-l10n-id$="-sync-now"],
 #PanelUI-fxa-menu-setup-sync-button {
   background-image: url("chrome://browser/skin/sync.svg");
