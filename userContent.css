@@ -1,8 +1,11 @@
+@import 'includes/realfire-config.css';
+@import 'includes/realfire-colours.css';
+@import 'includes/realfire-settings.css';
+
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
   .click-target-container *,
   .top-sites-list * {
-    color: #fff !important ;
-    text-shadow: 2px 2px 2px #222 !important ;
+    color: var(--uc-inverted-colour) !important ;
   }
 
   body::before {

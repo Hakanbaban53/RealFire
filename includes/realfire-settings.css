@@ -1,0 +1,62 @@
+@-moz-document url(chrome://browser/content/preferences/preferences.xhtml), url(about:preferences), url(about:preferences#home), url(about:preferences#general), url(about:preferences#search), url(about:preferences#privacy), url(about:preferences#sync), url(about:preferences#moreFromMozilla){
+
+/*Navigation menu*/
+  .navigation {
+  -moz-appearance: none !important;
+  background-color: var(--uc-base-colour) !important;
+  border-right: 2px solid var(--accent-color) !important;
+  align-items: center !important;
+}
+
+.main-content {
+  -moz-appearance: none !important;
+  padding: 0px 28px !important;
+}
+
+#categories {
+  width: auto !important;
+}
+
+#categories richlistitem {
+  color: var(--uc-inverted-colour) !important;
+  border-radius: var(--uc-border-radius) !important;
+}
+
+.sidebar-footer-list {
+  margin-inline-start: 0px !important;
+  margin-inline: 0px !important;
+}
+@media not (prefers-contrast) {
+
+  #categories>.category[selected],
+  #categories>.category.selected {
+    color: var(--accent-color) !important;
+  }
+  
+}
+#categories > .category {
+  margin-inline: 20px !important;
+  justify-content: center !important;
+}
+
+/*Checkboxes*/
+.checkbox-check {
+   border-radius: var(--uc-border-radius) !important;
+}
+
+.checkbox-check[checked] {
+  background-size: 14px !important;
+  background-color: var(--accent-color) !important;
+  fill: var(--uc-inverted-colour) !important;
+}
+
+/*Inputs*/
+#searchInput[focused="true"] {
+  outline: var(--accent-color) solid 2px !important;
+}
+#searchInput{
+  border-radius: var(--uc-border-radius) !important;
+}
+
+
+}
