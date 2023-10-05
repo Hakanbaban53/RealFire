@@ -1,0 +1,23 @@
+#row-selector.selector,
+button {
+    color: var(--uc-inverted-colour) !important;
+    border: 1px solid var(--uc-muted-colour) !important;
+    border-radius: var(--uc-border-radius) !important;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible,
+menulist:focus-visible,
+checkbox:not([native]):focus-visible>.checkbox-check,
+radio[focused="true"]>.radio-check,
+tab:focus-visible>.tab-middle>.tab-text {
+    outline: var(--uc-inverted-colour) solid 2px !important;
+    outline-offset: 0px !important;
+}
+
+
+button:not([disabled])[default] {
+    color: var(--button-text-white) !important;
+    background-color: var(--accent-color) !important;
+}

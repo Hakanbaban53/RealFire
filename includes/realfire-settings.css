@@ -1,10 +1,10 @@
 @-moz-document url(chrome://browser/content/preferences/preferences.xhtml), url(about:preferences), url(about:preferences#home), url(about:preferences#general), url(about:preferences#search), url(about:preferences#privacy), url(about:preferences#sync), url(about:preferences#moreFromMozilla){
 
 /*Navigation menu*/
-  .navigation {
+.navigation {
   -moz-appearance: none !important;
   background-color: var(--uc-base-colour) !important;
-  border-right: 2px solid var(--accent-color) !important;
+  border-right: 2px solid var(--settings-color) !important;
   align-items: center !important;
 }
 
@@ -26,37 +26,53 @@
   margin-inline-start: 0px !important;
   margin-inline: 0px !important;
 }
+
 @media not (prefers-contrast) {
 
   #categories>.category[selected],
   #categories>.category.selected {
-    color: var(--accent-color) !important;
+    color: var(--settings-color) !important;
   }
-  
+
 }
-#categories > .category {
+
+#categories>.category {
   margin-inline: 20px !important;
   justify-content: center !important;
 }
 
-/*Checkboxes*/
-.checkbox-check {
-   border-radius: var(--uc-border-radius) !important;
+@media not (prefers-contrast) {
+  .privacy-detailedoption.selected {
+    background-color: color-mix(in srgb, var(--settings-color) 20%, transparent) !important;
+  }
 }
 
-.checkbox-check[checked] {
-  background-size: 14px !important;
-  background-color: var(--accent-color) !important;
-  fill: var(--uc-inverted-colour) !important;
+.privacy-detailedoption.selected {
+  border-color: var(--settings-color) !important;
 }
 
 /*Inputs*/
+input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
+textarea:focus,
+search-textbox[focused],
+tree:focus-visible,
+richlistbox:focus-visible,
 #searchInput[focused="true"] {
-  outline: var(--accent-color) solid 2px !important;
+  outline: var(--settings-color) solid 2px !important;
 }
-#searchInput{
+
+#searchInput {
   border-radius: var(--uc-border-radius) !important;
 }
 
+a,
+.text-link {
+  color: var(--settings-color) !important;
+}
 
+a:hover,
+.text-link:hover,
+.text-link:is(:not([disabled="true"]), :enabled):hover {
+  color: color-mix(in srgb, var(--uc-inverted-colour), var(--settings-color)) !important;
+}
 }

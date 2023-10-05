@@ -14,6 +14,7 @@
 @import 'includes/realfire-tabs.css';
 @import 'includes/realfire-side-bar.css';
 @import 'includes/realfire-library.css';
+@import 'includes/realfire-button.css';
 
 .container.infobar {
   background:black !important;

@@ -1,8 +1,14 @@
 @import 'includes/realfire-config.css';
 @import 'includes/realfire-colours.css';
 @import 'includes/realfire-settings.css';
+@import "includes/realfire-popups.css";
+@import "includes/realfire-checkbox.css";
+
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+  .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus) .tile {
+    box-shadow: 0 0 0 3px var(--accent-color), 0 0 0 1px var(--accent-color) !important;
+  }
   .click-target-container *,
   .top-sites-list * {
     color: var(--uc-inverted-colour) !important ;
@@ -19,4 +25,11 @@
     width: 100vw;
     height: 100vh;
   }
+}
+
+.home-section .section input:checked + .slider {
+  background-color: var(--accent-color) !important;
+}
+.home-section .section .slider {
+  background-color: var(--uc-inverted-colour) !important;
 }

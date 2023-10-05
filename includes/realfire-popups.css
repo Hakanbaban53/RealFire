@@ -15,7 +15,14 @@ panel[type="autocomplete-richlistbox"] {
   /*! box-sizing: content-box !important; */
 }
 
-.panel-header, .panel-subview-body {
+:is(menupopup, panel)[type=arrow] {
+  --panel-border-color: none !important;;
+  --panel-border-radius: var(--uc-border-radius);
+  --panel-padding: 0px !important;
+}
+
+.panel-header,
+.panel-subview-body {
   background-color: var(--uc-base-colour);
 }
 
@@ -23,18 +30,18 @@ menupopup #contentAreaContextMenu {
   max-width: 250px !important;
 }
 
-#toolbar-menubar > #menubar-items > #main-menubar > menu > menupopup {
+#toolbar-menubar>#menubar-items>#main-menubar>menu>menupopup {
   margin-top: -12px !important;
 }
 
-menuitem[type="checkbox"] > .menu-iconic-left,
-menuitem[type="radio"] > .menu-iconic-left {
+menuitem[type="checkbox"]>.menu-iconic-left,
+menuitem[type="radio"]>.menu-iconic-left {
   display: -moz-box !important;
   padding-inline-end: 0px !important;
   margin-inline-end: 6px !important;
 }
 
-menuitem:not([type="checkbox"], [type="radio"]) > .menu-iconic-left {
+menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
   display: -moz-box !important;
   padding-inline-end: 0px !important;
   margin-inline-end: 0px !important;
@@ -48,11 +55,16 @@ menupopup menuseparator {
   opacity: 0.12 !important;
 }
 
+menulist>menupopup>menu:not([disabled="true"])[selected="true"],
+menulist>menupopup>menuitem:not([disabled="true"])[selected="true"] {
+  background-color: var(--accent-color) !important;
+}
+
 menupopup menuitem,
 menupopup menu,
 .autocomplete-richlistitem {
   height: var(--menupopup-height) !important;
-  padding: 2px 10px 0px 0 !important;
+  padding: 4px 10px !important;
   margin: 0 4px !important;
   /* background: 0 !important; */
   color: var(--uc-inverted-colour) !important;
@@ -64,8 +76,8 @@ menupopup menu,
   height: var(--sidebar-menupopup-height) !important;
 }
 
-menupopup:not(.in-menulist) > menu:not(.menu-iconic),
-menupopup:not(.in-menulist, [aria-label]) > menuitem:not(.menuitem-iconic) {
+menupopup:not(.in-menulist)>menu:not(.menu-iconic),
+menupopup:not(.in-menulist, [aria-label])>menuitem:not(.menuitem-iconic) {
   padding-inline-start: 1em !important;
   background-position: left 1em center;
   background-repeat: no-repeat;
@@ -75,12 +87,12 @@ menupopup:not(.in-menulist, [aria-label]) > menuitem:not(.menuitem-iconic) {
 }
 
 /* , [type="checkbox"] */
-menu:not([type="checkbox"], [type="radio"]) > .menu-iconic-left,
-menuitem:not([type="checkbox"], [type="radio"]) > .menu-iconic-left {
+menu:not([type="checkbox"], [type="radio"])>.menu-iconic-left,
+menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
   margin-inline: calc(1em - 4px) !important;
 }
 
-.subviewbutton:not([checked="true"], [targetURI]) > .toolbarbutton-icon {
+.subviewbutton:not([checked="true"], [targetURI])>.toolbarbutton-icon {
   width: 16px;
   height: 16px;
   margin-inline-end: 8px !important;
@@ -88,8 +100,8 @@ menuitem:not([type="checkbox"], [type="radio"]) > .menu-iconic-left {
   fill: var(--accent-color);
 }
 
-#appMenu-zoom-controls2 > label,
-#fxa-manage-account-button > vbox > label {
+#appMenu-zoom-controls2>label,
+#fxa-manage-account-button>vbox>label {
   margin-inline-start: 24px !important;
 }
 
@@ -97,9 +109,7 @@ menuitem:not([type="checkbox"], [type="radio"]) > .menu-iconic-left {
   margin-inline-start: 40px !important;
 }
 
-.widget-overflow-list
-  .toolbarbutton-1:not(.toolbarbutton-combined)
-  > .toolbarbutton-text {
+.widget-overflow-list .toolbarbutton-1:not(.toolbarbutton-combined)>.toolbarbutton-text {
   padding-inline-start: 8px !important;
 }
 
@@ -184,15 +194,15 @@ scrollbox[orient="vertical"] {
   background-color: transparent !important;
 }
 
-menuitem[type="radio"]:not([checked="true"]) > .menu-iconic-text,
-menuitem[type="checkbox"]:not([checked="true"]) > .menu-iconic-text {
+menuitem[type="radio"]:not([checked="true"])>.menu-iconic-text,
+menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-text {
   opacity: 0.5 !important;
 }
 
-menuitem[type="radio"][checked="true"] > .menu-iconic-left::before,
-menuitem[type="radio"]:not([checked="true"]) > .menu-iconic-left::before,
-menuitem[type="checkbox"][checked="true"] > .menu-iconic-left::before,
-menuitem[type="checkbox"]:not([checked="true"]) > .menu-iconic-left::before {
+menuitem[type="radio"][checked="true"]>.menu-iconic-left::before,
+menuitem[type="radio"]:not([checked="true"])>.menu-iconic-left::before,
+menuitem[type="checkbox"][checked="true"]>.menu-iconic-left::before,
+menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-left::before {
   content: "";
   margin: auto;
   display: inline-block;
@@ -201,19 +211,19 @@ menuitem[type="checkbox"]:not([checked="true"]) > .menu-iconic-left::before {
   background-repeat: no-repeat;
 }
 
-menuitem[type="radio"][checked="true"] > .menu-iconic-left::before {
+menuitem[type="radio"][checked="true"]>.menu-iconic-left::before {
   background-image: url(../icons/radio-checked.svg);
 }
 
-menuitem[type="radio"]:not([checked="true"]) > .menu-iconic-left::before {
+menuitem[type="radio"]:not([checked="true"])>.menu-iconic-left::before {
   background-image: url(../icons/radio-unchecked.svg);
 }
 
-menuitem[type="checkbox"][checked="true"] > .menu-iconic-left::before {
+menuitem[type="checkbox"][checked="true"]>.menu-iconic-left::before {
   background-image: url(../icons/checked.svg);
 }
 
-menuitem[type="checkbox"]:not([checked="true"]) > .menu-iconic-left::before {
+menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-left::before {
   background-image: url(../icons/unchecked.svg);
 }
 
@@ -222,8 +232,7 @@ menuitem[type="checkbox"]:not([checked="true"]) > .menu-iconic-left::before {
 }
 
 /* hide icon if no image (default on macOS but not Windows) */
-.subviewbutton:not(:-moz-any([image], [targetURI], .bookmark-item))
-  > .menu-iconic-left {
+.subviewbutton:not(:-moz-any([image], [targetURI], .bookmark-item))>.menu-iconic-left {
   display: none;
 }
 
@@ -258,7 +267,7 @@ menuitem .menu-text {
   display: none !important;
 }
 
-menubar > menu[open] {
+menubar>menu[open] {
   color: var(--uc-inverted-colour) !important;
   background-color: var(--uc-base-colour) !important;
   border-radius: 4px !important;
@@ -271,13 +280,13 @@ menubar > menu[open] {
   -moz-box-pack: center;
 }
 
-#context-navigation > .menuitem-iconic:first-child,
-#context-navigation > .menuitem-iconic:last-child {
+#context-navigation>.menuitem-iconic:first-child,
+#context-navigation>.menuitem-iconic:last-child {
   width: auto !important;
   -moz-box-pack: center !important;
 }
 
-#context-navigation > .menuitem-iconic {
+#context-navigation>.menuitem-iconic {
   background: 0 !important;
   flex: 1 !important;
 }
@@ -306,8 +315,8 @@ menubar > menu[open] {
 
 /* Box Background*/
 .popup-internal-box,
-panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
-#PopupSearchAutoComplete > *,
+panel[type="autocomplete-richlistbox"]>.autocomplete-richlistbox,
+#PopupSearchAutoComplete>*,
 .menupopup-arrowscrollbox {
   background: var(--uc-base-colour) !important;
   border-radius: var(--uc-border-radius) !important;
@@ -318,7 +327,7 @@ panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
 /* themes a menupopup (or other root level / shadow dom popup) as a panel */
 /* Mozilla's use of shadow dom means we can't use a menupopup > .popup-internal-box */
 .popup-internal-box,
-panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
+panel[type="autocomplete-richlistbox"]>.autocomplete-richlistbox,
 .menupopup-arrowscrollbox {
   /*    margin: 8px 0 !important;*/
   padding: 8px 0 !important;
@@ -334,38 +343,37 @@ panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
     0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
 }
 
-#PopupSearchAutoComplete > * {
+#PopupSearchAutoComplete>* {
   border-radius: 0 !important;
 }
 
-#PopupSearchAutoComplete > :first-child {
+#PopupSearchAutoComplete> :first-child {
   border-radius: 4px 4px 0 0 !important;
 }
 
-#PopupSearchAutoComplete > :last-child {
+#PopupSearchAutoComplete> :last-child {
   border-radius: 0 0 4px 4px !important;
 }
 
 /* autocomplete panel can't overlap the textbox, so shadow can't go up more than 1px */
-panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox {
+panel[type="autocomplete-richlistbox"]>.autocomplete-richlistbox {
   margin: -1px -8px !important;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
     0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
 }
 
 /* search panel gets special treatment; it has multiple children */
-#PopupSearchAutoComplete > .autocomplete-richlistbox {
+#PopupSearchAutoComplete>.autocomplete-richlistbox {
   box-shadow: none !important;
 }
 
 #PopupSearchAutoComplete {
-  filter: drop-shadow(0 8px 6px rgba(0, 0, 0, 0.25))
-    drop-shadow(0 1px 1px rgba(0, 0, 0, 0.125)) !important;
+  filter: drop-shadow(0 8px 6px rgba(0, 0, 0, 0.25)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.125)) !important;
 }
 
 /* reset non-layout props when embedded in a panel
    (panel handles panel theming in this case) */
-.panel-arrowcontent > .popup-internal-box {
+.panel-arrowcontent>.popup-internal-box {
   background: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -378,7 +386,7 @@ panel[type="arrow"] {
   background: var(--uc-base-colour) !important;
   border-radius: var(--uc-border-radius) !important;
   border: 1.5px solid var(--accent-color) !important;
-  
+
 }
 
 /* panel[type="arrow"][side="top"],
@@ -421,6 +429,7 @@ panelview .toolbarbutton-1,
   min-height: var(--subview-height) !important;
   border-radius: var(--uc-border-radius) !important;
   background-image: none !important;
+  padding: calc(var(--arrowpanel-menuitem-margin-inline) - 1px) var(--arrowpanel-menuitem-margin-inline) !important;
 }
 
 
@@ -429,49 +438,37 @@ panelview .toolbarbutton-1,
   padding: 0 !important;
 }
 
-#editBookmarkPanel > #editBookmarkHeaderSeparator,
-#editBookmarkPanel > .panel-subview-body > #editBookmarkSeparator,
-panelview > toolbarseparator {
+#editBookmarkPanel>#editBookmarkHeaderSeparator,
+#editBookmarkPanel>.panel-subview-body>#editBookmarkSeparator,
+panelview>toolbarseparator {
   display: none !important;
 }
 
-#context-navigation:not([hidden]) > .menuitem-iconic:hover,
+#context-navigation:not([hidden])>.menuitem-iconic:hover,
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
 menuitem:where([_moz-menuactive="true"]:not([disabled="true"])),
 panelview .toolbarbutton-1:not([disabled], [open], :active):is(:hover, :focus),
 toolbarbutton.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
 .navigable.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
 toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover,
-.widget-overflow-list
-  .toolbarbutton-1:not([disabled], [open], :active):is(:hover, :focus),
-.toolbaritem-combined-buttons:is(
-    :not([cui-areatype="toolbar"]),
-    [overflowedItem="true"]
-  )
-  > toolbarbutton:not([disabled], [open], :active):is(:hover, :focus) {
+.widget-overflow-list .toolbarbutton-1:not([disabled], [open], :active):is(:hover, :focus),
+.toolbaritem-combined-buttons:is( :not([cui-areatype="toolbar"]),
+  [overflowedItem="true"])>toolbarbutton:not([disabled], [open], :active):is(:hover, :focus) {
   background-color: color-mix(in srgb, var(--uc-inverted-colour), transparent 85%) !important;
   color: var(--uc-inverted-colour) !important;
   border-radius: var(--uc-border-radius) !important;
 }
 
-toolbarbutton.subviewbutton.unified-extensions-item-action:not(
-    [disabled],
-    [open],
-    :active
-  ):is(:hover, :focus) {
+toolbarbutton.subviewbutton.unified-extensions-item-action:not([disabled],
+  [open],
+  :active):is(:hover, :focus) {
   background: transparent !important;
 }
 
 findbar toolbarbutton.tabbable:-moz-focusring,
-toolbar:not(#PersonalToolbar)
-  .toolbarbutton-1:-moz-focusring
-  > .toolbarbutton-icon,
-toolbar:not(#PersonalToolbar)
-  .toolbarbutton-1:-moz-focusring
-  > .toolbarbutton-text,
-toolbar:not(#PersonalToolbar)
-  .toolbarbutton-1:-moz-focusring
-  > .toolbarbutton-badge-stack {
+toolbar:not(#PersonalToolbar) .toolbarbutton-1:-moz-focusring>.toolbarbutton-icon,
+toolbar:not(#PersonalToolbar) .toolbarbutton-1:-moz-focusring>.toolbarbutton-text,
+toolbar:not(#PersonalToolbar) .toolbarbutton-1:-moz-focusring>.toolbarbutton-badge-stack {
   outline-offset: -1px !important;
   /* -3px */
 }
@@ -493,20 +490,20 @@ toolbar:not(#PersonalToolbar)
   padding-inline-start: 0 !important;
 }
 
-#appMenu-zoom-controls > .subviewbutton,
-#appMenu-edit-controls > .subviewbutton {
+#appMenu-zoom-controls>.subviewbutton,
+#appMenu-edit-controls>.subviewbutton {
   border-radius: var(--uc-border-radius) !important;
   padding: 0 8px !important;
   border: none !important;
   /* margin-inline-start: 4px !important; */
 }
 
-#appMenu-zoom-controls > toolbarseparator[orient="vertical"] + .subviewbutton {
+#appMenu-zoom-controls>toolbarseparator[orient="vertical"]+.subviewbutton {
   margin-inline-start: 0 !important;
 }
 
-#appMenu-zoom-controls > .subviewbutton-iconic,
-#appMenu-edit-controls > .subviewbutton-iconic {
+#appMenu-zoom-controls>.subviewbutton-iconic,
+#appMenu-edit-controls>.subviewbutton-iconic {
   padding: 0 !important;
 }
 
@@ -514,8 +511,8 @@ toolbar:not(#PersonalToolbar)
   border: none !important;
 }
 
-#appMenu-addon-banners:not(:empty) ~ #appMenu-fxa-status,
-.panel-banner-item:not([hidden]) + #appMenu-fxa-status {
+#appMenu-addon-banners:not(:empty)~#appMenu-fxa-status,
+.panel-banner-item:not([hidden])+#appMenu-fxa-status {
   border-top: 1px solid var(--panel-separator-color) !important;
   margin-top: 5px !important;
   padding-top: 5px !important;
@@ -535,7 +532,7 @@ toolbar:not(#PersonalToolbar)
   margin: 0 !important;
 }
 
-:root[fxastatus="signedin"] #appMenu-fxa-label > .toolbarbutton-icon {
+:root[fxastatus="signedin"] #appMenu-fxa-label>.toolbarbutton-icon {
   display: -moz-box !important;
   border-radius: 100px !important;
   padding: 2px !important;
@@ -545,20 +542,16 @@ toolbar:not(#PersonalToolbar)
   display: none !important;
 }
 
-.toolbaritem-combined-buttons:-moz-any(
-    :not([cui-areatype="toolbar"]),
-    [overflowedItem="true"]
-  )
-  > toolbarbutton
-  > .toolbarbutton-icon {
+.toolbaritem-combined-buttons:-moz-any( :not([cui-areatype="toolbar"]),
+  [overflowedItem="true"])>toolbarbutton>.toolbarbutton-icon {
   margin: 0 !important;
 }
 
-panelmultiview .toolbaritem-combined-buttons > spacer.before-label {
+panelmultiview .toolbaritem-combined-buttons>spacer.before-label {
   width: 20px !important;
 }
 
-panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
+panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
   width: 14px !important;
 }
 
@@ -595,7 +588,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   fill-opacity: 1 !important;
 }
 
-#identity-popup > .panel-arrowcontainer > .panel-arrowcontent {
+#identity-popup>.panel-arrowcontainer>.panel-arrowcontent {
   fill-opacity: inherit !important;
 }
 
@@ -604,7 +597,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   background-image: none !important;
 }
 
-.identity-popup-preferences-button > .toolbarbutton-icon {
+.identity-popup-preferences-button>.toolbarbutton-icon {
   margin: 0 !important;
 }
 
@@ -612,11 +605,11 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   padding: 0 !important;
 }
 
-#tracking-protection-preferences-button > .toolbarbutton-icon {
+#tracking-protection-preferences-button>.toolbarbutton-icon {
   margin-inline-end: -8px !important;
 }
 
-#tracking-protection-preferences-button > .toolbarbutton-text {
+#tracking-protection-preferences-button>.toolbarbutton-text {
   padding-inline-end: 4px !important;
   -moz-box-ordinal-group: 0 !important;
 }
@@ -644,7 +637,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   background-image: none !important;
 }
 
-.identity-popup-expander > .button-box {
+.identity-popup-expander>.button-box {
   border: none !important;
   display: flex !important;
   justify-content: center !important;
@@ -659,7 +652,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   display: none !important;
 }
 
-.PanelUI-subView > .identity-popup-security-content,
+.PanelUI-subView>.identity-popup-security-content,
 #identity-popup-securityView-body,
 #identity-popup-mainView-panel-header {
   padding: 16px !important;
@@ -676,8 +669,8 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   width: 100% !important;
 }
 
-#identity-popup-content-blocking-content > hbox:first-child,
-#identity-popup-permissions-content > hbox:first-child {
+#identity-popup-content-blocking-content>hbox:first-child,
+#identity-popup-permissions-content>hbox:first-child {
   display: flex !important;
 }
 
@@ -720,7 +713,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   fill-opacity: 1 !important;
 }
 
-.popup-notification-panel > popupnotification:not([hidden]) {
+.popup-notification-panel>popupnotification:not([hidden]) {
   background: var(--uc-base-colour) !important;
 }
 
@@ -756,7 +749,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   padding-inline-start: 50px !important;
 }
 
-.tracking-protection-button > .button-box {
+.tracking-protection-button>.button-box {
   padding: 0 !important;
 }
 
@@ -791,28 +784,28 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
 }
 
 .identity-popup-content-blocking-empty-label,
-#tracking-protection-preferences-button > .toolbarbutton-text,
+#tracking-protection-preferences-button>.toolbarbutton-text,
 .tracking-protection-button,
-#identity-popup-trackersView-strict-info > label,
+#identity-popup-trackersView-strict-info>label,
 .identity-popup-cookiesView-list-header,
-.identity-popup-content-blocking-list-item > label,
-#identity-popup-mainView-panel-header > label,
-#identity-popup-trackersView > .panel-header,
-#identity-popup-securityView > .panel-header,
-#identity-popup-breakageReportView > .panel-header,
+.identity-popup-content-blocking-list-item>label,
+#identity-popup-mainView-panel-header>label,
+#identity-popup-trackersView>.panel-header,
+#identity-popup-securityView>.panel-header,
+#identity-popup-breakageReportView>.panel-header,
 #identity-popup-content-blocking-report-breakage,
 .identity-popup-content-blocking-category-label,
 .identity-popup-content-blocking-category-state-label,
 .identity-popup-permission-label,
 .identity-popup-permission-state-label,
-#identity-popup-security-descriptions > description,
-#identity-popup-securityView-body > description,
-#identity-popup-permissions-content > description,
-#identity-popup-content-blocking-content > description {
+#identity-popup-security-descriptions>description,
+#identity-popup-securityView-body>description,
+#identity-popup-permissions-content>description,
+#identity-popup-content-blocking-content>description {
   font-size: 100% !important;
 }
 
-.panel-header > label {
+.panel-header>label {
   text-align: start !important;
   margin-inline-start: 4px !important;
 }
@@ -821,16 +814,16 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   font-size: 110% !important;
 }
 
-.identity-popup-security-content > description,
-#identity-popup-content-blocking-content > description,
-#identity-popup-permissions-content > description,
+.identity-popup-security-content>description,
+#identity-popup-content-blocking-content>description,
+#identity-popup-permissions-content>description,
 .identity-popup-content-blocking-category-state-label,
 .identity-popup-permission-state-label {
   font-size: 85% !important;
 }
 
-#identity-popup-permissions-content > description,
-#identity-popup-content-blocking-content > description {
+#identity-popup-permissions-content>description,
+#identity-popup-content-blocking-content>description {
   color: inherit !important;
   opacity: 0.6 !important;
 }
@@ -839,8 +832,8 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   transform: translateY(1px) !important;
 }
 
-.tracking-protection-button > .button-box,
-.panel-footer button > .button-box {
+.tracking-protection-button>.button-box,
+.panel-footer button>.button-box {
   display: flex !important;
   align-items: center !important;
 }
@@ -858,6 +851,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
 #protections-popup-main-header-label {
   color: var(--uc-inverted-colour) !important;
 }
+
 /*
 #downloadsPanel-multiView {
   padding-top: 8px !important;
@@ -871,7 +865,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   padding: 0 !important;
   /*! /*! display: flex !important; */
   flex: 1 !important;
-  /*! /*! margin-inline-end: -48px !important; */ 
+  /*! /*! margin-inline-end: -48px !important; */
   /*! padding-inline-end: 48px !important; */
   /*! padding-inline-start: 16px !important; */
   height: 100% !important;
@@ -897,7 +891,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   font-size: 85% !important;
 }
 
-#downloadsListBox > richlistitem > toolbarseparator {
+#downloadsListBox>richlistitem>toolbarseparator {
   display: none !important;
 }
 
@@ -1017,7 +1011,7 @@ button .customizationmode-button:hover:active {
   outline: 0 !important;
 }
 
-.panel-footer button > .button-box {
+.panel-footer button>.button-box {
   -moz-appearance: none !important;
   position: relative !important;
   padding-inline-end: 16px !important;
@@ -1028,7 +1022,7 @@ button .customizationmode-button:hover:active {
   margin-inline-end: -8px !important;
 }
 
-.panel-footer button:not([default]) > .button-box::before {
+.panel-footer button:not([default])>.button-box::before {
   content: "" !important;
   display: block !important;
   border-radius: 4px !important;
@@ -1042,9 +1036,7 @@ button .customizationmode-button:hover:active {
   box-sizing: border-box !important;
 }
 
-.panel-footer
-  button:not([default]):hover:active:not([disabled])
-  > .button-box::before {
+.panel-footer button:not([default]):hover:active:not([disabled])>.button-box::before {
   border-width: 0 !important;
 }
 
@@ -1059,29 +1051,24 @@ panel toolbarseparator {
   margin-block: 10px !important;
 }
 
-#PopupAutoComplete
-  > richlistbox
-  > richlistitem[originaltype="loginWithOrigin"] {
+#PopupAutoComplete>richlistbox>richlistitem[originaltype="loginWithOrigin"] {
   height: 48px !important;
 }
 
-#PopupAutoComplete > richlistbox > richlistitem[originaltype="loginsFooter"] {
+#PopupAutoComplete>richlistbox>richlistitem[originaltype="loginsFooter"] {
   visibility: collapse !important;
 }
 
 richlistitem[originaltype="loginsFooter"],
-richlistitem[originaltype="generatedPassword"] > .two-line-wrapper {
+richlistitem[originaltype="generatedPassword"]>.two-line-wrapper {
   display: flex !important;
   align-items: center !important;
 }
 
-richlistitem:-moz-any(
-    [originaltype="generatedPassword"],
-    [originaltype="loginWithOrigin"],
-    [originaltype="login"],
-    [originaltype="loginsFooter"]
-  )
-  .ac-site-icon {
+richlistitem:-moz-any([originaltype="generatedPassword"],
+  [originaltype="loginWithOrigin"],
+  [originaltype="login"],
+  [originaltype="loginsFooter"]) .ac-site-icon {
   display: block !important;
   align-self: center !important;
   margin-inline: 0 16px !important;
@@ -1092,13 +1079,10 @@ richlistitem[originaltype="loginsFooter"] .ac-site-icon {
   visibility: hidden !important;
 }
 
-richlistitem:-moz-any(
-    [originaltype="generatedPassword"],
-    [originaltype="loginWithOrigin"],
-    [originaltype="login"],
-    [originaltype="loginsFooter"]
-  )
-  .ac-title {
+richlistitem:-moz-any([originaltype="generatedPassword"],
+  [originaltype="loginWithOrigin"],
+  [originaltype="login"],
+  [originaltype="loginsFooter"]) .ac-title {
   margin: 0 !important;
 }
 
@@ -1133,4 +1117,15 @@ search-textbox .tabsFilter:focus-within,
 /* Browser popups */
 dialog#commonDialog #dialogGrid .titleIcon {
   background-color: transparent !important;
+}
+
+window#commonDialogWindow.system-font-size {
+  background-color: var(--uc-base-colour) !important;
+  border: 2px solid AccentColor !important;
+  border-radius: var(--uc-border-radius) !important;
+  ;
+}
+
+.customize-menu{
+  background-color: var(--uc-base-colour) !important;
 }

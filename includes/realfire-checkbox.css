@@ -1,12 +1,15 @@
+input[type="checkbox"]:checked,
 .checkbox-check[checked] {
-    color: var(--button-text-white) !important;
-  background-color: color-mix(in srgb, field 10%, var(--accent-color) ) !important;
-  /* background-image: url(../icons/checked.svg) !important; */
+  background-size: 14px !important;
+  background-color: var(--accent-color) !important;
+  fill: var(--uc-inverted-colour) !important;
 }
 .checkbox-check {
     border-radius: 4px !important;
 }
-button:not([disabled])[default] {
-  color: var(--button-text-white) !important;
+
+input[type="radio"]:checked,
+.radio-check[selected] {
+  fill: var(--uc-inverted-colour) !important;
   background-color: var(--accent-color) !important;
 }

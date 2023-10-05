@@ -38,12 +38,6 @@ search-textbox.tabsFilter:focus-within,
   border: 1px solid var(--accent-color) !important;
 }
 
-button {
-  color: var( --uc-inverted-colour);
-  background-color: ButtonFace;
-  border: 1px solid var(--uc-muted-colour) !important;
-  border-radius: var(--uc-border-radius) !important;
-}
 
 
 

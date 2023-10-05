@@ -37,6 +37,12 @@ menu.sync-ui-item,
   background-image: url("chrome://global/skin/icons/settings.svg");
   list-style-image: url("chrome://global/skin/icons/settings.svg");
 }
+#menu_preferences,
+#openSettingsMenuItem,
+.subviewbutton[id="appMenu-advanced-settings-button"]{
+  list-style-image: url(chrome://userchrome/content/material/experiments.svg);
+}
+
 
 #PanelUI-fxa-menu-account-signout-button {
   background-image: url(../icons/signout.svg);
