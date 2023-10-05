@@ -857,12 +857,39 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
   padding-top: 8px !important;
 }*/
 
-#downloadsListBox .download-state {
+/* #downloadsListBox .download-state {
   padding-top: 8px !important;
+} */
+
+@media not (prefers-contrast) {
+  .downloadProgress::-moz-progress-bar {
+    background-color: #3c9af8;
+  }
+
+  .downloadProgress[paused]::-moz-progress-bar {
+    background-color: #a6a6a6;
+  }
+
+  #downloadsListBox > richlistitem{
+    align-items: center !important;
+    transition: ease-out 200ms !important;
+  }
+
+  #downloadsListBox:focus > richlistitem[selected="true"],
+  #downloadsListBox:focus > richlistitem[selected],
+  #downloadsListBox > richlistitem[selected] {
+    transition: ease-in 200ms !important;
+    background-color: var(--accent-color) !important;
+    /* four gradients for the bevel highlights on each edge, one for blue background */
+    background-image:none !important;
+    border-radius: var(--uc-border-radius) !important;
+    outline-offset: 0px !important;
+    margin: 4px !important;
+  }
 }
 
 #downloadsListBox .downloadMainArea {
-  padding: 0 !important;
+  padding-left: 4px !important;
   /*! /*! display: flex !important; */
   flex: 1 !important;
   /*! /*! margin-inline-end: -48px !important; */
@@ -896,10 +923,10 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
 }
 
 #downloadsListBox .downloadButton {
-  /*! margin-inline-end: 16px !important; */
   height: 32px !important;
   min-width: 32px !important;
-  border-radius: 16px !important;
+  border-radius: var(--uc-border-radius) !important;
+  border: none !important;
   fill: var(--accent-color) !important;
   -moz-context-properties: fill, fill-opacity !important;
 }

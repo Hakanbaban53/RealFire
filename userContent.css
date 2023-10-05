@@ -3,6 +3,8 @@
 @import 'includes/realfire-settings.css';
 @import "includes/realfire-popups.css";
 @import "includes/realfire-checkbox.css";
+@import 'includes/realfire-library.css';
+
 
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {

@@ -218,14 +218,14 @@
 
   /* These change the odd rows of the lists */
   #placeContent tree,
-  treechildren::-moz-tree-row(odd),
-  treechildren::-moz-tree-row(hover) {
-    
+  treechildren::-moz-tree-row(odd) {
     color: var(--uc-inverted-colour) !important;
   }
 
+  treechildren::-moz-tree-row(hover),
   treechildren::-moz-tree-row(selected, focus) {
-    background-color: darkgray !important;
+    outline: none !important;
+    background-color: var(--accent-color) !important;
     color: var(--uc-inverted-colour) !important;
   }
 
@@ -251,13 +251,15 @@
 
   /* This deletes the leftover border when clicking one of the top buttons */
   #placesMenu > menu {
+    transition: ease-in 200ms;
     margin-inline: 5px !important;
-    border: 1px solid var(--uc-muted-colour) !important;
+    outline: 1.5px solid var(--uc-muted-colour) !important;
     border-radius: var(--uc-border-radius) !important;
   }
 
   #placesMenu > menu:hover {
-    border: 1px solid var(--accent-color) !important;
+    transition: ease-out 200ms;
+    outline: 1.5px solid AccentColor !important;
   }
   
   #placesMenu > menu > .menubar-text {
@@ -409,4 +411,6 @@
     border-top: none !important;
     background-color: var(--uc-base-colour) !important;
   }
+
+
 }
