@@ -220,6 +220,9 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 3) If something breaks on your system then please raise a issue
 
 
+## Known issues
+- Adaptive window color with windows not working on preferences page and start page. If you want the change it use the config.css file.
+
 ## Credits
 - I started with this amazing material theme : [Sweet_Pop!](https://github.com/PROxZIMA/Sweet-Pop) by [PROxZIMA](https://github.com/PROxZIMA)
 
