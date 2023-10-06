@@ -15,6 +15,12 @@
   .top-sites-list * {
     color: var(--uc-inverted-colour) !important ;
   }
+  .top-site-outer:hover{
+    transition: ease-in 200ms !important;
+  }
+  .top-site-outer{
+    transition: ease-out 200ms !important;
+  }
 
   body::before {
     content: "";

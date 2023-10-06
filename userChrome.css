@@ -21,9 +21,9 @@
 }
 
 .notificationbox-stack {
-  border-radius: 8px !important;
+  border-radius: var(--uc-border-radius) !important;
     position: absolute !important;
-    top: 50vw !important;
+    bottom: 0px !important;
   
     width: auto !important;
 }
