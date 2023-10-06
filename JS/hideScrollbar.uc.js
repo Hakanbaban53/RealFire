@@ -10,6 +10,7 @@
 // ==/UserScript==
 
 (function () {
+    //yooo wtf
     // var prefs = Services.prefs,
     //     enabled;
     // if (prefs.prefHasUserValue('userChromeJS.floatingScrollbar.enabled')) {
