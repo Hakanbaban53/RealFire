@@ -904,6 +904,10 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
   max-width: 32px !important;
 }
 
+.reader-header .reader .chap-and-type select option {
+  background: none !important;
+}
+
 /* Customize page */
 
 button .customizationmode-button {
