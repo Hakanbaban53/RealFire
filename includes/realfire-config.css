@@ -83,7 +83,7 @@
    *  URL Bar placement. Change this variable to adapt
    *  to this when necessary.
    */
-  --uc-urlbar-top-spacing: 1px;
+  --uc-urlbar-top-spacing: 0px;
 }
 
 /* Disable the Navigation Buttons */

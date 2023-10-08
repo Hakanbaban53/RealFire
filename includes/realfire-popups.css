@@ -65,7 +65,7 @@ menupopup menu,
 .autocomplete-richlistitem {
   height: var(--menupopup-height) !important;
   padding: 4px 10px !important;
-  margin: 0 4px !important;
+  margin: 4px 4px !important;
   /* background: 0 !important; */
   color: var(--uc-inverted-colour) !important;
   border-radius: var(--uc-border-radius) !important;
@@ -177,15 +177,6 @@ menupopup menu[disabled="true"],
     0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
 }
 
-scrollbox[orient="vertical"] {
-  gap: 6px;
-  overflow-y: auto !important;
-}
-
-.menupopup-srollbutton {
-  display: none !important;
-}
-
 .menu-iconic-left {
   -moz-appearance: none !important;
 }
@@ -211,36 +202,11 @@ menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-left::before {
   background-repeat: no-repeat;
 }
 
-menuitem[type="radio"][checked="true"]>.menu-iconic-left::before {
-  background-image: url(../icons/radio-checked.svg);
-}
-
-menuitem[type="radio"]:not([checked="true"])>.menu-iconic-left::before {
-  background-image: url(../icons/radio-unchecked.svg);
-}
-
-menuitem[type="checkbox"][checked="true"]>.menu-iconic-left::before {
-  background-image: url(../icons/checked.svg);
-}
-
-menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-left::before {
-  background-image: url(../icons/unchecked.svg);
-}
-
-.bookmark-item {
-  list-style-image: url(../icons/bookmark-manage.svg) !important;
-}
-
 /* hide icon if no image (default on macOS but not Windows) */
 .subviewbutton:not(:-moz-any([image], [targetURI], .bookmark-item))>.menu-iconic-left {
   display: none;
 }
 
-menuitem[type="radio"] .menu-iconic-icon,
-menuitem[type="checkbox"] .menu-iconic-icon {
-  display: none;
-  /* max-width: 0px !important; */
-}
 
 .menu-iconic-icon {
   fill: var(--accent-color) !important;
@@ -1069,8 +1035,8 @@ button .customizationmode-button:hover:active {
 
 .panel-footer button:not([default]):hover:active:not([disabled]) {
   border-width: 0 !important;
-  background: #002275 !important;
-  color: #fff !important;
+  background: var(--accent-color) !important;
+  color: var(--uc-inverted-colour) !important;
 }
 
 panel toolbarseparator {
@@ -1121,24 +1087,6 @@ richlistitem:-moz-any([originaltype="generatedPassword"],
 
 #confirmation-hint-checkmark-animation-container {
   margin-inline-end: 0 !important;
-}
-
-search-textbox#search-box {
-  appearance: none !important;
-  background-color: var(--uc-base-colour) !important;
-  border: 1px solid var(--uc-identity-colour-blue) !important;
-  color: var(--uc-inverted-colour) !important;
-  padding: 6px !important;
-  border-radius: var(--uc-border-radius) !important;
-}
-
-image.textbox-search-sign {
-  display: none !important;
-}
-
-search-textbox .tabsFilter:focus-within,
-#search-box:focus-within {
-  border: 2px solid var(--uc-identity-colour-blue) !important;
 }
 
 /* Browser popups */

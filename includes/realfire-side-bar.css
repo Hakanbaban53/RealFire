@@ -1,6 +1,7 @@
 #sidebar-search-container {
   justify-content: center !important;
 }
+
 .content-container {
   background-color: var(--uc-base-colour) !important;
 }
@@ -12,6 +13,7 @@
   background-repeat: no-repeat !important;
   background-position: 5px center !important;
 }
+
 #sidebar-header {
   background-color: var(--uc-base-colour) !important;
   border-bottom: 1.5px solid var(--accent-color) !important;
@@ -20,27 +22,3 @@
 #sidebar-icon {
   fill: var(--accent-color) !important;
 }
-
-search-textbox.tabsFilter,
-#search-box {
-    -moz-default-appearance: none !important;
-    padding: 4px !important;
-    border-radius: var(--uc-border-radius) !important;
-    border: 1px solid var(--uc-muted-colour) !important;
-  }
-search-textbox.tabsFilter:hover,
-#search-box:hover {
-  background-color: var(--uc-highlight-colour) !important;
-}
-
-search-textbox.tabsFilter:focus-within,
-#search-box:focus-within {
-  border: 1px solid var(--accent-color) !important;
-}
-
-
-
-
-
-
-

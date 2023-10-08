@@ -8,6 +8,26 @@ menupopup:not(.in-menulist, [aria-label])
   display: -moz-inline-box !important;
 }
 
+menuitem[type="radio"][checked="true"]>.menu-iconic-left::before {
+  background-image: url(../icons/radio-checked.svg);
+}
+
+menuitem[type="radio"]:not([checked="true"])>.menu-iconic-left::before {
+  background-image: url(../icons/radio-unchecked.svg);
+}
+
+menuitem[type="checkbox"][checked="true"]>.menu-iconic-left::before {
+  background-image: url(../icons/checked.svg);
+}
+
+menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-left::before {
+  background-image: url(../icons/unchecked.svg);
+}
+
+.bookmark-item {
+  list-style-image: url(../icons/bookmark-manage.svg) !important;
+}
+
 #appMenu-translate-button {
   list-style-image: url(chrome://userchrome/content/material/translate.svg);
 }

@@ -5,8 +5,6 @@
 @import "includes/realfire-checkbox.css";
 @import 'includes/realfire-library.css';
 
-
-
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
   .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus) .tile {
     box-shadow: 0 0 0 3px var(--accent-color), 0 0 0 1px var(--accent-color) !important;

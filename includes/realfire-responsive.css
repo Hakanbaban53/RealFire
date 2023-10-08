@@ -39,7 +39,6 @@
     padding: 0px !important;
     min-width: 0px !important;
     transition: all 200ms !important;
-    /*! margin-right: 4px !important; */
   }
 
   /* Show on hover or focus */
@@ -84,11 +83,6 @@
     transform: scale(0.6, 0.6) !important;
     pointer-events: none !important;
   }
-
-  /* #navigator-toolbox:focus-within #nav-bar {
-    width: auto !important;
-    width: var(--uc-urlbar-max-width) !important;
-  } */
 
   #navigator-toolbox:focus-within #titlebar {
     width: auto !important;

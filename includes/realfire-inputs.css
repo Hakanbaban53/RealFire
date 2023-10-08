@@ -1,0 +1,48 @@
+/*settings Inputs*/
+input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):hover,
+search-textbox:hover,
+tree:hover,
+richlistbox:hover,
+#searchInput:hover {
+  outline: none !important;
+  border: var(--settings-color) solid 1px !important;
+}
+
+input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
+search-textbox[focused],
+tree:focus-visible,
+richlistbox:focus-visible,
+#searchInput[focused="true"] {
+  outline: none !important;
+  border: var(--settings-color) solid 2px !important;
+}
+
+#searchInput {
+    border-radius: var(--uc-border-radius) !important;
+  }
+
+  /*popups*/
+  search-textbox.tabsFilter:focus-within,
+search-textbox.tabsFilter:hover,
+search-textbox#search-box:focus-within,
+search-textbox#search-box:hover {
+  transition: ease-in 200ms;
+  background-color: var(--uc-highlight-colour) !important;
+  border: 1px solid var(--accent-color) !important;
+}
+
+image.textbox-search-sign {
+  display: none !important;
+}
+
+search-textbox.tabsFilter,
+search-textbox#search-box {
+  transition: ease-out 200ms;
+  appearance: none !important;
+  background-color: var(--uc-base-colour) !important;
+  color: var(--uc-inverted-colour) !important;
+  -moz-default-appearance: none !important;
+  padding: 4px !important;
+  border-radius: var(--uc-border-radius) !important;
+  border: 1px solid var(--uc-muted-colour) !important;
+}

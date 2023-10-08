@@ -4,12 +4,12 @@
 }
 
 /* remove tab shadow */
-.tabbrowser-tab > .tab-stack > .tab-background {
+.tabbrowser-tab>.tab-stack>.tab-background {
   box-shadow: none !important;
   border-radius: var(--uc-border-radius) !important;
-  /* margin-block: 0px !important; */
 }
 
+/*privateWindowHomepage.uc.js home page private logo fix*/
 #private-mask,
 #private-mask:is([enabled="false"]) {
   display: none !important;
@@ -21,10 +21,7 @@
 }
 
 /* multi tab selection */
-#tabbrowser-tabs:not([noshadowfortests])
-  .tabbrowser-tab:is([multiselected])
-  > .tab-stack
-  > .tab-background:-moz-lwtheme {
+#tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([multiselected])>.tab-stack>.tab-background:-moz-lwtheme {
   outline-color: var(--toolbarseparator-color) !important;
 }
 
@@ -32,6 +29,7 @@
 .tabbrowser-tab:not([pinned]) .tab-close-button {
   display: var(--show-tab-close-button) !important;
 }
+
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   display: var(--show-tab-close-button-hover) !important;
 }
@@ -40,27 +38,20 @@
 .tabbrowser-tab[selected][fadein]:not([pinned]) {
   max-width: var(--uc-active-tab-width) !important;
 }
+
 .tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
   max-width: var(--uc-inactive-tab-width) !important;
 }
 
 /* container tabs indicator */
-.tabbrowser-tab[usercontextid]
-  > .tab-stack
-  > .tab-background
-  > .tab-context-line {
-  margin: -1px var(--container-tabs-indicator-margin) 0
-    var(--container-tabs-indicator-margin) !important;
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
+  margin: -1px var(--container-tabs-indicator-margin) 0 var(--container-tabs-indicator-margin) !important;
   height: 1px !important;
-
   box-shadow: var(--uc-identity-glow) var(--identity-tab-color) !important;
 }
 
+.tab-throbber:not([pinned]),
 .tab-icon-pending:not([pinned]) {
-  list-style-image: url("../icons/tab-loading.png") !important;
-}
-
-.tab-throbber:not([pinned]) {
   list-style-image: url("../icons/tab-loading.png") !important;
 }
 
@@ -78,15 +69,13 @@
   inset-inline-end: -8px !important;
   width: 16px !important;
   height: 16px !important;
-  border-radius: 10px !important;
+  border-radius: var(--uc-border-radius) !important;
 }
 
 /* style and position speaker icon */
-.tab-icon-overlay:not([sharing], [crashed]):is(
-    [soundplaying],
-    [muted],
-    [activemedia-blocked]
-  ) {
+.tab-icon-overlay:not([sharing], [crashed]):is([soundplaying],
+  [muted],
+  [activemedia-blocked]) {
   stroke: transparent !important;
   background: transparent !important;
   opacity: 1 !important;
@@ -97,26 +86,20 @@
 }
 
 /* change the colours of the speaker icon on active tab to match tab colours */
-.tabbrowser-tab[selected]
-  .tab-icon-overlay:not([sharing], [crashed]):is(
-    [soundplaying],
-    [muted],
-    [activemedia-blocked]
-  ) {
+.tabbrowser-tab[selected] .tab-icon-overlay:not([sharing], [crashed]):is([soundplaying],
+  [muted],
+  [activemedia-blocked]) {
   stroke: var(--toolbar-bgcolor) !important;
   background-color: var(--toolbar-bgcolor) !important;
 }
 
-.tab-icon-overlay:not([pinned], [sharing], [crashed]):is(
-    [soundplaying],
-    [muted],
-    [activemedia-blocked]
-  ) {
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying],
+  [muted],
+  [activemedia-blocked]) {
   margin-inline-end: 9.5px !important;
 }
 
-.tabbrowser-tab:not([image])
-  .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
+.tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
   top: 0 !important;
   padding: 0 !important;
   margin-inline-end: 5.5px !important;
@@ -134,8 +117,7 @@
 
 .tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 .tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[muted]:hover,
-.tabbrowser-tab[selected]
-  .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
   color: var(--accent-color) !important;
   stroke: var(--toolbar-color) !important;
   background-color: var(--toolbar-color) !important;
@@ -146,17 +128,9 @@
   /* The following properties should allow the themes with trasparent toolbars to work */
   background-color: transparent !important;
   background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);
-  --uc-bg-y: calc(
-    -2 * (
-        var(--tab-block-margin) + var(--toolbarbutton-inner-padding) +
-          var(--toolbarbutton-outer-padding)
-      ) - var(--tab-min-height) - 16px - var(--bookmark-block-padding)
-  );
+  --uc-bg-y: calc(-2 * (var(--tab-block-margin) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding)) - var(--tab-min-height) - 16px - var(--bookmark-block-padding));
   background-position: top left, top left,
     var(--lwt-background-alignment, top left);
-    /* margin-inline: 2px !important;
-    padding-inline: 2px !important; */
-  /* background-color: color-mix(in srgb, field 68%, var(--accent-color)) !important; */
   border: 1.5px solid var(--accent-color) !important;
   border-radius: var(--uc-border-radius) !important;
 }
@@ -183,8 +157,7 @@
 }
 
 /* Fixing Multiselect */
-.tab-background[multiselected="true"]:not([selected="true"])
-  > .tab-background-inner {
+.tab-background[multiselected="true"]:not([selected="true"])>.tab-background-inner {
   background: none !important;
 }
 

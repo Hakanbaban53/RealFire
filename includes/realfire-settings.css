@@ -51,20 +51,6 @@
   border-color: var(--settings-color) !important;
 }
 
-/*Inputs*/
-input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
-textarea:focus,
-search-textbox[focused],
-tree:focus-visible,
-richlistbox:focus-visible,
-#searchInput[focused="true"] {
-  outline: var(--settings-color) solid 2px !important;
-}
-
-#searchInput {
-  border-radius: var(--uc-border-radius) !important;
-}
-
 a,
 .text-link {
   color: var(--settings-color) !important;
@@ -75,4 +61,50 @@ a:hover,
 .text-link:is(:not([disabled="true"]), :enabled):hover {
   color: color-mix(in srgb, var(--uc-inverted-colour), var(--settings-color)) !important;
 }
+
+
+input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
+search-textbox[focused],
+textarea:focus-visible,
+tree:focus-visible,
+richlistbox:focus-visible,
+#searchInput[focused="true"] {
+  outline: none !important;
+  border: var(--settings-color) solid 2px !important;
+}
+
+#searchInput {
+  border-radius: var(--uc-border-radius) !important;
+}
+
+/*buttons*/
+
+#row-selector.selector,
+button {
+  color: var(--uc-inverted-colour) !important;
+  border: 1px solid var(--uc-muted-colour) !important;
+  border-radius: var(--uc-border-radius) !important;
+}
+
+button[autofocus],
+button[type="submit"],
+button[default],
+button:not([disabled])[default="true"],
+button.primary {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--button-text-white) !important;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible,
+menulist:focus-visible,
+checkbox:not([native]):focus-visible>.checkbox-check,
+radio[focused="true"]>.radio-check,
+tab:focus-visible>.tab-middle>.tab-text {
+  outline: var(--uc-inverted-colour) solid 2px !important;
+  outline-offset: 0px !important;
+}
+
 }
