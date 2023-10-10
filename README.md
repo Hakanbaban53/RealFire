@@ -4,6 +4,7 @@
   **A minimalist animated oneliner theme for Firefox perfectly matching Sweet Dark**
 </div>
 
+<h2 align="center">RealFire</h2>
 <p align="center"><img src="./assets/preview.png"></p>
 
 <h3 align="center">Animated Background</h3>
