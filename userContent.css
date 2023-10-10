@@ -4,38 +4,62 @@
 @import "includes/realfire-popups.css";
 @import "includes/realfire-checkbox.css";
 @import 'includes/realfire-library.css';
+@import 'includes/realfire-addons.css';
 
-@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
-  .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus) .tile {
-    box-shadow: 0 0 0 3px var(--accent-color), 0 0 0 1px var(--accent-color) !important;
-  }
-  .click-target-container *,
-  .top-sites-list * {
-    color: var(--uc-inverted-colour) !important ;
-  }
-  .top-site-outer:hover{
-    transition: ease-in 200ms !important;
-  }
-  .top-site-outer{
-    transition: ease-out 200ms !important;
-  }
-
-  body::before {
-    content: "";
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0) no-repeat url(img/wallpaperflare.com_wallpaper.jpg) center;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-  }
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing){
+  .top-site-outer .top-site-icon,
+.outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner>a .tile {
+  transition: ease-out 200ms;
+  background-color: var(--uc-base-colour) !important;
 }
 
-.home-section .section input:checked + .slider {
+.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover),
+.outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner>a:is(.active, :focus, :hover) .tile {
+  transition: ease-in 200ms;
+  box-shadow: 0 0 0 1px var(--accent-color), 0 0 0 1px var(--accent-color) !important;
+}
+
+.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+  transition: ease-in 200ms;
+  background: var(--uc-base-colour) !important;
+}
+
+.click-target-container *,
+.top-sites-list * {
+  color: var(--uc-inverted-colour) !important;
+}
+
+
+body::before {
+  content: "";
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0) no-repeat url(img/wallpaperflare.com_wallpaper.jpg) center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+}
+
+.neterror {
+  background-color: var(--uc-base-colour) !important;
+}
+
+#neterrorTryAgainButton {
+  background-color: var(--accent-color) !important;
+  color: var(--uc-inverted-colour) !important;
+}
+
+#neterrorTryAgainButton:hover {
+  background-color: var(--accent-hover-color) !important;
+}
+
+.home-section .section input:checked+.slider {
   background-color: var(--accent-color) !important;
 }
+
 .home-section .section .slider {
   background-color: var(--uc-inverted-colour) !important;
 }

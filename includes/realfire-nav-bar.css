@@ -42,6 +42,11 @@
 #urlbar-go-button {
   margin: auto;
 }
+
+.urlbar-icon[starred='true'] {
+  fill: var(--accent-color) !important;
+}
+
 .urlbar-page-action {
   padding: 0 inherit !important;
 }

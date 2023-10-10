@@ -1,4 +1,4 @@
-@-moz-document url(chrome://browser/content/preferences/preferences.xhtml), url(about:preferences), url(about:preferences#home), url(about:preferences#general), url(about:preferences#search), url(about:preferences#privacy), url(about:preferences#sync), url(about:preferences#moreFromMozilla){
+@-moz-document url(chrome://browser/content/preferences/preferences.xhtml), url(about:preferences), url(about:preferences#home), url(about:preferences#general), url(about:preferences#search), url(about:preferences#privacy), url(about:preferences#sync), url(about:preferences#moreFromMozilla) {
 
 /*Navigation menu*/
 .navigation {
@@ -8,8 +8,13 @@
   align-items: center !important;
 }
 
+.sticky-container {
+  background-color: var(--uc-base-colour) !important;
+}
+
 .main-content {
   -moz-appearance: none !important;
+  background-color: var(--uc-base-colour) !important;
   padding: 0px 28px !important;
 }
 

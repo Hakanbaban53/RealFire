@@ -4,8 +4,7 @@ search-textbox:hover,
 tree:hover,
 richlistbox:hover,
 #searchInput:hover {
-  outline: none !important;
-  border: var(--settings-color) solid 1px !important;
+  outline: var(--settings-color) solid 1px !important;
 }
 
 input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
@@ -13,11 +12,12 @@ search-textbox[focused],
 tree:focus-visible,
 richlistbox:focus-visible,
 #searchInput[focused="true"] {
-  outline: none !important;
-  border: var(--settings-color) solid 2px !important;
+  transition: linear 350ms !important;
+  outline: var(--settings-color) solid 2px !important;
 }
 
 #searchInput {
+  transition: linear 350ms !important;
     border-radius: var(--uc-border-radius) !important;
   }
 

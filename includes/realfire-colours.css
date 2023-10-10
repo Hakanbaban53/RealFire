@@ -97,6 +97,7 @@
   --accent-color: AccentColor;
   --settings-color: AccentColor;
   --accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
+  --accent-hover-color:  color-mix(in srgb, var(--accent-color) 90%, var(--uc-inverted-colour) 20%);
   --button-text-white: #ffffff;
 
   --lwt-frame: var(--uc-base-colour) !important;

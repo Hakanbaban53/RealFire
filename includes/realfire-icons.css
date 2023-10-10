@@ -8,20 +8,24 @@ menupopup:not(.in-menulist, [aria-label])
   display: -moz-inline-box !important;
 }
 
-menuitem[type="radio"][checked="true"]>.menu-iconic-left::before {
+input[type="radio"]:checked,
+.radio-check[selected],
+menuitem[type="radio"][checked="true"] {
   background-image: url(../icons/radio-checked.svg);
 }
 
-menuitem[type="radio"]:not([checked="true"])>.menu-iconic-left::before {
-  background-image: url(../icons/radio-unchecked.svg);
+input[type="radio"]:not([checked]),
+.radio-check,
+menuitem[type="radio"]:not([checked="true"]) {
+  background-image: url(../icons/radio-unchecked.svg) !important;
 }
 
-menuitem[type="checkbox"][checked="true"]>.menu-iconic-left::before {
-  background-image: url(../icons/checked.svg);
+menuitem[type="checkbox"][checked="true"] {
+  background-image: url(../icons/checked.svg) !important;
 }
 
-menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-left::before {
-  background-image: url(../icons/unchecked.svg);
+menuitem[type="checkbox"]:not([checked="true"]) {
+  background-image: url(../icons/unchecked.svg) !important;
 }
 
 .bookmark-item {
@@ -286,7 +290,7 @@ menuitem[data-l10n-id*="-customize-toolbar"],
 }
 
 #toolbar-context-selectAllTabs[data-l10n-id="toolbar-context-menu-select-all-tabs"] {
-  background-image: url(../icons/select-all.svg);
+  background-image: url(chrome://userchrome/content/material/select-all.svg);
 }
 
 
@@ -486,7 +490,7 @@ menuitem.sendtab-target[clientType="vr"] {
 #menu_selectAll,
 #context-selectall,
 #context_selectAllTabs {
-  background-image: url(../icons/select-all.svg);
+  background-image: url(chrome://userchrome/content/material/select-all.svg);
 }
 
 #context-viewsource,

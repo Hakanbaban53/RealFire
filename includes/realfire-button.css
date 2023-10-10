@@ -16,8 +16,11 @@ tab:focus-visible>.tab-middle>.tab-text {
     outline-offset: 0px !important;
 }
 
-
 button:not([disabled])[default] {
     color: var(--button-text-white) !important;
     background-color: var(--accent-color) !important;
 }
+
+.customizationmode-button {
+    color: var(--uc-base-colour) !important;
+  }

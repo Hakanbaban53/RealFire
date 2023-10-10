@@ -16,7 +16,8 @@ panel[type="autocomplete-richlistbox"] {
 }
 
 :is(menupopup, panel)[type=arrow] {
-  --panel-border-color: none !important;;
+  --panel-border-color: none !important;
+  ;
   --panel-border-radius: var(--uc-border-radius);
   --panel-padding: 0px !important;
 }
@@ -36,6 +37,7 @@ menupopup #contentAreaContextMenu {
 
 menuitem[type="checkbox"]>.menu-iconic-left,
 menuitem[type="radio"]>.menu-iconic-left {
+  list-style-image: none !important;
   display: -moz-box !important;
   padding-inline-end: 0px !important;
   margin-inline-end: 6px !important;
@@ -48,11 +50,7 @@ menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
 }
 
 menupopup menuseparator {
-  margin: 6px 6px !important;
-  padding: 0 !important;
-  height: 1px !important;
-  background: var(--accent-color) !important;
-  opacity: 0.12 !important;
+  color: var(--uc-inverted-colour) !important;
 }
 
 menulist>menupopup>menu:not([disabled="true"])[selected="true"],
@@ -280,6 +278,7 @@ menubar>menu[open] {
 } */
 
 /* Box Background*/
+.context-menu,
 .popup-internal-box,
 panel[type="autocomplete-richlistbox"]>.autocomplete-richlistbox,
 #PopupSearchAutoComplete>*,
@@ -346,6 +345,7 @@ panel[type="autocomplete-richlistbox"]>.autocomplete-richlistbox {
 }
 
 panel[type="arrow"] {
+  --panel-background: var(--uc-base-colour) !important;
   -moz-window-shadow: none !important;
   /* margin: 0 -14px -18px !important;
   padding: 1px 14px 18px !important; */
@@ -410,6 +410,7 @@ panelview>toolbarseparator {
   display: none !important;
 }
 
+.context-menu > ul > li > a:is(:focus, :hover), .context-menu > ul > li > button:is(:focus, :hover),
 #context-navigation:not([hidden])>.menuitem-iconic:hover,
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
 menuitem:where([_moz-menuactive="true"]:not([disabled="true"])),
@@ -836,18 +837,18 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
     background-color: #a6a6a6;
   }
 
-  #downloadsListBox > richlistitem{
+  #downloadsListBox>richlistitem {
     align-items: center !important;
     transition: ease-out 200ms !important;
   }
 
-  #downloadsListBox:focus > richlistitem[selected="true"],
-  #downloadsListBox:focus > richlistitem[selected],
-  #downloadsListBox > richlistitem[selected] {
+  #downloadsListBox:focus>richlistitem[selected="true"],
+  #downloadsListBox:focus>richlistitem[selected],
+  #downloadsListBox>richlistitem[selected] {
     transition: ease-in 200ms !important;
     background-color: var(--accent-color) !important;
     /* four gradients for the bevel highlights on each edge, one for blue background */
-    background-image:none !important;
+    background-image: none !important;
     border-radius: var(--uc-border-radius) !important;
     outline-offset: 0px !important;
     margin: 4px !important;
@@ -933,8 +934,8 @@ button .customizationmode-button:hover:active {
 
 .customization-lwtheme-menu-theme,
 .customization-uidensity-menuitem {
-  padding: 0 16px !important;
-  margin: 0 -16px !important;
+  border-radius: var(--uc-border-radius) !important;
+  margin: 4px !important;
   border: none !important;
   height: 48px !important;
 }
@@ -1105,6 +1106,6 @@ window#commonDialogWindow.system-font-size {
   ;
 }
 
-.customize-menu{
+.customize-menu {
   background-color: var(--uc-base-colour) !important;
 }
