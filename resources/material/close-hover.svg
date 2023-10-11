@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 114" width="114" height="114">
+	<title>close-hover-svg</title>
+	<style>
+		.s0 { fill: #f25056;stroke: #993236;stroke-width: 1.5 } 
+		.s1 { fill: #9f1d2b } 
+	</style>
+	<path id="Layer" class="s0" d="m114 57c0 31.5-25.5 57-57 57-31.5 0-57-25.5-57-57 0-31.5 25.5-57 57-57 31.5 0 57 25.5 57 57z"/>
+	<path id="Layer" class="s1" d="m83.8 83.9c-2.7 2.6-7 2.6-9.6 0l-44.1-44.1c-2.6-2.7-2.6-7 0-9.6 2.7-2.6 7-2.6 9.6 0l44.1 44.1c2.7 2.6 2.7 6.9 0 9.6z"/>
+	<path id="Layer" class="s1" d="m30.2 83.9c-2.6-2.7-2.6-7 0-9.6l44-44.2c2.7-2.6 7-2.6 9.6 0 2.6 2.7 2.6 7 0 9.6l-44.1 44.1c-2.6 2.7-6.9 2.7-9.5 0.1z"/>
+</svg>

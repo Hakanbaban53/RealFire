@@ -6,7 +6,7 @@
   }
 
   #nav-bar {
-    order: var(-uc-urlbar-position) !important;
+    order: var(--uc-urlbar-position) !important;
     width: var(--uc-urlbar-max-width) !important;
   }
   

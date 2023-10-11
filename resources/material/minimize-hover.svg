@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 114" width="114" height="114">
+	<title>minimize-hover-svg</title>
+	<style>
+		.s0 { fill: #fac536;stroke: #997922;stroke-width: 1.5 } 
+		.s1 { fill: #9d6525 } 
+	</style>
+	<path id="Layer" class="s0" d="m113.8 61.7c-2.6 31.4-30.1 54.7-61.5 52.1-31.4-2.6-54.7-30.1-52.1-61.5 2.6-31.4 30.1-54.7 61.5-52.1 31.4 2.6 54.7 30.1 52.1 61.5z"/>
+	<path id="Layer" class="s1" d="m95 57c0 3.8-3.1 6.8-6.8 6.8h-62.4c-3.8 0-6.8-3.1-6.8-6.8 0-3.8 3.1-6.8 6.8-6.8h62.4c3.7 0 6.7 3.1 6.8 6.8z"/>
+</svg>
