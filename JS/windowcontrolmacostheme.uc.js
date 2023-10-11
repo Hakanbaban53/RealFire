@@ -10,35 +10,9 @@
 // ==/UserScript==
 
 (function () {
-  (function () {
-    var root = document.documentElement;
-    var urlbarPosition = getComputedStyle(document.documentElement).getPropertyValue('--uc-urlbar-position').trim();
-    console.log('URL Bar Position:', urlbarPosition);
-  
-    var minWidthQuery = window.matchMedia('(min-width: 1000px)');
-    
-    // Log the initial match status
-    console.log('Initial Match:', minWidthQuery.matches);
-  
-    // Listen for changes in the media query status
-    minWidthQuery.addListener(function (event) {
-      console.log('Media Query Match:', event.matches);
-  
-      if (urlbarPosition === '1') {
-        // Apply padding to #nav-bar for value 1
-        var navBar = document.getElementById('nav-bar');
-        navBar.style.paddingLeft = event.matches ? '72px' : '0';
-      } if (urlbarPosition === '3') {
-        // Apply padding to #titlebar for value 3
-        var titleBar = document.getElementById('titlebar');
-        titleBar.style.paddingLeft = event.matches ? '72px' : '0';
-      }
-    });
-  })();
-  
+  // CSS rules to apply
   var css = `
   @media (min-width: 1000px) {
-
   #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
     visibility: visible !important;
     display: block !important;
@@ -152,14 +126,55 @@
       list-style-image: url(chrome://userchrome/content/material/maximize-restore.svg) !important;
   }
   }
-`
+
+  `;
+
+  // Function to initialize the script
+  function init() {
+    var root = document.documentElement;
+    var urlbarPosition = getComputedStyle(document.documentElement).getPropertyValue('--uc-urlbar-position').trim();
+    console.log('URL Bar Position:', urlbarPosition);
+
+    // Function to apply styles based on the media query status
+    function applyStyles(matches) {
+      var navBar = document.getElementById('nav-bar');
+      var titleBar = document.getElementById('titlebar');
+
+      if (urlbarPosition === '1') {
+        navBar.style.paddingLeft = matches ? '72px' : '0';
+      } else if (urlbarPosition === '3') {
+        titleBar.style.paddingLeft = matches ? '72px' : '0';
+      }
+    }
+
+    // Listen for changes in the media query status
+    window.matchMedia('(min-width: 1000px)').addListener(function (event) {
+      console.log('Media Query Match:', event.matches);
+      applyStyles(event.matches);
+    });
+
+    // Initial application of styles
+    applyStyles(window.matchMedia('(min-width: 1000px)').matches);
+  }
+
+  if (gBrowserInit.delayedStartupFinished) {
+    init();
+  } else {
+    let delayedListener = (subject, topic) => {
+      if (topic == "browser-delayed-startup-finished" && subject == window) {
+        Services.obs.removeObserver(delayedListener, topic);
+        init();
+      }
+    };
+    Services.obs.addObserver(
+      delayedListener,
+      "browser-delayed-startup-finished"
+    );
+  }
+
+  // Create a style element and append the CSS rules
   var style = document.createElement("style");
   style.type = "text/css";
   style.textContent = css;
-
-  // Append the style element to the document head
   document.head.appendChild(style);
 })();
-
-
-
