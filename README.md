@@ -129,28 +129,6 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
         - Shows help message with flags info
 </details>
 
-<details><summary>Curl based Installation</summary>
-
-- You can also install this theme with one command:
-
-    <details><summary>Linux/MacOS</summary><br>
-
-    ```console
-    $ curl -s -o- https://raw.githubusercontent.com/Hakanbaban53/RealFire/master/programs/install-curl.sh | bash # Standard
-    $ curl -s -o- https://raw.githubusercontent.com/Hakanbaban53/RealFire/master/programs/install-curl.sh | bash -s -- -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
-    ```
-    </details>
-
-   <details><summary>Windows</summary><br>
-
-    ```powershell
-    > curl -sL "https://raw.githubusercontent.com/Hakanbaban53/RealFire/master/programs/install-curl.bat" > %TEMP%\install-curl.bat && %TEMP%\install-curl.bat REM Standard
-    > curl -sL "https://raw.githubusercontent.com/Hakanbaban53/RealFire/master/programs/install-curl.bat" > %TEMP%\install-curl.bat && %TEMP%\install-curl.bat -b "C:\Program Files (x86)\Mozilla Firefox" REM Custom binary folder
-
-    ```
-    </details>
-</details>
-
 <details><summary>Manual Installation</summary>
 
 1) Open `about:support` in new tab and click `Open Directory` near `Profile Directory`.
