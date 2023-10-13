@@ -39,9 +39,7 @@
 │  └──  many script in .uc.js format
 ├──  programs
 │  ├──  install-cfg.sh
-│  ├──  install-curl.sh
 │  ├──  install.sh
-│  ├──  install-curl.bat
 │  ├──  install.bat
 │  ├──  local-settings.js
 │  ├──  mozilla.cfg
