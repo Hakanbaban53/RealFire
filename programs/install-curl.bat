@@ -16,12 +16,10 @@ tar -xvf %FILENAME% || echo.
 
 del %FILENAME%
 
-cd %FOLDERPATH%
+call "%FOLDERPATH%\programs\install.bat" %*
 
-call "\programs\install.bat" %*
+if exist "%FOLDERPATH%"\* (
+    rd /s /q %FOLDERPATH%
+)
 
-REM if exist "%FOLDERPATH%"\* (
-REM     rd /s /q %FOLDERPATH%
-REM )
-
-REM exit \B
+exit \B
