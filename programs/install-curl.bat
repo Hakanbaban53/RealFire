@@ -2,8 +2,7 @@
 
 cd %TEMP%
 
-set "VERSION=v1.1.1"
-set "FILENAME=RealFire-%VERSION%.tar.gz"
+set "FILENAME=RealFire-main.tar.gz"
 set "FOLDERPATH=RealFire-main"
 
 if exist "%FOLDERPATH%"\* (
@@ -16,12 +15,10 @@ tar -xvf %FILENAME% || echo.
 
 del %FILENAME%
 
-call "%FOLDERPATH%\programs\install.bat" %*
+call "%FOLDERPATH%\programs\install.bat"
 
-if exist "%FOLDERPATH%"\* (
-    rd /s /q %FOLDERPATH%
-)
+REM if exist "%FOLDERPATH%"\* (
+REM     rd /s /q %FOLDERPATH%
+REM )
 
-
-
-exit \B
+REM exit \B
