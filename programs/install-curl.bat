@@ -2,7 +2,7 @@
 
 cd %TEMP%
 
-set "VERSION=0.0.1"
+set "VERSION=v1.1.1"
 set "FILENAME=RealFire-%VERSION%.tar.gz"
 set "FOLDERPATH=RealFire-main"
 
