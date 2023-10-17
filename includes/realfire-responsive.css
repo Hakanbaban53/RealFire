@@ -20,7 +20,7 @@
 
   #titlebar {
     width: auto !important;
-    min-width: calc(100vw - var(--uc-urlbar-max-width) - 1px) !important;
+    min-width: calc(100vw - var(--uc-urlbar-max-width) - 1px);
     order: 2;
   }
 
@@ -86,6 +86,6 @@
 
   #navigator-toolbox:focus-within #titlebar {
     width: auto !important;
-    min-width: calc(100vw - var(--uc-urlbar-max-width) - 1px) !important;
+    min-width: calc(100vw - var(--uc-urlbar-max-width) - 1px);
   }
 }

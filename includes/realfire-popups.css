@@ -93,7 +93,6 @@ menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
 .subviewbutton:not([checked="true"], [targetURI])>.toolbarbutton-icon {
   width: 16px;
   height: 16px;
-  margin-inline-end: 8px !important;
   -moz-context-properties: fill, fill-opacity;
   fill: var(--accent-color);
 }
@@ -392,10 +391,8 @@ panelview .toolbarbutton-1,
 .widget-overflow-list .toolbarbutton-1,
 .panel-banner-item {
   background-color: transparent !important;
-  min-height: var(--subview-height) !important;
   border-radius: var(--uc-border-radius) !important;
   background-image: none !important;
-  padding: calc(var(--arrowpanel-menuitem-margin-inline) - 1px) var(--arrowpanel-menuitem-margin-inline) !important;
 }
 
 

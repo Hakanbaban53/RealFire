@@ -1,23 +1,12 @@
 // ==UserScript==
 // @name           Vertical Tabs Pane
 // @version        1.7.7
-// @author         aminomancer
+// @author         aminomancer (Customized for RealFire *Hakanbaban53*)
 // @homepageURL    https://github.com/aminomancer/uc.css.js
 // @long-description
 // @description
-/*
-Create a vertical pane across from the sidebar that functions like the vertical tab pane in Microsoft Edge. It doesn't hide the tab bar since people have different preferences on how to do that, but it sets an attribute on the root element that you can use to hide the regular tab bar while the vertical pane is open, for example `:root[vertical-tabs] #TabsToolbar...`.
-
-By default, the pane is resizable just like the sidebar is. And like the pane in Edge, you can press a button to collapse it, and it will hide the tab labels and become a thin strip that just shows the tabs' favicons. Hovering the collapsed pane will expand it without moving the browser content. As with the `[vertical-tabs]` attribute, this "unpinned" state is reflected on the root element, so you can select it like `:root[vertical-tabs-unpinned]...`
-
-Like the sidebar, the state of the pane is stored between windows and recorded in preferences. There's no need to edit these preferences directly. There are a few other preferences that can be edited in <about:config>, but they can all be changed on the fly by opening the context menu within the pane. The new tab button and the individual tabs all have their own context menus, but right-clicking anything else will open the pane's context menu, which has options for changing these preferences.
-
-"Move Pane to Right/Left" will change which side the pane (and by extension, the sidebar) is displayed on, relative to the browser content. Since the pane always mirrors the position of the sidebar, moving the pane to the right will move the sidebar to the left, and vice versa. "Reverse Tab Order" changes the direction of the pane so that newer tabs are displayed on top rather than on bottom. "Expand Pane on Hover/Focus" causes the pane to expand on hover when it's collapsed.
-
-When you collapse the pane with the unpin button, it collapses to a small width and then temporarily expands if you hover it, after a delay of 100ms. Then when your mouse leaves the pane, it collapses again, after a delay of 100ms. Both of these delays can be changed with the "Configure Hover Delay" and "Configure Hover Out Delay" options in the context menu, or in about:config. For languages other than English, the labels and tooltips can be modified directly in the l10n object below.
-*/
-// @downloadURL    https://cdn.jsdelivr.net/gh/aminomancer/uc.css.js@master/JS/verticalTabsPane.uc.js
-// @updateURL      https://cdn.jsdelivr.net/gh/aminomancer/uc.css.js@master/JS/verticalTabsPane.uc.js
+// @downloadURL   
+// @updateURL      
 // @license        This Source Code Form is subject to the terms of the Creative Commons Attribution-NonCommercial-ShareAlike International License, v. 4.0. If a copy of the CC BY-NC-SA 4.0 was not distributed with this file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 // ==/UserScript==
 
@@ -1876,6 +1865,22 @@ When you collapse the pane with the unpin button, it collapses to a small width 
     // and !important rules.
     _registerSheet() {
       let css = /* css */ `
+
+      :root {
+        --uc-urlbar-max-width: 81.5vw;
+      }
+
+      #tabbrowser-tabs {
+        display: none;
+      }
+      @media (min-width: 1000px) {
+      #titlebar {
+        width: auto !important;
+        max-width: 284px !important;
+        min-width: 0 !important;
+      }
+    }
+
 #vertical-tabs-pane {
   --vertical-tabs-padding: 4px;
   --collapsed-pane-width: calc(
@@ -2071,14 +2076,11 @@ When you collapse the pane with the unpin button, it collapses to a small width 
 }
 /* secondary buttons inside a tab row */
 #vertical-tabs-list .all-tabs-item .all-tabs-secondary-button {
-  width: 18px;
   height: 18px;
   border-radius: var(--tab-button-border-radius, 2px);
   color: inherit;
   background-color: transparent !important;
   opacity: 0.7;
-  min-height: revert;
-  min-width: revert;
   padding: 0;
 }
 #vertical-tabs-list
@@ -2249,11 +2251,10 @@ When you collapse the pane with the unpin button, it collapses to a small width 
   transition: 0.25s cubic-bezier(0.07, 0.78, 0.21, 0.95) transform,
     0.2s cubic-bezier(0.07, 0.74, 0.24, 0.95) margin, 0.075s linear opacity;
   display: block;
-  -moz-context-properties: fill, fill-opacity, stroke;
   fill: currentColor;
   fill-opacity: 0;
   border-radius: var(--tab-button-border-radius, 2px);
-  list-style-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><rect fill='context-fill' fill-opacity='context-fill-opacity' width='20' height='20' rx='2' ry='2'/><path fill='context-fill' fill-opacity='context-stroke-opacity' d='M11.06 10l3.47-3.47a.75.75 0 00-1.06-1.06L10 8.94 6.53 5.47a.75.75 0 10-1.06 1.06L8.94 10l-3.47 3.47a.75.75 0 101.06 1.06L10 11.06l3.47 3.47a.75.75 0 001.06-1.06z'/></svg>");
+  list-style-image: url("chrome://global/skin/icons/close-12.svg");
 }
 #vertical-tabs-list
   .all-tabs-item:is(:hover, :focus-within)
