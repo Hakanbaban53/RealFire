@@ -1867,20 +1867,24 @@
       let css = /* css */ `
 
       :root {
-        --uc-urlbar-max-width: 81.5vw;
+        --uc-urlbar-max-width: 71vw;
       }
 
       #tabbrowser-tabs {
         display: none;
       }
+
       @media (min-width: 1000px) {
       #titlebar {
         width: auto !important;
-        max-width: 284px !important;
+        max-width: 29.5vw !important;
         min-width: 0 !important;
+        right: 0;
+        top: 6px;
+        position: absolute;
       }
-    }
 
+    }
 #vertical-tabs-pane {
   --vertical-tabs-padding: 4px;
   --collapsed-pane-width: calc(

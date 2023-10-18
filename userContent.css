@@ -36,7 +36,7 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0) no-repeat url(img/wallpaperflare.com_wallpaper.jpg) center;
+  background: rgba(0, 0, 0, 0) no-repeat url(img/new_tab_wallpaper.jpg) center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
