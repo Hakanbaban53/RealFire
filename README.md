@@ -70,7 +70,7 @@ This helps to customize Firefox User Interface.
 ### [`userContent.css`](./userContent.css)
 This helps to customize new tab page.
 
-##### **Attention**
+# Attention ⚠️
 If you dont use horizonal tabs or like this extension you need the use the userChrome manager (Shortcut `Ctrl+Shift+U`) and disable the js file.
 
 ## **But how does it work?**
