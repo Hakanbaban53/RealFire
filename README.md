@@ -70,6 +70,8 @@ This helps to customize Firefox User Interface.
 ### [`userContent.css`](./userContent.css)
 This helps to customize new tab page.
 
+# Attention ⚠️
+If you dont use horizonal tabs or like this extension you need the use the userChrome manager (Shortcut `Ctrl+Shift+U`) and disable the js file.
 
 ## **But how does it work?**
 Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is loaded using [`local-settings.js`](./programs/local-settings.js). This startup-script adds "loader" scripts from `utils` folder that loads arbitrary javascript files from the `script` folder into Firefox<br>
