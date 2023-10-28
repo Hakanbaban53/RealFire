@@ -5,6 +5,7 @@
 
 /* remove tab shadow */
 .tabbrowser-tab>.tab-stack>.tab-background {
+  background-color: var(--uc-base-colour) !important;
   box-shadow: none !important;
   border-radius: var(--uc-border-radius) !important;
 }
@@ -139,20 +140,20 @@
   border: 1.5px solid var(--accent-field-color) !important;
 }
 
-.tabbrowser-tab .tab-background[selected="true"] {
+.tabbrowser-tab .tab-stack .tab-background[selected]{
   border: 2px solid var(--accent-color) !important;
 }
 
-.tabbrowser-tab .tab-background[selected="true"]:-moz-window-inactive {
+.tabbrowser-tab .tab-stack .tab-background[selected=]:-moz-window-inactive {
   border: 2px solid var(--accent-field-color) !important;
 }
 
 /* Background tabs design */
-.tabbrowser-tab .tab-background:not([selected]) {
+.tabbrowser-tab .tab-stack .tab-background:not([selected]) {
   border: 2px solid color-mix(in srgb, field 95%, var(--accent-color)) !important;
 }
 
-.tabbrowser-tab .tab-background:not([selected]):-moz-window-inactive {
+.tabbrowser-tab .tab-stack .tab-background:not([selected]):-moz-window-inactive {
   border: 2px solid color-mix(in srgb, field 99%, var(--accent-color)) !important;
 }
 
