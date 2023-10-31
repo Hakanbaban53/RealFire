@@ -390,6 +390,7 @@ panelview .toolbarbutton-1,
 .subviewbutton,
 .widget-overflow-list .toolbarbutton-1,
 .panel-banner-item {
+  transition: all 200ms;
   background-color: transparent !important;
   border-radius: var(--uc-border-radius) !important;
   background-image: none !important;
@@ -418,15 +419,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover
 .widget-overflow-list .toolbarbutton-1:not([disabled], [open], :active):is(:hover, :focus),
 .toolbaritem-combined-buttons:is( :not([cui-areatype="toolbar"]),
   [overflowedItem="true"])>toolbarbutton:not([disabled], [open], :active):is(:hover, :focus) {
-  background-color: color-mix(in srgb, var(--uc-inverted-colour), transparent 85%) !important;
-  color: var(--uc-inverted-colour) !important;
-  border-radius: var(--uc-border-radius) !important;
-}
-
-toolbarbutton.subviewbutton.unified-extensions-item-action:not([disabled],
-  [open],
-  :active):is(:hover, :focus) {
-  background: transparent !important;
+    background-color: color-mix(in srgb, var(--uc-inverted-colour), transparent 85%) !important;
+    color: var(--uc-inverted-colour) !important;
+    border-radius: var(--uc-border-radius) !important;
+    
+  }
+  
+  toolbarbutton.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
+  toolbarbutton.subviewbutton.unified-extensions-item-action:not([disabled],[open],:active):is(:hover, :focus) {
+  transition: all 200ms;
+  padding: 8px !important;
 }
 
 findbar toolbarbutton.tabbable:-moz-focusring,
