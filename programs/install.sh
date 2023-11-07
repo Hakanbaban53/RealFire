@@ -7,7 +7,7 @@ case "$(uname -s)" in
     *)          FIREFOXFOLDER=~/.mozilla/firefox/;;
 esac
 
-APPLICATIONFOLDER=$(readlink -f `which firefox` | xargs -I{} dirname {})
+APPLICATIONFOLDER='/usr/lib/firefox/'
 PROFILENAME="";
 FXACEXTRAS=true;
 CHROMEFOLDER="chrome";
@@ -98,21 +98,21 @@ if [ "$FXACEXTRAS" = true ] ; then
     echo
 
     echo "Enabling userChrome.js manager (fx-autoconfig)..."
-    rm "utils/boot.sys.mjs"
-    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.sys.mjs" > "utils/boot.sys.mjs" || { echo "Failed to fetch boot.sys.mjs"; echo "Exiting..."; exit 1; }
+    rm "./utils/boot.sys.mjs"
+    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/profile/chrome/utils/boot.sys.mjs" > "./utils/boot.sys.mjs" || { echo "Failed to fetch boot.sys.mjs"; echo "Exiting..."; exit 1; }
 
-    echo "Enabling Navbar Toolbar Button Slider..."
-    rm "programs\config-prefs.js"
-    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/program/defaults/pref/config-prefs.js" > "programs\config-prefs.js" || { echo "Failed to fetch config-prefs.js"; echo "Exiting..."; exit 1; }
-	echo "Enabling Navbar Toolbar Button Slider..."
-    rm "programs\config.js"
-	curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/program/config.js" > "programs\config.js" || { echo "Failed to fetch config.js"; echo "Exiting..."; exit 1; }
+    echo "Enabling config-prefs.js..."
+    rm "./programs/config-prefs.js"
+    curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/program/defaults/pref/config-prefs.js" > "./programs/config-prefs.js" || { echo "Failed to fetch config-prefs.js"; echo "Exiting..."; exit 1; }
+	echo "Enabling config.js..."
+    rm "./programs/config.js"
+	curl -sL "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/program/config.js" > "./programs/config.js" || { echo "Failed to fetch config.js"; echo "Exiting..."; exit 1; }
 
 
     echo
     echo "Copying mozilla.cfg, local-settings.js, config.js and config-pref.js to ${APPLICATIONFOLDER}"
     chmod +x "${PWD}/programs/install-cfg.sh"
-    sudo "${PWD}/programs/install-cfg.sh" $APPLICATIONFOLDER || { echo "Exiting..."; exit 1; }
+    sudo "${PWD}/programs/install-cfg.sh" ${APPLICATIONFOLDER} || { echo "Exiting..."; exit 1; }
 fi
 
 echo
