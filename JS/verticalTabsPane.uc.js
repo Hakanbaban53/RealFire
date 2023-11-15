@@ -1881,7 +1881,6 @@
         min-width: 0 !important;
         right: 0;
         top: 6px;
-        position: absolute;
       }
 
     }
@@ -2349,7 +2348,7 @@
 }
 #vertical-tabs-pane .subviewbutton-iconic > .toolbarbutton-icon {
   -moz-context-properties: fill, fill-opacity;
-  fill: var(--toolbarbutton-icon-fill);
+  fill: var(--accent-color);
 }
 #vertical-tabs-pane .subviewbutton.no-label .toolbarbutton-text {
   display: none;
