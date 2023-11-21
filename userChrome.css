@@ -20,14 +20,20 @@
 
 
 .container.infobar {
-  background:black !important;
+  background:var(--uc-base-colour) !important;
+  border: 2px solid var(--accent-color) !important;
+  border-radius: var(--uc-border-radius) !important;
+}
+
+.container.infobar::before {
+  background-image: none !important;
 }
 
 .notificationbox-stack {
+  background: transparent !important;
   border-radius: var(--uc-border-radius) !important;
     position: absolute !important;
     bottom: 0px !important;
-  
     width: auto !important;
 }
 
