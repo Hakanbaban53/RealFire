@@ -343,6 +343,8 @@ menuitem[data-l10n-id="text-action-paste"] {
 }
 
 menuitem[data-l10n-id="text-action-delete"],
+menuitem[data-l10n-id="downloads-cmd-clear-list"],
+menuitem[data-l10n-id="downloads-cmd-delete-file"],
 .customize-context-removeExtension,
 menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"],
 .downloadRemoveFromHistoryMenuItem,
@@ -522,6 +524,14 @@ menuitem[data-l10n-id="full-screen-exit"] {
   background-image: url("chrome://global/skin/icons/warning.svg");
 }
 
+.downloadResumeMenuItem {
+  background-image: url(../resources/material/playButton.svg);
+}
+
+  .downloadPauseMenuItem{
+  background-image: url(../resources/material/pause.svg);
+}
+
 .downloadShowMenuItem {
   background-image: url("chrome://global/skin/icons/folder.svg");
 }
@@ -646,10 +656,10 @@ menuitem[data-l10n-id^="places-edit-"] {
   list-style-image: url(../icons/terminal.svg);
 }
 
+#placesContext_showAllBookmarks,
 #bookmarksShowAll,
 #panelMenu_showAllBookmarks {
   background-image: url(../icons/bookmark-manage.svg);
-  list-style-image: url(../icons/bookmark-manage.svg);
 }
 
 #appMenu-restoreSession{

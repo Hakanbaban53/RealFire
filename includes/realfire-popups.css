@@ -37,10 +37,7 @@ menupopup #contentAreaContextMenu {
 
 menuitem[type="checkbox"]>.menu-iconic-left,
 menuitem[type="radio"]>.menu-iconic-left {
-  list-style-image: none !important;
-  display: -moz-box !important;
-  padding-inline-end: 0px !important;
-  margin-inline-end: 6px !important;
+  display: none !important;
 }
 
 menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
@@ -185,6 +182,10 @@ menupopup menu[disabled="true"],
 menuitem[type="radio"]:not([checked="true"])>.menu-iconic-text,
 menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-text {
   opacity: 0.5 !important;
+}
+menuitem[type="radio"]>.menu-iconic-text,
+menuitem[type="checkbox"]>.menu-iconic-text {
+  padding-left: 29px !important;
 }
 
 menuitem[type="radio"][checked="true"]>.menu-iconic-left::before,
