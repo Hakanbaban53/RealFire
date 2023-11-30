@@ -61,6 +61,7 @@ menu.sync-ui-item,
   background-image: url("chrome://global/skin/icons/settings.svg");
   list-style-image: url("chrome://global/skin/icons/settings.svg");
 }
+
 #menu_preferences,
 #openSettingsMenuItem,
 .subviewbutton[id="appMenu-advanced-settings-button"]{
@@ -121,6 +122,7 @@ menuitem[data-l10n-id*="bookmark-"]:not(.menuitem-iconic),
   list-style-image: url("chrome://global/skin/icons/search-glass.svg");
 }
 
+#spell-dictionaries,
 #toggle_PersonalToolbar,
 #BMB_viewBookmarksToolbar,
 #panelMenu_viewBookmarksToolbar {
