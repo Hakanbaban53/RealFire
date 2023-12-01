@@ -4,7 +4,7 @@ THEMEDIRECTORY=$(cd `dirname "$0"` && cd .. && pwd);
 
 case "$(uname -s)" in
     Darwin*)    FIREFOXFOLDER=~/Library/Application\ Support/Firefox/;;
-    *)          FIREFOXFOLDER=~/.mozilla/firefox/;;
+    *)          FIREFOXFOLDER=/home/$USER/.mozilla/firefox/;;
 esac
 
 APPLICATIONFOLDER='/usr/lib/firefox/'
