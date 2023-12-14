@@ -13,6 +13,8 @@
   max-width: 64px !important;
 }
 
+::-moz-selection {background-color: var(--accent-color) !important;}
+
 #urlbar,
 #urlbar * {
  padding-block-start: var(--uc-urlbar-top-spacing) !important; 
@@ -36,6 +38,10 @@
 .urlbarView-row:hover > .urlbarView-row-inner,
 .urlbarView-row[selected] > .urlbarView-row-inner {
   background: var(--toolbar-field-focus-background-color) !important;
+}
+
+.urlbarView-url {
+  color: var(--accent-color) !important;
 }
 
 .urlbar-icon,
