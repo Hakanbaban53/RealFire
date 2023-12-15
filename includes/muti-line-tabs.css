@@ -1,0 +1,30 @@
+
+/* https://github.com/Naezr/ImpossibleFox/blob/main/userChrome.css */
+
+:root {
+  
+    --imf-selected-tab-width: 140px;
+    --imf-tab-width: 70px;
+  }
+  
+  scrollbox[part][orient="horizontal"] { 
+    display: flex; 
+    flex-wrap: wrap !important; 
+    height: none !important; 
+  }
+  
+  
+  /* inactive tab */
+  
+  .tabbrowser-tab[fadein]:not([selected]):not([pinned]) { 
+    /* max-width: var(--imf-tab-width) !important;  */
+    min-width: var(--imf-tab-width) !important; 
+  }
+  
+  /* active tab */
+  
+  .tabbrowser-tab[fadein][selected]:not([pinned]) { 
+    /* max-width: var(--imf-selected-tab-width) !important;  */
+    min-width: var(--imf-selected-tab-width) !important; 
+  }
+  

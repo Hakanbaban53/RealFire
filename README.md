@@ -3,8 +3,12 @@
   # [RealFire 🔥](https://github.com/Hakanbaban53/RealFire)
   **A minimalist animated oneliner theme for Firefox perfectly matching real Dark**
 </div>
+
 <h2 align="center">RealFire</h2>
 <p align="center"><img src="./assets/preview.png"></p>
+
+<h2 align="center">RealFire_mod</h2>
+<p align="center"><img src="./assets/preview_mod.png"></p>
 
 <h3 align="center">Horizonal Tabs</h3>
 <p align="center"><img src="./assets/horizonal_tabs.gif"></p>
@@ -14,6 +18,9 @@
 
 <h3 align="center">Animated Background</h3>
 <p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
+
+<h3 align="center">Animated Background_mod</h3>
+<p align="center" style="max-heigh:250px"><img src="./assets/navbar_mod.gif"></p>
 
 <h3 align="center">Context Menu</h3>
 <p align="center"><img src="./assets/context.png"></p>
@@ -133,7 +140,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
     - `-h` *optional*
         - Shows help message with flags info
-</details>
+     </details>
 
 <details><summary>Manual Installation</summary>
 
@@ -145,9 +152,9 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
     ```console
     $ cd {Your profile directory}
-
+    
     $ git clone https://github.com/Hakanbaban53/RealFire.git chrome
-
+    
     $ cd chrome
     ```
 
@@ -157,28 +164,28 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
     - `about:support` > `Application Binary` > `{Installation folder}firefox`<br>
     Generally `Installation folder` is `/Applications/Firefox.app/Contents/MacOS/` (`Firefox Nightly` for Nightly version)
-
+    
       For `MacOS`, our destination folder is `/Applications/Firefox.app/Contents/Resources/`
-
+    
     ```console
     $ ln -s "`pwd`/programs/user.js" ../user.js
-
+    
     $ cp ./programs/mozilla.cfg /Applications/Firefox.app/Contents/Resources/
-
+    
     $ cp ./programs/local-settings.js /Applications/Firefox.app/Contents/Resources/defaults/pref/
     ```
     </details>
-
+    
     <details><summary>Windows</summary><br>
-
+    
     - `about:support` > `Application Binary` > `{Installation folder}firefox.exe`<br>
     Generally `Installation folder` is `C:\Program Files\Mozilla Firefox\`
-
+    
     ```powershell
     > mklink ..\user.js "%cd%\programs\user.js"
-
+    
     > copy .\programs\mozilla.cfg "C:\Program Files\Mozilla Firefox\"
-
+    
     > copy .\programs\local-settings.js "C:\Program Files\Mozilla Firefox\defaults\pref\"
     ```
     </details>
