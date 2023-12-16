@@ -1,5 +1,5 @@
 #navigator-toolbox:not(:-moz-lwtheme) {
-  background: var(--toolbar-field-background-color) !important;
+  background: var(--uc-base-colour) !important;
 }
 
 #nav-bar {
@@ -11,6 +11,127 @@
 
 #nav-bar-toolbarbutton-slider-container {
   max-width: 64px !important;
+}
+
+::-moz-selection {background-color: var(--accent-color) !important;}
+
+
+ /*Dots in search bar*/
+#urlbar #identity-icon-box,
+#urlbar #identity-permission-box {
+  opacity: 0 !important;
+  margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
+  transition: margin-inline-start 100ms linear, opacity 200ms linear;
+}
+
+#urlbar #identity-box.notSecureText #identity-icon-box {
+  margin-inline-start: initial !important;
+  opacity: 1 !important;
+  color: #e36f6f !important;
+}
+
+#urlbar #identity-box.extensionPage #identity-icon-box {
+  margin-inline-start: initial !important;
+  opacity: 1 !important;
+}
+
+#identity-box:hover #identity-icon-box,
+#identity-box:hover #identity-permission-box,
+#identity-box #identity-permission-box[open="true"] {
+  opacity: 1 !important;
+  margin-inline-start: initial !important;
+}
+
+#urlbar-input-container .urlbar-input-box {
+  padding-inline-start: 2px !important;
+}
+
+#identity-box:hover ~ .urlbar-input-box > #urlbar-input {
+  mask-image: linear-gradient(to right, transparent, black 3ch) !important;
+}
+
+#page-action-buttons {
+  padding-inline-start: 8px;
+}
+
+#page-action-buttons .urlbar-page-action {
+  margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
+  opacity: 0;
+  transition: margin-inline-end 100ms linear, opacity 200ms linear;
+}
+
+#page-action-buttons:hover > .urlbar-page-action,
+.urlbar-page-action[open],
+.urlbar-page-action[open] ~ .urlbar-page-action {
+  opacity: 1;
+  margin-inline-end: 0px !important;
+}
+
+#identity-box.chromeUI #identity-icon-box {
+  opacity: 1 !important;
+  margin-inline-start: initial;
+}
+
+#identity-box.chromeUI::after,
+#identity-box.chromeUI:hover::after {
+  opacity: 0 !important;
+}
+
+#page-action-buttons:not(:hover) #translations-button[translationsactive="true"]:not([open]) {
+  visibility:collapse !important;
+} 
+
+/* Create visual dots on both sides */
+/* left side identity-box dots modification */
+#identity-box::after,
+#page-action-buttons::before {
+  position: relative;
+  content: "•••";
+  pointer-events: none;
+  transition: opacity 100ms ease;
+  align-self: center;
+  font-size: 0.7em;
+}
+
+#identity-box::after,
+#page-action-buttons::before {
+  opacity: 0.2;
+}
+
+#identity-box::after {
+  transform: rotate(90deg);
+  left: 4px;
+}
+
+#page-action-buttons::before {
+  transform: rotate(-90deg);
+  right: 4px;
+}
+
+#identity-box:hover::after,
+#page-action-buttons:hover::before {
+  opacity: 0.5 !important;
+  transition: opacity 50ms ease;
+  pointer-events: none;
+}
+
+#identity-box[pageproxystate="invalid"]::after,
+#urlbar-input-container[pageproxystate="invalid"]
+  > #page-action-buttons::before {
+  opacity: 0 !important;
+  transition: opacity 50ms ease;
+}
+
+/* Only show dots in search bar when hovered */
+#urlbar #identity-box::after,
+#urlbar #page-action-buttons::before {
+   opacity: 0;
+}
+
+#urlbar:hover #identity-box::after,
+#urlbar:hover #page-action-buttons::before {
+  opacity: 0.5;
+ transition: opacity 100ms ease;
 }
 
 #urlbar,
@@ -26,16 +147,20 @@
 
 #urlbar[focused="true"] > #urlbar-background,
 #urlbar:not([open]) > #urlbar-background {
-  background: var(--toolbar-field-background-color) !important;
+  background: var(--uc-base-colour) !important;
 }
 
 #urlbar[open] > #urlbar-background {
-  background: var(--toolbar-field-background-color) !important;
+  background: var(--uc-base-colour) !important;
 }
 
 .urlbarView-row:hover > .urlbarView-row-inner,
 .urlbarView-row[selected] > .urlbarView-row-inner {
   background: var(--toolbar-field-focus-background-color) !important;
+}
+
+.urlbarView-url {
+  color: var(--accent-color) !important;
 }
 
 .urlbar-icon,

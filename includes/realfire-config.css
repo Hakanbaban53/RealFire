@@ -91,7 +91,7 @@
 #forward-button { display: none !important; } */
 
 /* Disables the Tracking Protection Shield */
-/* #tracking-protection-icon-container { display: none !important; } */
+#tracking-protection-icon-container { display: none !important; }
 
 /* Encryption and Permissions icons */
 /* Only hides permission items */
@@ -142,7 +142,7 @@
    *  show: -moz-box
    *  hide: none
    */
-  --uc-show-all-tabs-button: none;
+  --uc-show-all-tabs-button: -moz-box;
 
   /*  Left and Right "dip" of the container indicator
    *  0px equals tab width

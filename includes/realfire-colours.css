@@ -6,21 +6,21 @@
   :root {
     /* These colours are (mainly) used by the
      Container Tabs Plugin */
-     
-    --uc-identity-colour-blue: #0078d7;
-    --uc-identity-colour-turquoise: #55e6c1;
-    --uc-identity-colour-green: #b8e994;
+
+     --uc-identity-colour-red: #fc5c65;
+     --uc-identity-colour-pink: #f78fb3;
+     --uc-identity-colour-blue: #0078d7;
+     --uc-identity-colour-green: #b8e994;
+    --uc-identity-colour-purple: #786fa6;
     --uc-identity-colour-yellow: #f7d794;
     --uc-identity-colour-orange: #f19066;
-    --uc-identity-colour-red: #fc5c65;
-    --uc-identity-colour-pink: #f78fb3;
-    --uc-identity-colour-purple: #786fa6;
+    --uc-identity-colour-turquoise: #55e6c1;
 
     /*  Cascades main Colour Scheme */
     --uc-base-colour: #000000;
-    --uc-highlight-colour: #191b1c;
+    --uc-muted-colour: #c3c3c3;
     --uc-inverted-colour: #fafafc;
-    --uc-muted-colour: #515151;
+    --uc-highlight-colour: #191b1c;
     --uc-accent-colour: var(--uc-identity-colour-purple);
   }
 }
@@ -29,20 +29,20 @@
   :root {
     /* These colours are (mainly) used by the
      Container Tabs Plugin */
-    --uc-identity-colour-blue: #1d65f5;
-    --uc-identity-colour-turquoise: #209fb5;
-    --uc-identity-colour-green: #40a02b;
+     --uc-identity-colour-red: #fc5c65;
+     --uc-identity-colour-blue: #1d65f5;
+     --uc-identity-colour-pink: #ec83d0;
+     --uc-identity-colour-green: #40a02b;
+    --uc-identity-colour-purple: #822fee;
     --uc-identity-colour-yellow: #e49320;
     --uc-identity-colour-orange: #fe640b;
-    --uc-identity-colour-red: #fc5c65;
-    --uc-identity-colour-pink: #ec83d0;
-    --uc-identity-colour-purple: #822fee;
+    --uc-identity-colour-turquoise: #209fb5;
 
     /*  Cascades main Colour Scheme */
     --uc-base-colour: #fafafc;
-    --uc-highlight-colour: #dadadc;
-    --uc-inverted-colour: #1e2021;
     --uc-muted-colour: #292929;
+    --uc-inverted-colour: #1e2021;
+    --uc-highlight-colour: #dadadc;
     --uc-accent-colour: var(--uc-identity-colour-purple);
   }
 }
@@ -50,25 +50,26 @@
 /* Down here I'm just reassigning variables based on the colours set above.
    Feel free to play around with these but there is no editing necessary below this line. c:
    */
-   
-   :root[uidensity="compact"] {
-     --sidebar-menupopup-height: 29px;
-   }
-   
-   :root[uidensity="touch"] {
-     --sidebar-menupopup-height: 41px;
-   }
+
+:root[uidensity="compact"] {
+  --sidebar-menupopup-height: 29px;
+}
+
+:root[uidensity="touch"] {
+  --sidebar-menupopup-height: 41px;
+}
+
 :root {
-  --bookmark-block-padding: 1px !important;
-  /*--tab-min-height: 29px !important;*/
-  --menupopup-height: var(--tab-min-height);
-  --sidebar-menupopup-height: 36px;
-  --navbar-margin-top: calc(0px - var(--tab-min-height));
-  --navbar-percent: 32vw;
-  --subview-height: var(--tab-min-height);
   --tab-radius: 8px;
+  --navbar-percent: 32vw;
   --tab-border-width: 2px;
   --toolbar-percent: 68vw;
+  --sidebar-menupopup-height: 36px;
+  /*--tab-min-height: 29px !important;*/
+  --subview-height: var(--tab-min-height);
+  --bookmark-block-padding: 1px !important;
+  --menupopup-height: var(--tab-min-height);
+  --navbar-margin-top: calc(0px - var(--tab-min-height));
   --toolbarbutton-inner-padding: 6px !important;
   --toolbarbutton-outer-padding: 3px !important;
   /* 1px */
@@ -78,8 +79,8 @@
   /*
   More gradients to try out
   Usage:
-  --tabbar-gradient-color: linear-gradient();
   --tabbar-gradient-color: url();
+  --tabbar-gradient-color: linear-gradient();
 
   - url("../icons/animation.svg")
 
@@ -87,85 +88,50 @@
   !Note
   !Above linear gradient can be use with css/tabbar.css@177-198 to resemble the SVG animation
 
+  - linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);
   - linear-gradient(90deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)
   - linear-gradient(90deg, rgb(0,3,1),rgb(0, 140, 255),rgb(0,120,215),rgb(0,120,215),rgb(0,120,215),rgb(0,140,215), rgb(0,3,1));
-  - linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);
   */
 
 
-/* Sidebar doesn't have any height variable for different densities */
+  /* Sidebar doesn't have any height variable for different densities */
   --accent-color: AccentColor;
   --settings-color: AccentColor;
-  --accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
-  --accent-hover-color:  color-mix(in srgb, var(--accent-color) 90%, var(--uc-inverted-colour) 20%);
   --button-text-white: #ffffff;
+  --accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
+  --accent-hover-color: color-mix(in srgb, var(--accent-color) 90%, var(--uc-inverted-colour) 20%);
 
   --lwt-frame: var(--uc-base-colour) !important;
-  --lwt-accent-color: var(--lwt-frame) !important;
+  /* --lwt-accent-color: var(--lwt-frame) !important; */
   --lwt-text-color: var(--uc-inverted-colour) !important;
 
   --toolbar-field-color: var(--uc-inverted-colour) !important;
 
-  --toolbar-field-focus-color: var(--uc-inverted-colour) !important;
-  --toolbar-field-focus-background-color: var(--uc-highlight-colour) !important;
   --toolbar-field-focus-border-color: transparent !important;
+  --toolbar-field-focus-color: var(--uc-inverted-colour) !important;
+  /* --toolbar-field-focus-background-color: var(--uc-highlight-colour) !important; */
 
-  --toolbar-field-background-color: var(--lwt-frame) !important;
-  --lwt-toolbar-field-highlight: var(--uc-inverted-colour) !important;
-  --lwt-toolbar-field-highlight-text: var(--uc-highlight-colour) !important;
   --urlbar-popup-url-color: var(--uc-accent-colour) !important;
+  /* --toolbar-field-background-color: var(--lwt-frame) !important; */
+  --lwt-toolbar-field-highlight: var(--uc-inverted-colour) !important;
+  /* --lwt-toolbar-field-highlight-text: var(--uc-highlight-colour) !important; */
 
   --lwt-tab-text: var(--lwt-text-colour) !important;
 
-  --lwt-selected-tab-background-color: var(--uc-highlight-colour) !important;
+  /* --lwt-selected-tab-background-color: var(--uc-highlight-colour) !important; */
 
-  --toolbar-bgcolor: var(--lwt-frame) !important;
+  /* --toolbar-bgcolor: var(--lwt-frame) !important; */
   --toolbar-color: var(--lwt-text-color) !important;
   --toolbarseparator-color: var(--uc-accent-colour) !important;
-  --toolbarbutton-hover-background: var(--uc-highlight-colour) !important;
-  --toolbarbutton-active-background: var(
-    --toolbarbutton-hover-background
-  ) !important;
+  /* --toolbarbutton-hover-background: var(--uc-highlight-colour) !important; */
+  --toolbarbutton-active-background: var(--toolbarbutton-hover-background) !important;
 
-  --lwt-sidebar-background-color: var(--lwt-frame) !important;
+  /* --lwt-sidebar-background-color: var(--lwt-frame) !important; */
   --sidebar-background-color: var(--lwt-sidebar-background-color) !important;
 
-  --urlbar-box-bgcolor: var(--uc-highlight-colour) !important;
   --urlbar-box-text-color: var(--uc-muted-colour) !important;
-  --urlbar-box-hover-bgcolor: var(--uc-highlight-colour) !important;
+  /* --urlbar-box-bgcolor: var(--uc-highlight-colour) !important; */
+  /* --urlbar-box-hover-bgcolor: var(--uc-highlight-colour) !important; */
   --urlbar-box-hover-text-color: var(--uc-inverted-colour) !important;
-  --urlbar-box-focus-bgcolor: var(--uc-highlight-colour) !important;
-}
-
-.identity-color-blue {
-  --identity-tab-color: var(--uc-identity-colour-blue) !important;
-  --identity-icon-color: var(--uc-identity-colour-blue) !important;
-}
-.identity-color-turquoise {
-  --identity-tab-color: var(--uc-identity-colour-turquoise) !important;
-  --identity-icon-color: var(--uc-identity-colour-turquoise) !important;
-}
-.identity-color-green {
-  --identity-tab-color: var(--uc-identity-colour-green) !important;
-  --identity-icon-color: var(--uc-identity-colour-green) !important;
-}
-.identity-color-yellow {
-  --identity-tab-color: var(--uc-identity-colour-yellow) !important;
-  --identity-icon-color: var(--uc-identity-colour-yellow) !important;
-}
-.identity-color-orange {
-  --identity-tab-color: var(--uc-identity-colour-orange) !important;
-  --identity-icon-color: var(--uc-identity-colour-orange) !important;
-}
-.identity-color-red {
-  --identity-tab-color: var(--uc-identity-colour-red) !important;
-  --identity-icon-color: var(--uc-identity-colour-red) !important;
-}
-.identity-color-pink {
-  --identity-tab-color: var(--uc-identity-colour-pink) !important;
-  --identity-icon-color: var(--uc-identity-colour-pink) !important;
-}
-.identity-color-purple {
-  --identity-tab-color: var(--uc-identity-colour-purple) !important;
-  --identity-icon-color: var(--uc-identity-colour-purple) !important;
+  /* --urlbar-box-focus-bgcolor: var(--uc-highlight-colour) !important; */
 }

@@ -1,14 +1,13 @@
-#main-window,
-#toolbar-menubar,
+#nav-bar,
 #TabsToolbar,
-#navigator-toolbox,
-#PersonalToolbar,
+#main-window,
 #sidebar-box,
-#nav-bar {
+#PersonalToolbar,
+#toolbar-menubar,
+#navigator-toolbox {
   box-shadow: none !important;
   border: none !important;
 }
-
 
 /* remove "padding" left and right from tabs */
 .titlebar-spacer {

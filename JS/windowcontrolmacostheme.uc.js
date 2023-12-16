@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Window Control Macos Theme
-// @version        1.0.0
+// @version        2.0.1
 // @author         Hakanbaban53
 // @homepage       https://github.com/Hakanbaban53/RealFire
 // @description    Move the window control to the left and recolor it.
@@ -12,12 +12,21 @@
 (function () {
   // CSS rules to apply
   var css = `
+  html, body {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    text-shadow: 0px 0px 0px !important;
+    -webkit-text-stroke-width: 0.1px !important;
+    }
+    *:not([class*="FokDXb"]):not([class*="upload"]):not([class*="icon"]):not([class*="mui-amount"]):not([class*="chaoshi"]):not([class*="top-nav"]):not([href*="ju.taobao.com"]):not([class*="Icon"]):not(b):not(ins):not(i):not(s){
+    font-family:"PingFang SC"!important;
+    }
+
   @media (min-width: 1000px) {
   #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
     visibility: visible !important;
     display: block !important;
     position: absolute !important;
-      top: 20px;
+      top: 12px;
       left: -8px;
   }
   }
@@ -47,15 +56,17 @@
   }
   
   .titlebar-button > .toolbarbutton-icon {
-      width: 12px !important;
-    min-width: 12px !important;
-    min-height: 12px !important;
-      height: 12px !important;
-      stroke: none !important;
+    height: 15px !important;
+    min-height: 25px !important;
+    width: 15px !important;
+    min-width: 25px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
   }
   
   
   .titlebar-buttonbox {
+    gap: 10px;
       margin-right: 12px !important;
       margin-left: 12px !important;
   }
@@ -63,20 +74,12 @@
   .titlebar-close {
       appearance: none !important;
       padding: 0px !important;
-      padding-left: 6px !important;
-      padding-right: 5px !important;
-      margin: 0px !important;
-      background-color: transparent !important;
       order : 0 !important;
   }
   
   .titlebar-min {
       appearance: none !important;
       padding: 0px !important;
-      padding-left: 3px !important;
-      padding-right: 5px !important;
-      margin: 0px !important;
-      background-color: transparent !important;
       order :1 !important;
   }
   
@@ -84,49 +87,73 @@
   .titlebar-restore {
       appearance: none !important;
       padding: 0px !important;
-      padding-left: 4px !important;
-      padding-right: 5px !important;
-      margin: 0px !important;
-      background-color: transparent !important;
       order : 2 !important;
   }
-  
-  #TabsToolbar .titlebar-buttonbox .titlebar-button {
-    list-style-image: url(chrome://userchrome/content/material/inactive.svg) !important;
-  }
-  
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-close {
-    list-style-image: url(chrome://userchrome/content/material/close.svg) !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-close:hover {
-      list-style-image: url(chrome://userchrome/content/material/close-hover.svg) !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-min {
+
+  #TabsToolbar .titlebar-buttonbox-container .titlebar-min,
+  .titlebar-min{
+	position: relative !important;
     list-style-image: url(chrome://userchrome/content/material/minimize.svg) !important;	
+	list-style-type: square !important;
+	list-style-position: inherit !important;
   }
   
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-min:hover {
-      list-style-image: url(chrome://userchrome/content/material/minimize-hover.svg) !important;
+  #TabsToolbar .titlebar-buttonbox-container .titlebar-min:hover,
+  .titlebar-min:hover{
+	position: relative !important;
+	list-style-image: url(chrome://userchrome/content/material/minimize-hover.svg) !important;
+	list-style-type: square !important;
+	list-style-position: inherit !important;
   }
   
   #TabsToolbar .titlebar-buttonbox-container .titlebar-max,
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-restore {
+  .titlebar-max{
+	position: relative !important;
     list-style-image: url(chrome://userchrome/content/material/maximize.svg) !important;
+	list-style-type: square !important;
+	list-style-position: inherit !important;
   }
   
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover {
-      list-style-image: url(chrome://userchrome/content/material/maximize-hover.svg) !important;
+  #TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover,
+  .titlebar-max:hover{
+	position: relative !important;
+	list-style-image: url(chrome://userchrome/content/material/maximize-hover.svg) !important;
+	list-style-type: square !important;
+	list-style-position: inherit !important;
   }
   
-  :root[sizemode="maximized"] #TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover,
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover {
-      list-style-image: url(chrome://userchrome/content/material/maximize-restore.svg) !important;
+  #TabsToolbar .titlebar-buttonbox-container .titlebar-restore,
+  .titlebar-restore{
+	position: relative !important;
+    list-style-image: url(chrome://userchrome/content/material/maximize.svg) !important;
+	list-style-type: square !important;
+	list-style-position: inherit !important;
   }
+  
+  #TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover,
+  .titlebar-restore:hover{
+	position: relative !important;
+	list-style-image: url(chrome://userchrome/content/material/maximize-restore.svg) !important;
+	list-style-type: square !important;
+	list-style-position: inherit !important;
   }
-
+  
+  #TabsToolbar .titlebar-buttonbox-container .titlebar-close,
+  .titlebar-close{
+	position: relative !important;
+    list-style-image: url(chrome://userchrome/content/material/close.svg) !important;
+	list-style-type: square !important;
+	list-style-position: inherit !important;
+  }
+  
+  #TabsToolbar .titlebar-buttonbox-container .titlebar-close:hover,
+  .titlebar-close:hover{
+	position: relative !important;
+	list-style-image: url(chrome://userchrome/content/material/close-hover.svg) !important;
+	list-style-type: square !important;
+	list-style-position: inherit !important;
+  }
+  
   `;
 
   // Function to initialize the script
@@ -141,9 +168,9 @@
       var titleBar = document.getElementById('titlebar');
 
       if (urlbarPosition === '1') {
-        navBar.style.paddingLeft = matches ? '72px' : '0';
+        navBar.style.paddingLeft = matches ? '106px' : '0';
       } else if (urlbarPosition === '3') {
-        titleBar.style.paddingLeft = matches ? '72px' : '0';
+        titleBar.style.paddingLeft = matches ? '106px' : '0';
       }
     }
 

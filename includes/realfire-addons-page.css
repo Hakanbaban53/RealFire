@@ -1,21 +1,28 @@
-@-moz-document url(chrome://browser/content/preferences/preferences.xhtml), url(about:preferences), url(about:preferences#home), url(about:preferences#general), url(about:preferences#search), url(about:preferences#privacy), url(about:preferences#sync), url(about:preferences#moreFromMozilla) {
+@-moz-document url(about:addons){
 
 /*Navigation menu*/
-.navigation {
+#sidebar {
+  align-items: center !important;
   -moz-appearance: none !important;
   background-color: var(--uc-base-colour) !important;
   border-right: 2px solid var(--settings-color) !important;
-  align-items: center !important;
 }
 
 .sticky-container {
-  background-color: var(--uc-base-colour) !important;
+  -moz-appearance: none !important;
+  border-bottom: 2px solid AccentColor;
 }
 
-.main-content {
-  -moz-appearance: none !important;
-  background-color: var(--uc-base-colour) !important;
-  padding: 0px 28px !important;
+.main-heading {
+  padding: 16px !important;
+  background-color: black !important;
+  border-top: 2px solid var(--accent-color) !important;
+  border-inline: 2px solid var(--accent-color) !important;
+  border-radius: var(--uc-border-radius) var(--uc-border-radius) 0 0 !important;
+}
+
+#content {
+  background: var(--uc-base-colour) !important;
 }
 
 #categories {
@@ -28,8 +35,8 @@
 }
 
 .sidebar-footer-list {
-  margin-inline-start: 0px !important;
   margin-inline: 0px !important;
+  margin-inline-start: 0px !important;
 }
 
 @media not (prefers-contrast) {
@@ -67,12 +74,15 @@ a:hover,
   color: color-mix(in srgb, var(--uc-inverted-colour), var(--settings-color)) !important;
 }
 
+addon-card:not([expanded])>.addon.card:hover {
+  box-shadow: 0 0 0 5px var(--accent-field-color) !important;
+}
 
-input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
-search-textbox[focused],
-textarea:focus-visible,
 tree:focus-visible,
+textarea:focus-visible,
+search-textbox[focused],
 richlistbox:focus-visible,
+input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
 #searchInput[focused="true"] {
   outline: none !important;
   border: var(--settings-color) solid 2px !important;
@@ -84,18 +94,17 @@ richlistbox:focus-visible,
 
 /*buttons*/
 
-#row-selector.selector,
-button {
+button,
+#row-selector.selector {
   color: var(--uc-inverted-colour) !important;
-  border: 1px solid var(--uc-muted-colour) !important;
   border-radius: var(--uc-border-radius) !important;
 }
 
+button.primary,
+button[default],
 button[autofocus],
 button[type="submit"],
-button[default],
-button:not([disabled])[default="true"],
-button.primary {
+button:not([disabled])[default="true"] {
   background-color: var(--accent-color) !important;
   border-color: var(--accent-color) !important;
   color: var(--button-text-white) !important;
@@ -103,11 +112,11 @@ button.primary {
 
 button:focus-visible,
 select:focus-visible,
-input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible,
 menulist:focus-visible,
-checkbox:not([native]):focus-visible>.checkbox-check,
 radio[focused="true"]>.radio-check,
-tab:focus-visible>.tab-middle>.tab-text {
+tab:focus-visible>.tab-middle>.tab-text,
+checkbox:not([native]):focus-visible>.checkbox-check,
+input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible {
   outline: var(--uc-inverted-colour) solid 2px !important;
   outline-offset: 0px !important;
 }

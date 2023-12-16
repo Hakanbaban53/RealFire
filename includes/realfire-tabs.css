@@ -5,12 +5,10 @@
 
 /* remove tab shadow */
 .tabbrowser-tab>.tab-stack>.tab-background {
-  background-color: var(--uc-base-colour) !important;
   box-shadow: none !important;
   border-radius: var(--uc-border-radius) !important;
 }
 
-/*privateWindowHomepage.uc.js home page private logo fix*/
 #private-mask,
 #private-mask:is([enabled="false"]) {
   display: none !important;
@@ -46,9 +44,9 @@
 
 /* container tabs indicator */
 .tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
-  margin: -1px var(--container-tabs-indicator-margin) 0 var(--container-tabs-indicator-margin) !important;
   height: 1px !important;
   box-shadow: var(--uc-identity-glow) var(--identity-tab-color) !important;
+  margin: -1px var(--container-tabs-indicator-margin) 0 var(--container-tabs-indicator-margin) !important;
 }
 
 .tab-throbber:not([pinned]),
@@ -66,21 +64,21 @@
 .tab-icon-overlay[pinned][crashed][selected] {
   top: 5px !important;
   z-index: 1 !important;
-  padding: 1.5px !important;
-  inset-inline-end: -8px !important;
   width: 16px !important;
   height: 16px !important;
+  padding: 1.5px !important;
+  inset-inline-end: -8px !important;
   border-radius: var(--uc-border-radius) !important;
 }
 
 /* style and position speaker icon */
+[muted],
 .tab-icon-overlay:not([sharing], [crashed]):is([soundplaying],
-  [muted],
   [activemedia-blocked]) {
-  stroke: transparent !important;
-  background: transparent !important;
   opacity: 1 !important;
   fill-opacity: 0.8 !important;
+  stroke: transparent !important;
+  background: transparent !important;
   color: var(--accent-color) !important;
   stroke: var(--toolbar-bgcolor) !important;
   background-color: var(--toolbar-bgcolor) !important;
@@ -103,59 +101,59 @@
 .tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
   top: 0 !important;
   padding: 0 !important;
-  margin-inline-end: 5.5px !important;
   inset-inline-end: 0 !important;
+  margin-inline-end: 5.5px !important;
 }
 
 .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 .tab-icon-overlay:not([crashed])[muted]:hover,
 .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  fill-opacity: 0.95 !important;
   color: var(--accent-color) !important;
   stroke: var(--toolbar-color) !important;
   background-color: var(--toolbar-color) !important;
-  fill-opacity: 0.95 !important;
 }
 
-.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 .tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[muted]:hover,
+.tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 .tabbrowser-tab[selected] .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  fill-opacity: 0.95 !important;
   color: var(--accent-color) !important;
   stroke: var(--toolbar-color) !important;
   background-color: var(--toolbar-color) !important;
-  fill-opacity: 0.95 !important;
 }
 
 #PersonalToolbar:not([customizing]) {
   /* The following properties should allow the themes with trasparent toolbars to work */
   background-color: transparent !important;
+  border-radius: var(--uc-border-radius) !important;
+  border: 1.5px solid var(--accent-color) !important;
   background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);
   --uc-bg-y: calc(-2 * (var(--tab-block-margin) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding)) - var(--tab-min-height) - 16px - var(--bookmark-block-padding));
   background-position: top left, top left,
     var(--lwt-background-alignment, top left);
-  border: 1.5px solid var(--accent-color) !important;
-  border-radius: var(--uc-border-radius) !important;
 }
 
 #PersonalToolbar:not([customizing]):-moz-window-inactive {
   border: 1.5px solid var(--accent-field-color) !important;
 }
 
-.tabbrowser-tab .tab-stack .tab-background[selected]{
-  border: 2px solid var(--accent-color) !important;
+.tabbrowser-tab .tab-stack .tab-background[selected] {
+  border: 1px solid var(--accent-color) !important;
 }
 
 .tabbrowser-tab .tab-stack .tab-background[selected=]:-moz-window-inactive {
-  border: 2px solid var(--accent-field-color) !important;
+  border: 1px solid var(--accent-field-color) !important;
 }
 
 /* Background tabs design */
-.tabbrowser-tab .tab-stack .tab-background:not([selected]) {
+/* .tabbrowser-tab .tab-stack .tab-background:not([selected]) {
   border: 2px solid color-mix(in srgb, field 95%, var(--accent-color)) !important;
 }
 
 .tabbrowser-tab .tab-stack .tab-background:not([selected]):-moz-window-inactive {
   border: 2px solid color-mix(in srgb, field 99%, var(--accent-color)) !important;
-}
+} */
 
 /* Fixing Multiselect */
 .tab-background[multiselected="true"]:not([selected="true"])>.tab-background-inner {
@@ -163,15 +161,15 @@
 }
 
 /* speaker icon colour fix */
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
 #TabsToolbar .tab-icon-overlay:not([crashed])[muted],
+#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
 #TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] {
   color: var(--toolbar-color) !important;
 }
 
 /* speaker icon colour fix on hover */
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 #TabsToolbar .tab-icon-overlay:not([crashed])[muted]:hover,
+#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 #TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
   color: var(--toolbar-bgcolor) !important;
 }

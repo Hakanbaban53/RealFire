@@ -8,10 +8,10 @@
 
 .textbox-search-sign,
 .textbox-search-icon {
-  background-color: transparent !important;
-  background-image: url(../icons/search.svg) !important;
   background-repeat: no-repeat !important;
+  background-color: transparent !important;
   background-position: 5px center !important;
+  background-image: url(../icons/search.svg) !important;
 }
 
 #sidebar-header {

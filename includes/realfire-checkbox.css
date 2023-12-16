@@ -1,15 +1,15 @@
-input[type="checkbox"]:checked,
-.checkbox-check[checked] {
+.checkbox-check[checked],
+input[type="checkbox"]:checked {
   background-size: 14px !important;
-  background-color: var(--accent-color) !important;
   fill: var(--uc-inverted-colour) !important;
+  background-color: var(--accent-color) !important;
 }
 .checkbox-check {
     border-radius: 4px !important;
 }
 
-input[type="radio"]:checked,
-.radio-check[selected] {
+.radio-check[selected],
+input[type="radio"]:checked {
   fill: var(--uc-inverted-colour) !important;
   background-color: var(--accent-color) !important;
 }
