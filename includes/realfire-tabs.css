@@ -135,15 +135,15 @@
 }
 
 #PersonalToolbar:not([customizing]):-moz-window-inactive {
-  border: 1.5px solid var(--accent-field-color) !important;
+  border: 2px solid var(--accent-field-color) !important;
 }
 
 .tabbrowser-tab .tab-stack .tab-background[selected] {
-  border: 1px solid var(--accent-color) !important;
+  border: 2px solid var(--accent-color) !important;
 }
 
 .tabbrowser-tab .tab-stack .tab-background[selected=]:-moz-window-inactive {
-  border: 1px solid var(--accent-field-color) !important;
+  border: 2px solid var(--accent-field-color) !important;
 }
 
 /* Background tabs design */

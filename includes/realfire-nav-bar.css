@@ -1,4 +1,5 @@
-#navigator-toolbox:not(:-moz-lwtheme) {
+#navigator-toolbox:not(:-moz-lwtheme),
+.sidebar-panel:not(:-moz-lwtheme) {
   background: var(--uc-base-colour) !important;
 }
 

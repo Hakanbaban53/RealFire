@@ -7,7 +7,13 @@
 @import 'includes/realfire-addons-page.css';
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing){
-  .top-site-outer .top-site-icon,
+
+.search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
+  border: 1px solid var(--accent-color) !important;
+  box-shadow: 0 0 0 4px var(--accent-field-color) !important;
+}
+
+.top-site-outer .top-site-icon,
 .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner>a .tile {
   transition: ease-out 200ms;
   background-color: var(--uc-base-colour) !important;
