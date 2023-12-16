@@ -42,8 +42,8 @@ menuitem[type="radio"]>.menu-iconic-left {
 
 menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
   display: -moz-box !important;
-  padding-inline-end: 0px !important;
   margin-inline-end: 0px !important;
+  padding-inline-end: 0px !important;
 }
 
 menupopup menuseparator {
@@ -58,10 +58,10 @@ menulist>menupopup>menuitem:not([disabled="true"])[selected="true"] {
 menupopup menuitem,
 menupopup menu,
 .autocomplete-richlistitem {
-  height: var(--menupopup-height) !important;
   padding: 4px 10px !important;
   margin: 4px 4px !important;
   /* background: 0 !important; */
+  height: var(--menupopup-height) !important;
   color: var(--uc-inverted-colour) !important;
   border-radius: var(--uc-border-radius) !important;
 }
@@ -845,31 +845,27 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
   #downloadsListBox:focus>richlistitem[selected="true"],
   #downloadsListBox:focus>richlistitem[selected],
   #downloadsListBox>richlistitem[selected] {
-    transition: ease-in 200ms !important;
-    background-color: var(--accent-color) !important;
+    margin: 4px !important;
+    outline-offset: 0px !important;
     /* four gradients for the bevel highlights on each edge, one for blue background */
     background-image: none !important;
+    transition: ease-in 200ms !important;
+    background-color: var(--accent-color) !important;
     border-radius: var(--uc-border-radius) !important;
-    outline-offset: 0px !important;
-    margin: 4px !important;
   }
 }
 
 #downloadsListBox .downloadMainArea {
-  padding-left: 4px !important;
-  /*! /*! display: flex !important; */
   flex: 1 !important;
-  /*! /*! margin-inline-end: -48px !important; */
-  /*! padding-inline-end: 48px !important; */
-  /*! padding-inline-start: 16px !important; */
   height: 100% !important;
+  padding-left: 4px !important;
   align-items: center !important;
 }
 
 #downloadsListBox .downloadContainer {
+  flex: 1 !important;
   display: flex !important;
   flex-direction: column !important;
-  flex: 1 !important;
 }
 
 #downloadsListBox .downloadTypeIcon {
@@ -891,18 +887,18 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
 
 #downloadsListBox .downloadButton {
   height: 32px !important;
-  min-width: 32px !important;
-  border-radius: var(--uc-border-radius) !important;
   border: none !important;
+  min-width: 32px !important;
   fill: var(--accent-color) !important;
+  border-radius: var(--uc-border-radius) !important;
   -moz-context-properties: fill, fill-opacity !important;
 }
 
 #downloadsListBox .downloadButton .button-box {
   display: flex !important;
+  max-width: 32px !important;
   align-items: center !important;
   justify-content: center !important;
-  max-width: 32px !important;
 }
 
 .reader-header .reader .chap-and-type select option {
@@ -934,19 +930,19 @@ button .customizationmode-button:hover:active {
 
 .customization-lwtheme-menu-theme,
 .customization-uidensity-menuitem {
-  border-radius: var(--uc-border-radius) !important;
   margin: 4px !important;
   border: none !important;
   height: 48px !important;
+  border-radius: var(--uc-border-radius) !important;
 }
 
 .customization-lwtheme-menu-theme .toolbarbutton-icon,
 .customization-uidensity-menuitem .menu-iconic-icon {
   margin: 0 !important;
-  margin-inline-end: 16px !important;
   padding: 0 !important;
   width: 24px !important;
   height: 24px !important;
+  margin-inline-end: 16px !important;
 }
 
 .customization-lwtheme-menu-theme[active]:not(:hover):not(:active),
@@ -956,28 +952,28 @@ button .customizationmode-button:hover:active {
 
 .customization-lwtheme-menu-theme[active]::after,
 .customization-uidensity-menuitem[active]::after {
-  -moz-context-properties: fill, fill-opacity !important;
-  fill: var(--accent-color) !important;
-  display: -moz-box !important;
   width: 18px !important;
   height: 18px !important;
+  display: -moz-box !important;
+  fill: var(--accent-color) !important;
   margin-inline-start: 16px !important;
+  -moz-context-properties: fill, fill-opacity !important;
 }
 
 #customization-lwtheme-menu-footer {
   padding: 0 !important;
-  background: 0 !important;
   border: none !important;
   display: flex !important;
+  background: 0 !important;
   flex-direction: column !important;
 }
 
 #customization-lwtheme-menu-footer toolbarbutton {
   border: none !important;
-  margin: 0 -6px 0 !important;
   height: 48px !important;
-  padding: 0 16px !important;
   display: flex !important;
+  padding: 0 16px !important;
+  margin: 0 -6px 0 !important;
   background-image: none !important;
 }
 
@@ -992,46 +988,46 @@ button .customizationmode-button:hover:active {
 
 .panel-footer {
   padding: 4px !important;
+  display: flex !important;
+  justify-content: end !important;
   background: var(--uc-base-colour) !important;
   border-top: 1px solid var(--panel-separator-color) !important;
-  justify-content: end !important;
-  display: flex !important;
 }
 
 .panel-footer button {
-  border: none !important;
-  border-radius: 4px !important;
+  outline: 0 !important;
+  padding: 0 !important;
   margin: 4px !important;
   height: 32px !important;
-  padding: 0 !important;
+  border: none !important;
   flex: 0 0 auto !important;
+  border-radius: 4px !important;
   position: relative !important;
-  outline: 0 !important;
 }
 
 .panel-footer button>.button-box {
-  -moz-appearance: none !important;
   position: relative !important;
+  -moz-appearance: none !important;
   padding-inline-end: 16px !important;
 }
 
 .panel-footer button .button-menu-dropmarker {
-  margin-inline-start: 8px !important;
   margin-inline-end: -8px !important;
+  margin-inline-start: 8px !important;
 }
 
 .panel-footer button:not([default])>.button-box::before {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
   content: "" !important;
+  height: 100% !important;
+  opacity: 0.42 !important;
   display: block !important;
   border-radius: 4px !important;
   position: absolute !important;
-  left: 0 !important;
-  top: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border: 1px solid var(--accent-color) !important;
-  opacity: 0.42 !important;
   box-sizing: border-box !important;
+  border: 1px solid var(--accent-color) !important;
 }
 
 .panel-footer button:not([default]):hover:active:not([disabled])>.button-box::before {
@@ -1102,8 +1098,8 @@ dialog#commonDialog #dialogGrid .titleIcon {
 
 dialog[data-l10n-attrs="buttonlabelaccept, buttonaccesskeyaccept"],
 window#commonDialogWindow.system-font-size {
-  background-color: var(--uc-base-colour) !important;
   border: 2px solid AccentColor !important;
+  background-color: var(--uc-base-colour) !important;
   border-radius: var(--uc-border-radius) !important;
 }
 

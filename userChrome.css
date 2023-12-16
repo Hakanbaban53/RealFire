@@ -16,7 +16,6 @@
 @import 'includes/realfire-library.css';
 @import 'includes/realfire-button.css';
 @import 'includes/realfire-inputs.css';
-@import 'includes/realfire-addons.css';
 
 .container.infobar {
   background:var(--uc-base-colour) !important;

@@ -12,22 +12,22 @@
   }
   
   #urlbar-container {
-    margin-inline: 6px !important;
+    padding-left: 2px;
     width: auto !important;
+    margin-inline: 6px !important;
     min-width: var(--uc-urlbar-min-width);
     max-width: var(--uc-urlbar-max-width) !important;
-    padding-left: 2px;
   }
 
   #titlebar {
+    order: 2;
     width: auto !important;
     min-width: calc(100vw - var(--uc-urlbar-max-width) - 1px);
-    order: 2;
   }
 
   #PersonalToolbar {
-    order: var(--uc-toolbar-position) !important;
     width: 100% !important;
+    order: var(--uc-toolbar-position) !important;
   }
 
   /* Hide buttons */
@@ -81,8 +81,8 @@
   #back-button[disabled="true"] {
     display: none;
     opacity: 0 !important;
-    transform: scale(0.6, 0.6) !important;
     pointer-events: none !important;
+    transform: scale(0.6, 0.6) !important;
   }
 
   #navigator-toolbox:focus-within #titlebar {

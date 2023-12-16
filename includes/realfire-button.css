@@ -1,27 +1,27 @@
-#row-selector.selector,
-button {
+button,
+#row-selector.selector {
     color: var(--uc-inverted-colour) !important;
-    border: 1px solid var(--uc-muted-colour) !important;
     border-radius: var(--uc-border-radius) !important;
+    border: 1px solid var(--uc-muted-colour) !important;
 }
 
 button:focus-visible,
 select:focus-visible,
-input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible,
 menulist:focus-visible,
-checkbox:not([native]):focus-visible>.checkbox-check,
 radio[focused="true"]>.radio-check,
-tab:focus-visible>.tab-middle>.tab-text {
-    outline: var(--uc-inverted-colour) solid 2px !important;
+tab:focus-visible>.tab-middle>.tab-text,
+checkbox:not([native]):focus-visible>.checkbox-check,
+input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible {
     outline-offset: 0px !important;
+    outline: var(--uc-inverted-colour) solid 2px !important;
 }
 
-button[data-l10n-id="permission-dialog-btn-open-link"],
-button:not([disabled])[default] {
+button:not([disabled])[default],
+button[data-l10n-id="permission-dialog-btn-open-link"] {
     color: var(--button-text-white) !important;
     background-color: var(--accent-color) !important;
 }
 
 .customizationmode-button {
     color: var(--uc-base-colour) !important;
-  }
+}

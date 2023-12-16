@@ -33,9 +33,9 @@
 
   /* These change top bar background color */
   #placesToolbar {
-    border-bottom: 1px solid var(--accent-color) !important;
-    background-color: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    background-color: var(--uc-base-colour) !important;
+    border-bottom: 1px solid var(--accent-color) !important;
   }
 
   /* These change the lists background color */
@@ -46,22 +46,22 @@
 #placeContent,
 #editBMPanel_folderTree {
     -moz-appearance: none !important;
-    border-bottom: 1px solid var(--accent-color) !important;
-    background: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    background: var(--uc-base-colour) !important;
+    border-bottom: 1px solid var(--accent-color) !important;
   }
 
   /* These change the list header background and text colors */
   #placeContent treecol {
     -moz-appearance: none !important;
-    background: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    background: var(--uc-base-colour) !important;
   }
 
   #placeContent treecol:hover {
     -moz-appearance: none !important;
-    background: rgb(255, 255, 255, 0.15) !important;
     color: var(--uc-inverted-colour) !important;
+    background: rgb(255, 255, 255, 0.15) !important;
   }
 
   /* This changes the right border on the left list panel */
@@ -78,8 +78,8 @@
   treechildren::-moz-tree-row(hover),
   treechildren::-moz-tree-row(selected, focus) {
     outline: none !important;
-    background-color: var(--accent-color) !important;
     color: var(--uc-inverted-colour) !important;
+    background-color: var(--accent-color) !important;
   }
 
   treechildren::-moz-tree-cell {
@@ -98,16 +98,16 @@
   /* This changes the forward and back buttons color */
   #back-button > .toolbarbutton-icon,
   #forward-button > .toolbarbutton-icon {
-    fill: var(--uc-inverted-colour) !important;
     opacity: 1 !important;
+    fill: var(--uc-inverted-colour) !important;
   }
 
   /* This deletes the leftover border when clicking one of the top buttons */
   #placesMenu > menu {
     transition: ease-in 200ms;
     margin-inline: 5px !important;
-    outline: 1.5px solid var(--uc-muted-colour) !important;
     border-radius: var(--uc-border-radius) !important;
+    outline: 1.5px solid var(--uc-muted-colour) !important;
   }
 
   #placesMenu > menu:hover {
@@ -130,27 +130,27 @@
 
   /* This themes the search box */
   #searchFilter {
-    border-radius: var(--uc-border-radius) !important;
-    transition: all 0.25s ease-in-out !important;
     -moz-appearance: none !important;
-    outline: 1px solid var(--uc-muted-colour) !important;
-    background-color: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    transition: all 0.25s ease-in-out !important;
+    border-radius: var(--uc-border-radius) !important;
+    background-color: var(--uc-base-colour) !important;
+    outline: 1px solid var(--uc-muted-colour) !important;
   }
 
   /* This themes the search box on hover */
   #searchFilter[focused="true"] {
-    box-shadow: var(--input-field-focus-shadow) !important;
-    background-color: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    background-color: var(--uc-base-colour) !important;
     outline: 1.5px solid var(--accent-color) !important;
+    box-shadow: var(--input-field-focus-shadow) !important;
   }
 
   /* This themes the information box on the lower part of the library menu */
   #detailsDeck {
-    background-color: var(--uc-base-colour) !important;
-    color: var(--uc-inverted-colour) !important;
     border-top: 2px solid #222 !important;
+    color: var(--uc-inverted-colour) !important;
+    background-color: var(--uc-base-colour) !important;
   }
 
   /* This changes the text boxes inside the library bottom information box */
@@ -162,11 +162,11 @@
   #editBMPanel_tagsSelector,
   #editBMPanel_locationField,
   #editBMPanel_keywordField {
-    transition: all 0.25s ease-in-out !important;
     -moz-appearance: none !important;
-    border: 1px solid var(--uc-muted-colour) !important;
-    border-radius: var(--uc-border-radius) !important;
     color: var(--uc-inverted-colour) !important;
+    transition: all 0.25s ease-in-out !important;
+    border-radius: var(--uc-border-radius) !important;
+    border: 1px solid var(--uc-muted-colour) !important;
   }
 
   /* A fix for bookmark preferences... so that some boxes won't appear brighter than others */
@@ -189,26 +189,26 @@
   #editBMPanel_keywordField:hover,
 #infoBox #bookmarkproperties #editBMPanel_namePicker:hover,
 #infoBox #bookmarkproperties #editBMPanel_tagsField:hover {
-    box-shadow: var(--Input-field-focus-shadow) !important;
-    border: 1.5px solid var(--accent-color) !important;
-    background-color: var(--uc-base-colour) !important;
-    color: var(--uc-inverted-colour) !important;
+  color: var(--uc-inverted-colour) !important;
+  border: 1.5px solid var(--accent-color) !important;
+  background-color: var(--uc-base-colour) !important;
+  box-shadow: var(--Input-field-focus-shadow) !important;
   }
 
   /* This changes the buttons inside the bookmarking popup at the url star */
   #editBMPanel_newFolderButton,
   #editBookmarkPanelDoneButton,
   #editBookmarkPanelRemoveButton,
-  #tracking-action-unblock-private,
   #identity-popup-popup-menulist,
+  #tracking-action-unblock-private,
   #tracking-action-block,
   #tracking-action-unblock {
-    -moz-appearance: none !important;
-    background: var(--uc-base-colour) !important;
-    color: var(--uc-inverted-colour) !important;
     padding: 0.3em !important;
     margin-top: 0.5em !important;
     margin-bottom: 0.5em !important;
+    -moz-appearance: none !important;
+    background: var(--uc-base-colour) !important;
+    color: var(--uc-inverted-colour) !important;
   }
 
   #editBMPanel_newFolderButton:hover,
@@ -218,8 +218,8 @@
   #identity-popup-popup-menulist:hover,
   #tracking-action-block:hover,
   #tracking-action-unblock:hover {
-    background: var(--uc-muted-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    background: var(--uc-muted-colour) !important;
   }
 
   #editBookmarkPanelBottomButtons {
@@ -232,17 +232,17 @@
   #editBMPanel_foldersExpander,
   #detailsDeck button {
     -moz-appearance: none !important;
-    border: 1px solid var(--uc-inverted-colour) !important;
-    background: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    background: var(--uc-base-colour) !important;
+    border: 1px solid var(--uc-inverted-colour) !important;
   }
 
   #editBMPanel_folderMenuList:hover,
-  #editBMPanel_tagsSelectorExpander:hover,
   #editBMPanel_foldersExpander:hover,
+  #editBMPanel_tagsSelectorExpander:hover,
   #detailsDeck button:hover {
-    border: 1px solid var(--accent-color) !important;
     background: var(--uc-muted-colour) !important;
+    border: 1px solid var(--accent-color) !important;
   }
   
   #BMB_bookmarksPopup {
@@ -256,8 +256,8 @@
 
   /* These change the downloads history list background */
   #downloadsRichListBox {
-    background: var(--uc-base-colour) !important;
     color: var(--uc-inverted-colour) !important;
+    background: var(--uc-base-colour) !important;
   }
 
   #detailsPane {

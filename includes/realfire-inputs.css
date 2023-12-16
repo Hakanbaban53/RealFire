@@ -1,17 +1,17 @@
 /*settings Inputs*/
-input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):hover,
-search-textbox:hover,
 tree:hover,
 richlistbox:hover,
-#searchInput:hover {
+#searchInput:hover,
+search-textbox:hover,
+input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):hover {
   outline: var(--settings-color) solid 1px !important;
 }
 
-input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
-search-textbox[focused],
 tree:focus-visible,
+search-textbox[focused],
 richlistbox:focus-visible,
-#searchInput[focused="true"] {
+#searchInput[focused="true"],
+input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus {
   transition: linear 350ms !important;
   outline: var(--settings-color) solid 2px !important;
 }
@@ -22,13 +22,13 @@ richlistbox:focus-visible,
   }
 
   /*popups*/
-  search-textbox.tabsFilter:focus-within,
-search-textbox.tabsFilter:hover,
-search-textbox#search-box:focus-within,
-search-textbox#search-box:hover {
+  search-textbox.tabsFilter:hover,
+  search-textbox#search-box:hover,
+  search-textbox#search-box:focus-within,
+  search-textbox.tabsFilter:focus-within {
   transition: ease-in 200ms;
-  background-color: var(--uc-highlight-colour) !important;
   border: 1px solid var(--accent-color) !important;
+  background-color: var(--uc-highlight-colour) !important;
 }
 
 image.textbox-search-sign {
@@ -37,12 +37,12 @@ image.textbox-search-sign {
 
 search-textbox.tabsFilter,
 search-textbox#search-box {
+  padding: 4px !important;
   transition: ease-out 200ms;
   appearance: none !important;
-  background-color: var(--uc-base-colour) !important;
-  color: var(--uc-inverted-colour) !important;
   -moz-default-appearance: none !important;
-  padding: 4px !important;
+  color: var(--uc-inverted-colour) !important;
   border-radius: var(--uc-border-radius) !important;
+  background-color: var(--uc-base-colour) !important;
   border: 1px solid var(--uc-muted-colour) !important;
 }

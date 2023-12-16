@@ -1,10 +1,10 @@
 @import 'includes/realfire-config.css';
 @import 'includes/realfire-colours.css';
-@import 'includes/realfire-settings.css';
+@import 'includes/realfire-settings-page.css';
 @import "includes/realfire-popups.css";
 @import "includes/realfire-checkbox.css";
 @import 'includes/realfire-library.css';
-@import 'includes/realfire-addons.css';
+@import 'includes/realfire-addons-page.css';
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing){
   .top-site-outer .top-site-icon,
