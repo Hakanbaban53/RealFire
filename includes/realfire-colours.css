@@ -6,7 +6,7 @@
   :root {
     /* These colours are (mainly) used by the
      Container Tabs Plugin */
-     
+
     --uc-identity-colour-blue: #0078d7;
     --uc-identity-colour-turquoise: #55e6c1;
     --uc-identity-colour-green: #b8e994;
@@ -50,14 +50,15 @@
 /* Down here I'm just reassigning variables based on the colours set above.
    Feel free to play around with these but there is no editing necessary below this line. c:
    */
-   
-   :root[uidensity="compact"] {
-     --sidebar-menupopup-height: 29px;
-   }
-   
-   :root[uidensity="touch"] {
-     --sidebar-menupopup-height: 41px;
-   }
+
+:root[uidensity="compact"] {
+  --sidebar-menupopup-height: 29px;
+}
+
+:root[uidensity="touch"] {
+  --sidebar-menupopup-height: 41px;
+}
+
 :root {
   --bookmark-block-padding: 1px !important;
   /*--tab-min-height: 29px !important;*/
@@ -93,11 +94,11 @@
   */
 
 
-/* Sidebar doesn't have any height variable for different densities */
+  /* Sidebar doesn't have any height variable for different densities */
   --accent-color: AccentColor;
   --settings-color: AccentColor;
   --accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
-  --accent-hover-color:  color-mix(in srgb, var(--accent-color) 90%, var(--uc-inverted-colour) 20%);
+  --accent-hover-color: color-mix(in srgb, var(--accent-color) 90%, var(--uc-inverted-colour) 20%);
   --button-text-white: #ffffff;
 
   --lwt-frame: var(--uc-base-colour) !important;
@@ -123,9 +124,7 @@
   --toolbar-color: var(--lwt-text-color) !important;
   --toolbarseparator-color: var(--uc-accent-colour) !important;
   /* --toolbarbutton-hover-background: var(--uc-highlight-colour) !important; */
-  --toolbarbutton-active-background: var(
-    --toolbarbutton-hover-background
-  ) !important;
+  --toolbarbutton-active-background: var(--toolbarbutton-hover-background) !important;
 
   /* --lwt-sidebar-background-color: var(--lwt-frame) !important; */
   --sidebar-background-color: var(--lwt-sidebar-background-color) !important;
@@ -141,30 +140,37 @@
   --identity-tab-color: var(--uc-identity-colour-blue) !important;
   --identity-icon-color: var(--uc-identity-colour-blue) !important;
 }
+
 .identity-color-turquoise {
   --identity-tab-color: var(--uc-identity-colour-turquoise) !important;
   --identity-icon-color: var(--uc-identity-colour-turquoise) !important;
 }
+
 .identity-color-green {
   --identity-tab-color: var(--uc-identity-colour-green) !important;
   --identity-icon-color: var(--uc-identity-colour-green) !important;
 }
+
 .identity-color-yellow {
   --identity-tab-color: var(--uc-identity-colour-yellow) !important;
   --identity-icon-color: var(--uc-identity-colour-yellow) !important;
 }
+
 .identity-color-orange {
   --identity-tab-color: var(--uc-identity-colour-orange) !important;
   --identity-icon-color: var(--uc-identity-colour-orange) !important;
 }
+
 .identity-color-red {
   --identity-tab-color: var(--uc-identity-colour-red) !important;
   --identity-icon-color: var(--uc-identity-colour-red) !important;
 }
+
 .identity-color-pink {
   --identity-tab-color: var(--uc-identity-colour-pink) !important;
   --identity-icon-color: var(--uc-identity-colour-pink) !important;
 }
+
 .identity-color-purple {
   --identity-tab-color: var(--uc-identity-colour-purple) !important;
   --identity-icon-color: var(--uc-identity-colour-purple) !important;

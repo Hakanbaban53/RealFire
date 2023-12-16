@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Vertical Tabs Pane
-// @version        1.7.7
+// @version        1.7.9
 // @author         aminomancer (Customized for RealFire *Hakanbaban53*)
 // @homepageURL    https://github.com/aminomancer/uc.css.js
 // @long-description
@@ -11,6 +11,29 @@
 // ==/UserScript==
 
 (function () {
+
+  // Function to check and update the accent color
+  function checkAndUpdateAccentColor() {
+    const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--lwt-accent-color').trim();
+
+    if (accentColor.toLowerCase() === 'white') {
+      document.documentElement.style.setProperty('--lwt-accent-color', '#000000');
+    }
+  }
+
+  // Initial check
+  checkAndUpdateAccentColor();
+
+  // Create a MutationObserver to listen for changes in the DOM
+  const observer = new MutationObserver(checkAndUpdateAccentColor);
+
+  // Specify the target node and the type of mutations to observe
+  const targetNode = document.documentElement; // You can adjust this based on your specific needs
+  const configs = { attributes: true, subtree: true };
+
+  // Start observing the target node for configured mutations
+  observer.observe(targetNode, configs);
+
   let config = {
     // localization strings. change these if your UI is not in english.
     l10n: {
@@ -1863,6 +1886,7 @@
     }
     // load our stylesheet as an author sheet. override it with userChrome.css
     // and !important rules.
+
     _registerSheet() {
       let css = /* css */ `
 
@@ -1975,6 +1999,7 @@
   ) !important;
 }
 #vertical-tabs-list {
+  gap: 6px;
   overflow: hidden;
   overflow-y: auto;
   scrollbar-width: thin;

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Window Control Macos Theme
-// @version        1.0.0
+// @version        2.0.1
 // @author         Hakanbaban53
 // @homepage       https://github.com/Hakanbaban53/RealFire
 // @description    Move the window control to the left and recolor it.

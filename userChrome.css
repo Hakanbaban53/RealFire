@@ -18,10 +18,6 @@
 @import 'includes/realfire-inputs.css';
 @import 'includes/realfire-addons.css';
 
-@import 'includes/tab-preview-on-hover.css';
-@import 'includes/muti-line-tabs.css';
-@import 'includes/dots-in-search-bar.css';
-
 .container.infobar {
   background:var(--uc-base-colour) !important;
   border: 2px solid var(--accent-color) !important;
