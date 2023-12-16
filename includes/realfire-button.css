@@ -21,7 +21,3 @@ button[data-l10n-id="permission-dialog-btn-open-link"] {
     color: var(--button-text-white) !important;
     background-color: var(--accent-color) !important;
 }
-
-.customizationmode-button {
-    color: var(--uc-base-colour) !important;
-}

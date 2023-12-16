@@ -15,7 +15,7 @@
 
 .main-heading {
   padding: 16px !important;
-  background-color: black !important;
+  background-color: var(--uc-base-colour) !important;
   border-top: 2px solid var(--accent-color) !important;
   border-inline: 2px solid var(--accent-color) !important;
   border-radius: var(--uc-border-radius) var(--uc-border-radius) 0 0 !important;
