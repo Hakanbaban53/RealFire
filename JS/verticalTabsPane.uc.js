@@ -1877,7 +1877,7 @@
       @media (min-width: 1000px) {
       #titlebar {
         width: auto !important;
-        max-width: 29.5vw !important;
+        max-width: 28vw !important;
         min-width: 0 !important;
         right: 0;
         top: 6px;
