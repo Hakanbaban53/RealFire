@@ -7,8 +7,6 @@
 <h2 align="center">RealFire</h2>
 <p align="center"><img src="./assets/preview.png"></p>
 
-<h2 align="center">RealFire_mod</h2>
-<p align="center"><img src="./assets/preview_mod.png"></p>
 
 <h3 align="center">Horizonal Tabs</h3>
 <p align="center"><img src="./assets/horizonal_tabs.gif"></p>
@@ -19,8 +17,6 @@
 <h3 align="center">Animated Background</h3>
 <p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
 
-<h3 align="center">Animated Background_mod</h3>
-<p align="center" style="max-heigh:250px"><img src="./assets/navbar_mod.gif"></p>
 
 <h3 align="center">Context Menu</h3>
 <p align="center"><img src="./assets/context.png"></p>
@@ -223,6 +219,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 - [Installation script](https://github.com/rafaelmardojai/firefox-gnome-theme) details.
 ___
+
 
 ## Stargazers over time
 
