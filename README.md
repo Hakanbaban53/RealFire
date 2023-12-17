@@ -7,6 +7,8 @@
 <h2 align="center">RealFire</h2>
 <p align="center"><img src="./assets/preview.png"></p>
 
+<h3 align="center">Adaptive Tab Bar Extension Support</h3>
+<p align="center"><img src="./assets/horizonal_tabs.gif"></p>
 
 <h3 align="center">Horizonal Tabs</h3>
 <p align="center"><img src="./assets/horizonal_tabs.gif"></p>
@@ -17,14 +19,19 @@
 <h3 align="center">Animated Background</h3>
 <p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
 
+<h3 align="center">Tab Preview</h3>
+<p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
 
 <h3 align="center">Context Menu</h3>
 <p align="center"><img src="./assets/context.png"></p>
 
+<h3 align="center">Auto-hide Scrollbars</h3>
+<p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
+
 <h3 align="center">Library</h3>
 <p align="center"><img src="./assets/library.png"></p>
 
-<h3 align="center">Adaptive Window Color With Windows</h3>
+<h3 align="center">Adaptive Window Color With Windows & GNU/Linux</h3>
 <p align="center"><img src="./assets/adaptive.gif"></p>
 
 ## Folder structure
@@ -44,12 +51,19 @@
 │  ├──  realfire-config.css
 │  └──  other .css files
 ├──  JS
+│  ├──  aboutUserChrome.sys.mjs
 │  ├──  navbarToolbarButtonSlider.uc.js
+│  ├──  tabThumbnailTooltip.uc.js
+│  ├──  verticalTabsPane.uc.js
+│  ├──  tabThumbnailTooltip.uc.js
+│  ├──  macosTheme.us.js
 │  └──  many script in .uc.js format
 ├──  programs
 │  ├──  install-cfg.sh
 │  ├──  install.sh
+│  ├──  install-curl.sh
 │  ├──  install.bat
+│  ├──  install-curl.bat
 │  ├──  local-settings.js
 │  ├──  mozilla.cfg
 │  └──  user.js
@@ -71,16 +85,61 @@
 This helps to customize Firefox User Interface.
 
 ### [`userContent.css`](./userContent.css)
-This helps to customize new tab page.
+This helps to customize web content like a specific site.
 
-# Attention ⚠️
-If you dont use horizonal tabs or like this extension you need the use the userChrome manager (Shortcut `Ctrl+Shift+U`) and disable the js file.
+### [`aboutUserChrome.sys.mjs by aminomancer`](https://github.com/aminomancer/uc.css.js#aboutUserChrome)
+This script helps to enabled or disabled browser scripts. Adding new entry the application menu named UserChrome Maneger (Shortcut `Ctrl+Shift+U`).
+
+### [`tabThumbnailTooltip.uc.js`](https://github.com/aminomancer/uc.css.js#tab-thumbnail-tooltip)
+Show a large thumbnail image to preview tab content when hovering a tab.
+
+### [`hideScrollbar.uc.js`](./JS/hideScrollbar.uc.js)
+It's now possible to autohide scrollbars.
+
+### [`navbarToolbarButtonSlider.uc.js by aminomancer`](https://github.com/aminomancer/uc.css.js#navbar-toolbar-button-slider)
+As this is a one-liner theme, one must drop some buttons to add sufficient space for urlbar and tabbar. But this messed up with their widths. Take a look [here](https://www.reddit.com/r/FirefoxCSS/comments/n9asta/addons_width_changes_to_a_fixed_value_when_placed/). I did some temporary fix(which was not that good). But [u/MotherStylus](https://www.reddit.com/user/MotherStylus) came up with an awesome `uc.js` script.<br>
+So basically this adds a button slider to navbar toolbar. [This](https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/assets/navbar.gif) is how it looks. Read the file description to configure it properly.
+
+### [`verticalTabsPane.uc.js by aminomancer (Edited for RealFire)`](./JS/verticalTabsPane.uc.js)
+This script create a vertical pane across from the sidebar that functions like the vertical tabs pane in Microsoft Edge. Writed by [aminomancer](https://github.com/aminomancer) but I edited full compatibility for RealFire.
+
+### [`windowcontrolmacostheme.uc.js`](./JS/windowcontrolmacostheme.uc.js)
+This script to convert font and window controls to macos style.
+
+## [`You can look here to find out what other scripts do.`](https://github.com/aminomancer/uc.css.js#script-conventions)
+
 
 ## **But how does it work?**
 Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is loaded using [`local-settings.js`](./programs/local-settings.js). This startup-script adds "loader" scripts from `utils` folder that loads arbitrary javascript files from the `script` folder into Firefox<br>
-`mozilla.cfg` also helps in setting local webpage as your homepage. Details in [Installation](#Installation).
+`mozilla.cfg` also helps in setting local webpage as your homepage. Details in [Installation](#Installation) (Currently Not Working ⚠️).
 
 # Installation
+
+<details><summary>Curl based Installation</summary>
+
+- You can also install this theme with one command:
+
+    <details><summary>GNU/Linux & MacOS</summary><br>
+
+    ```console
+    $ curl -s -o- https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/programs/install-curl.sh | bash # Standard
+    $ curl -s -o- https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/programs/install-curl.sh | bash -s -- -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+    $ curl -s -o- https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/programs/install-curl.sh | bash -s -- -f ~/snap/firefox/common/.mozilla/firefox/ # Snap
+    ```
+    </details>
+
+   <details><summary>Windows</summary><br>
+
+    ```powershell
+    > curl -sL "https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/programs/install-curl.bat" > %TEMP%\install-curl.bat && %TEMP%\install-curl.bat REM Standard
+    > curl -sL "https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/programs/install-curl.bat" > %TEMP%\install-curl.bat && %TEMP%\install-curl.bat -b "C:\Program Files (x86)\Mozilla Firefox" REM Custom binary folder
+    ```
+    
+    </details>
+
+    This will download the master branch and run the installation script.
+    `mozilla.cfg` can be configured after complete installation
+</details>
 
 <details><summary>Script Installation</summary>
 
@@ -94,7 +153,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
     This script will lookup default Firefox profile location and install the theme with default configurations.
 
-    <details><summary>Linux/MacOS</summary><br>
+    <details><summary>GNU/Linux & MacOS</summary><br>
 
     ```console
     $ ./programs/install.sh # Standard

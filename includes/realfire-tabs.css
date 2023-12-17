@@ -9,16 +9,6 @@
   border-radius: var(--uc-border-radius) !important;
 }
 
-#private-mask,
-#private-mask:is([enabled="false"]) {
-  display: none !important;
-}
-
-#private-mask[enabled="true"] {
-  align-items: center;
-  display: flex !important;
-}
-
 /* multi tab selection */
 #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([multiselected])>.tab-stack>.tab-background:-moz-lwtheme {
   outline-color: var(--toolbarseparator-color) !important;
