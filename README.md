@@ -26,7 +26,7 @@
 <p align="center"><img src="./assets/context.png"></p>
 
 <h3 align="center">Auto-hide Scrollbars</h3>
-<p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
+<p align="center" style="max-heigh:250px"><img src="./assets/hide_scroll_bar.gif"></p>
 
 <h3 align="center">Library</h3>
 <p align="center"><img src="./assets/library.png"></p>
