@@ -103,7 +103,7 @@ So basically this adds a button slider to navbar toolbar. [This](https://raw.git
 ### [`verticalTabsPane.uc.js by aminomancer (Edited for RealFire)`](./JS/verticalTabsPane.uc.js)
 This script create a vertical pane across from the sidebar that functions like the vertical tabs pane in Microsoft Edge. Writed by [aminomancer](https://github.com/aminomancer) but I edited full compatibility for RealFire.
 
-### [`windowcontrolmacostheme.uc.js`](./JS/windowcontrolmacostheme.uc.js)
+### [`macosTheme.uc.js`](./JS/macosTheme.uc.js)
 This script to convert font and window controls to macos style.
 
 
@@ -268,7 +268,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 
 ## Known issues
-- Adaptive window color with windows not working on preferences page and start page. If you want the change it use the config.css file.
+- Adaptive window color with windows not working on preferences page and start page (Windows only). If you want the change it use the config.css file.
 
 ## Credits
 - I started with this amazing material theme : [Sweet_Pop!](https://github.com/PROxZIMA/Sweet-Pop) by [PROxZIMA](https://github.com/PROxZIMA)
