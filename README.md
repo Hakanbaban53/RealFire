@@ -8,19 +8,19 @@
 <p align="center"><img src="./assets/preview.png"></p>
 
 <h3 align="center">Adaptive Tab Bar Extension Support</h3>
-<p align="center"><img src="./assets/horizonal_tabs.gif"></p>
+<p align="center"><img src="./assets/adaptive-tab-bar-extension-support.gif"></p>
 
 <h3 align="center">Horizonal Tabs</h3>
 <p align="center"><img src="./assets/horizonal_tabs.gif"></p>
 
-<h3 align="center">MacOs Windows Control</h3>
-<p align="center" style="max-heigh:250px"><img src="./assets/Macos_menu_window_control.gif"></p>
+<h3 align="center">MacOs Window Control & Fonts</h3>
+<p align="center" style="max-heigh:250px"><img src="./assets/mac_os_theme.gif"></p>
 
 <h3 align="center">Animated Background</h3>
 <p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
 
 <h3 align="center">Tab Preview</h3>
-<p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
+<p align="center" style="max-heigh:300px"><img src="./assets/tab-preview.gif"></p>
 
 <h3 align="center">Context Menu</h3>
 <p align="center"><img src="./assets/context.png"></p>
@@ -106,7 +106,8 @@ This script create a vertical pane across from the sidebar that functions like t
 ### [`windowcontrolmacostheme.uc.js`](./JS/windowcontrolmacostheme.uc.js)
 This script to convert font and window controls to macos style.
 
-## [`You can look here to find out what other scripts do.`](https://github.com/aminomancer/uc.css.js#script-conventions)
+
+#### [`You can look here to find out what other scripts do.`](https://github.com/aminomancer/uc.css.js#script-conventions)
 
 
 ## **But how does it work?**
