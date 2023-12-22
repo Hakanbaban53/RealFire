@@ -2,12 +2,21 @@
 
 THEMEDIRECTORY=$(cd `dirname "$0"` && cd .. && pwd);
 
-case "$(uname -s)" in
-    Darwin*)    FIREFOXFOLDER=~/Library/Application\ Support/Firefox/;;
-    *)          FIREFOXFOLDER=/home/$USER/.mozilla/firefox/;;
-esac
+os_type=$(uname -s)
 
-APPLICATIONFOLDER='/usr/lib/firefox/'
+# Set default paths
+FIREFOXFOLDER=""
+APPLICATIONFOLDER=""
+
+# Check the operating system and set paths accordingly
+if [ "$os_type" == "Darwin" ]; then
+    FIREFOXFOLDER=~/Library/Application\ Support/Firefox/
+    APPLICATIONFOLDER='/Applications/Firefox.app/Contents/MacOS/Firefox/'
+else
+    FIREFOXFOLDER=/home/$USER/.mozilla/firefox/
+    APPLICATIONFOLDER='/usr/lib/firefox/'
+fi
+
 PROFILENAME="";
 FXACEXTRAS=true;
 CHROMEFOLDER="chrome";
