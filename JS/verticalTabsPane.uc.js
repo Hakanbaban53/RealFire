@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Vertical Tabs Pane
-// @version        1.7.9
+// @version        1.8.0
 // @author         aminomancer (Customized for RealFire *Hakanbaban53*)
 // @homepageURL    https://github.com/aminomancer/uc.css.js
 // @long-description
@@ -2339,9 +2339,9 @@
   min-width: 0 !important;
 }
 #vertical-tabs-pane[unpinned]:not([expanded])
-  :is(.all-tabs-item, .subviewbutton) {
+:is(.all-tabs-item, .subviewbutton) {
   margin: 0 !important;
-  justify-items: start !important;
+  justify-content: center !important;
 }
 #vertical-tabs-pane[unpinned]:not([no-expand])
   #vertical-tabs-buttons-row
