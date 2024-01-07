@@ -26,11 +26,13 @@ When you collapse the pane with the unpin button, it collapses to a small width 
   // Function to check and update the accent color
   function checkAndUpdateAccentColor() {
     const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--lwt-accent-color').trim();
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (accentColor.toLowerCase() === 'white') {
+    if (accentColor.toLowerCase() === 'white' && prefersDarkMode) {
       document.documentElement.style.setProperty('--lwt-accent-color', '#000000');
     }
   }
+
 
   // Initial check
   checkAndUpdateAccentColor();
