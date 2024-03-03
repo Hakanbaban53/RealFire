@@ -104,16 +104,10 @@
 
   /* This deletes the leftover border when clicking one of the top buttons */
   #placesMenu > menu {
-    transition: ease-in 200ms;
     margin-inline: 5px !important;
     border-radius: var(--uc-border-radius) !important;
-    outline: 1.5px solid var(--uc-muted-colour) !important;
   }
 
-  #placesMenu > menu:hover {
-    transition: ease-out 200ms;
-    outline: 1.5px solid AccentColor !important;
-  }
   
   #placesMenu > menu > .menubar-text {
   background: none !important;;
