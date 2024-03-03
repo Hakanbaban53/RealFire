@@ -522,6 +522,10 @@ menuitem[data-l10n-id="full-screen-exit"] {
   background-image: url("chrome://browser/skin/forward.svg");
 }
 
+#appMenu-report-broken-site-button {
+  list-style-image: url("chrome://global/skin/icons/warning.svg");
+}
+
 .customize-context-reportExtension {
   background-image: url("chrome://global/skin/icons/warning.svg");
 }
