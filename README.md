@@ -37,47 +37,47 @@
 ## Folder structure
 
 ```css
- .
-├──  assets
-│  └──  preview images
-├──  img
-│  └──  new tab background image
-├──  icons
-│  ├──  animation.svg
-│  └──  many icons in .svg format
-├──  includes
-│  ├──  realfire-checkbox.css
-│  ├──  realfire-icons.css
-│  ├──  realfire-config.css
-│  └──  other .css files
-├──  JS
-│  ├──  aboutUserChrome.sys.mjs
-│  ├──  navbarToolbarButtonSlider.uc.js
-│  ├──  tabThumbnailTooltip.uc.js
-│  ├──  verticalTabsPane.uc.js
-│  ├──  tabThumbnailTooltip.uc.js
-│  ├──  macosTheme.us.js
-│  └──  many script in .uc.js format
-├──  programs
-│  ├──  install-cfg.sh
-│  ├──  install.sh
-│  ├──  install-curl.sh
-│  ├──  install.bat
-│  ├──  install-curl.bat
-│  ├──  local-settings.js
-│  ├──  mozilla.cfg
-│  └──  user.js
-├──  resources
-│  └──  userchrome Manager page files
-├──  utils
-│  ├──  .editorconfig
-│  ├──  boot.sys.mjs
-│  ├──  chrome.manifest
-│  ├──  fs.sys.mjs
-│  └──  utils.sys.mjs
-├──  README.md
-├──  userChrome.css
-└──  userContent.css
+🗃 .
+├── 🖿 assets
+│  └── 🖻 preview images
+├── 🖿 img
+│  └── 🖻 new tab background image
+├── 🖿 icons
+│  ├── 🗎 animation.svg
+│  └── 🗐 many icons in .svg format
+├── 🖿 includes
+│  ├── 🗎 realfire-checkbox.css
+│  ├── 🗎 realfire-icons.css
+│  ├── 🗎 realfire-config.css
+│  └── 🗐 other .css files
+├── 🖿 JS
+│  ├── 🗎 aboutUserChrome.sys.mjs
+│  ├── 🗎 navbarToolbarButtonSlider.uc.js
+│  ├── 🗎 tabThumbnailTooltip.uc.js
+│  ├── 🗎 verticalTabsPane.uc.js
+│  ├── 🗎 tabThumbnailTooltip.uc.js
+│  ├── 🗎 macosTheme.us.js
+│  └── 🗐 many script in .uc.js format
+├── 🖿 programs
+│  ├── 🗎 install-cfg.sh
+│  ├── 🗎 install.sh
+│  ├── 🗎 install-curl.sh
+│  ├── 🗎 install.bat
+│  ├── 🗎 install-curl.bat
+│  ├── 🗎 local-settings.js
+│  ├── 🗎 mozilla.cfg
+│  └── 🗎 user.js
+├── 🖿 resources
+│  └── 🗐 userchrome Manager page files
+├── 🖿 utils
+│  ├── 🗎 .editorconfig
+│  ├── 🗎 boot.sys.mjs
+│  ├── 🗎 chrome.manifest
+│  ├── 🗎 fs.sys.mjs
+│  └── 🗎 utils.sys.mjs
+├── 🗎 README.md
+├── 🗎 userChrome.css
+└── 🗎 userContent.css
 
 ```
 
