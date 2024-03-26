@@ -1,8 +1,5 @@
 import { FileSystem as FS } from "chrome://userchromejs/content/fs.sys.mjs";
 
-export const SharedGlobal = {};
-ChromeUtils.defineLazyGetter(SharedGlobal,"widgetCallbacks",() => {return new Map()});
-
 export class Pref{
   #type;
   #name;
@@ -268,10 +265,11 @@ export const loaderModuleLink = new (function(){
   let variant = null;
   let brandName = null;
   // .setup() is called once by boot.sys.mjs on startup
-  this.setup = (ref,aVersion,aBrandName,aVariant,aScriptData) => {
+  this.setup = (ref,aVersion,aBrandName,aVariant,aSharedGlobal,aScriptData) => {
     this.scripts = ref.scripts;
     this.styles = ref.styles;
     this.version = aVersion;
+    this.sharedGlobal = aSharedGlobal;
     this.getScriptMenu = (aDoc) => {
       return ref.generateScriptMenuItemsIfNeeded(aDoc);
     }
@@ -372,7 +370,7 @@ export class _ucUtils{
         : `url(chrome://userChrome/content/${desc.image});`;
       itemStyle += desc.style || "";
     }
-    SharedGlobal.widgetCallbacks.set(desc.id,desc.callback);
+    loaderModuleLink.sharedGlobal.widgetCallbacks.set(desc.id,desc.callback);
 
     return CUI.createWidget({
       id: desc.id,
@@ -531,7 +529,7 @@ export class _ucUtils{
     return false
   }
   static get sharedGlobal(){
-    return SharedGlobal
+    return loaderModuleLink.sharedGlobal
   }
   static async showNotification(description){
     if(loaderModuleLink.variant.THUNDERBIRD){
@@ -597,9 +595,7 @@ export class _ucUtils{
       return
     }
     const name = isElement ? el.getAttribute("filename") : el;
-    let script = name.endsWith("js")
-      ? _ucUtils.getScriptData(name)
-      : _ucUtils.getStyleData(name);
+    let script = _ucUtils.getScriptData(name);
     if(!script){
       return null
     }
