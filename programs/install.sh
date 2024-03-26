@@ -14,7 +14,7 @@ if [ "$os_type" == "Darwin" ]; then
     APPLICATIONFOLDER='/Applications/Firefox.app/Contents/MacOS/Firefox/'
 else
     FIREFOXFOLDER=/home/$USER/.mozilla/firefox/
-    APPLICATIONFOLDER='/usr/lib/firefox/'
+    APPLICATIONFOLDER='/usr/lib*/firefox/'
 fi
 
 PROFILENAME="";
