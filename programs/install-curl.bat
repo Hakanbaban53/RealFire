@@ -9,7 +9,7 @@ if exist "%FOLDERPATH%"\* (
     rd /s /q %FOLDERPATH%
 )
 
-curl -LJo %FILENAME% https://github.com/Hakanbaban53/RealFire/archive/refs/heads/main.zip || (echo Failed to fetch Sweet_Pop^! theme && echo Exiting... && goto :eof)
+curl -LJo %FILENAME% https://github.com/Hakanbaban53/RealFire/archive/refs/heads/main.zip || (echo Failed to fetch RealFire^! theme && echo Exiting... && goto :eof)
 
 tar -xvf %FILENAME% || echo.
 
