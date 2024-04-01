@@ -8,7 +8,7 @@
 <h2 align="center">RealFire</h2>
 <p align="center"><img src="./assets/preview.png"></p>
 
-### Images
+## 🏞 Screenshots
 
 <details><summary>Click me 🐈</summary>
 
@@ -70,11 +70,11 @@ This script to convert font and window controls to macos style.
 #### [`You can look here to find out what other scripts do.`](https://github.com/aminomancer/uc.css.js#script-conventions)
 
 
-## **But how does it work?**
+## ❓ **But how does it work?**
 Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is loaded using [`local-settings.js`](./programs/local-settings.js). This startup-script adds "loader" scripts from `utils` folder that loads arbitrary javascript files from the `script` folder into Firefox<br>
 `mozilla.cfg` also helps in setting local webpage as your homepage. Details in [Installation](#Installation) (Currently Not Working ⚠️).
 
-# Installation
+## 💡 Installation
 
 <details><summary>Curl based Installation</summary>
 
@@ -209,7 +209,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 </details>
 
-#### Follow-up changes
+#### 🔧 Follow-up changes
 1) In Firefox
     - Right click hamburger button > `customize toolbar` disable `Title Bar`, `Drag Space`.
     - Remove `Flexible Space` from urlbar.
@@ -219,7 +219,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 3) ### **Voilà**
 
-## Configuration
+## ⚙️ Configuration 
 1) You can use the [ realfire-config.css ](https://github.com/Hakanbaban53/RealFire/blob/main/includes/realfire-config.css) change the a lot of variables.
 
 2) If you run the automatic installation script, it will install all the files in the folders where they need to be installed. 
@@ -227,11 +227,11 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 3) If something breaks on your system then please raise a issue
 
 
-## Known issues
+## 📌 Known issues
 - Adaptive window color with windows not working on preferences page and start page (Windows only). If you want the change it use the config.css file.
 
 
-## Folder structure
+## 📂 Folder structure
 
 ```css
 🗃 .
