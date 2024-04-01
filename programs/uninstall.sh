@@ -42,37 +42,59 @@ while getopts 'b:f:p:eh' flag; do
     esac
 done
 
+# Check if Firefox profiles.ini is installed or not
+PROFILES_FILE="${FIREFOXFOLDER}/profiles.ini"
+if [ ! -f "${PROFILES_FILE}" ]; then
+    >&2 echo "Failed to locate profiles.ini in ${FIREFOXFOLDER}
+Exiting..."
+    exit 1
+fi
+
+echo
+echo "Profiles file found..."
+
+
+# Define default Profile folder path else use -p option
+if [ -z "$PROFILENAME" ]; then
+    PROFILEFOLDER="${FIREFOXFOLDER}/$(grep -zoP '\[Install.*?\]\nDefault=\K(.*?)\n' $PROFILES_FILE | tr -d '\0')"
+else
+    PROFILEFOLDER="${FIREFOXFOLDER}/${PROFILENAME}"
+fi
+
+
+# Enter Firefox profile folder if it exists
+if [ ! -d "$PROFILEFOLDER" ]; then
+    >&2 echo "Failed to locate Profile folder at ${PROFILEFOLDER}
+Exiting..."
+    exit 1
+fi
+
+cd $PROFILEFOLDER
+
 # Confirm uninstallation
 read -p "This will remove RealFire! theme and associated configuration files. Are you sure? (y/n): " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    # Remove RealFire! theme folder
-    rm -rf "${FIREFOXFOLDER}/${CHROMEFOLDER}"
+
+
+    # Remove RealFire! theme folder if it exists
+    if [ -d "${CHROMEFOLDER}" ]; then
+        rm -rf "${CHROMEFOLDER}"
+    fi
 
     # Remove user.js symbolic link
-    rm "${FIREFOXFOLDER}/user.js"
-
-    # Remove backup of user.js if exists
-    if [ -f "${FIREFOXFOLDER}/user.js.bak" ]; then
-        mv --backup=t ../user.js.bak ../user.js || { exit 1; }
+    if [ -f "../user.js" ]; then
+        rm "$../user.js"
     fi
 
-    # If FXACEXTRAS extras enabled, remove additional files
-    if [ -f "${FIREFOXFOLDER}/programs/config-prefs.js" ]; then
-        rm "${FIREFOXFOLDER}/programs/config-prefs.js"
-    fi
-
-    if [ -f "${FIREFOXFOLDER}/programs/config.js" ]; then
-        rm "${FIREFOXFOLDER}/programs/config.js"
-    fi
-
-    if [ -f "${FIREFOXFOLDER}/utils/boot.sys.mjs" ]; then
-        rm "${FIREFOXFOLDER}/utils/boot.sys.mjs"
+    # Restore backup of user.js if exists
+    if [ -f "../user.js.bak" ]; then
+        mv ../user.js.bak ../user.js || { exit 1; }
     fi
 
     echo "Removing mozilla.cfg, local-settings.js, config.js and config-pref.js from ${APPLICATIONFOLDER}"
     chmod +x "${PWD}/programs/uninstall-cfg.sh"
-    sudo "${PWD}/programs/install-cfg.sh" ${APPLICATIONFOLDER} || { echo "Exiting..."; exit 1; }
+    sudo "${PWD}/programs/uninstall-cfg.sh" ${APPLICATIONFOLDER} || { echo "Exiting..."; exit 1; }
 
     echo "RealFire! theme and associated configuration files have been removed."
 else
