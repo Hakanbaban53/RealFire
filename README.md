@@ -4,8 +4,13 @@
   **A minimalist animated oneliner theme for Firefox perfectly matching real Dark**
 </div>
 
+
 <h2 align="center">RealFire</h2>
 <p align="center"><img src="./assets/preview.png"></p>
+
+### Images
+
+<details><summary>Click me 🐈</summary>
 
 <h3 align="center">Adaptive Tab Bar Extension Support</h3>
 <p align="center"><img src="./assets/adaptive-tab-bar-extension-support.gif"></p>
@@ -33,6 +38,8 @@
 
 <h3 align="center">Adaptive Window Color With Windows & GNU/Linux</h3>
 <p align="center"><img src="./assets/adaptive.gif"></p>
+
+<details>
 
 ### [`userChrome.css`](./userChrome.css)
 This helps to customize Firefox User Interface.
