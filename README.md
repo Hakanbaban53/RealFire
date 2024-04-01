@@ -240,7 +240,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 ## 📌 Known issues
 
-- Adaptive window color with windows not working on preferences page and start page (Windows only). If you want the change it use the config.css file.
+- Adaptive window color with windows not working on preferences page and start page (Windows only). If you want the change it use the [ realfire-config.css ](https://github.com/Hakanbaban53/RealFire/blob/main/includes/realfire-config.css) file.
 
 ## 📂 Folder structure
 
