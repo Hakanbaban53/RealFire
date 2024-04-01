@@ -41,6 +41,8 @@
 
 </details>
 
+## 📃 Browser JS Files
+
 ### [`userChrome.css`](./userChrome.css)
 This helps to customize Firefox User Interface.
 
@@ -67,7 +69,7 @@ This script create a vertical pane across from the sidebar that functions like t
 This script to convert font and window controls to macos style.
 
 
-#### [`You can look here to find out what other scripts do.`](https://github.com/aminomancer/uc.css.js#script-conventions)
+#### [`You can look here to find out what other scripts do.`](https://github.com/aminomancer/uc.css.js#script-conventions) 👈
 
 
 ## ❓ **But how does it work?**
