@@ -62,11 +62,6 @@ Show a large thumbnail image to preview tab content when hovering a tab.
 
 It's now possible to autohide scrollbars.
 
-### [`navbarToolbarButtonSlider.uc.js by aminomancer`](https://github.com/aminomancer/uc.css.js#navbar-toolbar-button-slider)
-
-As this is a one-liner theme, one must drop some buttons to add sufficient space for urlbar and tabbar. But this messed up with their widths. Take a look [here](https://www.reddit.com/r/FirefoxCSS/comments/n9asta/addons_width_changes_to_a_fixed_value_when_placed/). I did some temporary fix(which was not that good). But [u/MotherStylus](https://www.reddit.com/user/MotherStylus) came up with an awesome `uc.js` script.<br>
-So basically this adds a button slider to navbar toolbar. [This](https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/assets/navbar.gif) is how it looks. Read the file description to configure it properly.
-
 ### [`verticalTabsPane.uc.js by aminomancer (Edited for RealFire)`](./JS/verticalTabsPane.uc.js)
 
 This script create a vertical pane across from the sidebar that functions like the vertical tabs pane in Microsoft Edge. Writed by [aminomancer](https://github.com/aminomancer) but I edited full compatibility for RealFire.
