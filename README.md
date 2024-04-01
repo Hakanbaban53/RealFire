@@ -86,10 +86,6 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 <details><summary><strong><em>Curl based Installation (You can install this theme with one line command)</em></strong></summary>
 
-
-    This will download the master branch and run the installation script.
-    `mozilla.cfg` can be configured after complete installation
-
 <details><summary>GNU/Linux & MacOS</summary><br>
 
     ```console
@@ -106,8 +102,10 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
     > curl -sL "https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/programs/install-curl.bat" > %TEMP%\install-curl.bat && %TEMP%\install-curl.bat REM Standard
     > curl -sL "https://raw.githubusercontent.com/Hakanbaban53/RealFire/main/programs/install-curl.bat" > %TEMP%\install-curl.bat && %TEMP%\install-curl.bat -b "C:\Program Files (x86)\Mozilla Firefox" REM Custom binary folder
     ```
-
 </details>
+
+    This will download the master branch and run the installation script.
+    `mozilla.cfg` can be configured after complete installation
 
 </details>
 
