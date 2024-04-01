@@ -39,7 +39,7 @@
 <h3 align="center">Adaptive Window Color With Windows & GNU/Linux</h3>
 <p align="center"><img src="./assets/adaptive.gif"></p>
 
-<details>
+</details>
 
 ### [`userChrome.css`](./userChrome.css)
 This helps to customize Firefox User Interface.
