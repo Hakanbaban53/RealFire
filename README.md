@@ -3,9 +3,6 @@
   # [RealFire 🔥](https://github.com/Hakanbaban53/RealFire)
   **A minimalist animated oneliner theme for Firefox perfectly matching real Dark**
 </div>
-
-
-<h2 align="center">RealFire</h2>
 <p align="center"><img src="./assets/preview.png"></p>
 
 ## 🏞 Screenshots
