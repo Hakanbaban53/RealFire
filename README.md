@@ -86,6 +86,9 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 <details><summary>Curl based Installation (You can install this theme with one line command)</summary>
 
+    This will download the master branch and run the installation script.
+    `mozilla.cfg` can be configured after complete installation
+
 <details><summary>GNU/Linux & MacOS</summary><br>
 
     ```console
@@ -104,9 +107,6 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
     ```
 
 </details>
-
-    This will download the master branch and run the installation script.
-    `mozilla.cfg` can be configured after complete installation
 
 </details>
 
