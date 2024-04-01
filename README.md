@@ -84,7 +84,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 ## 💡 Installation
 
-<details><summary>Curl based Installation (You can install this theme with one line command)</summary>
+### <details><summary>Curl based Installation (You can install this theme with one line command)</summary>
 
     This will download the master branch and run the installation script.
     `mozilla.cfg` can be configured after complete installation
@@ -110,7 +110,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 </details>
 
-<details><summary>Script Installation</summary>
+### <details><summary>Script Installation</summary>
 
 1. Clone the repository and enter folder:
 
@@ -174,7 +174,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
      - Shows help message with flags info
      </details>
 
-<details><summary>Manual Installation</summary>
+### <details><summary>Manual Installation</summary>
 
 1. Open `about:support` in new tab and click `Open Directory` near `Profile Directory`.
 
