@@ -94,10 +94,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     echo "Removing mozilla.cfg, local-settings.js, config.js and config-pref.js from ${APPLICATIONFOLDER}"
 
-    rm -f "${APPLICATIONFOLDER}/mozilla.cfg"
-    rm -f "${APPLICATIONFOLDER}/config.js"
-    rm -f "${APPLICATIONFOLDER}/defaults/pref/config-prefs.js"
-    rm -f "${APPLICATIONFOLDER}/defaults/pref/local-settings.js"
+    sudo rm -f "${APPLICATIONFOLDER}/mozilla.cfg"
+    sudo rm -f "${APPLICATIONFOLDER}/config.js"
+    sudo rm -f "${APPLICATIONFOLDER}/defaults/pref/config-prefs.js"
+    sudo rm -f "${APPLICATIONFOLDER}/defaults/pref/local-settings.js"
     
     echo "RealFire! theme and associated configuration files have been removed."
 else
