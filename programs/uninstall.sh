@@ -12,11 +12,11 @@ os_type=$(uname -s)
 
 # Set paths based on operating system
 if [ "$os_type" == "Darwin" ]; then
-    FIREFOXFOLDER=~/Library/Application\ Support/Firefox/
-    APPLICATIONFOLDER='/Applications/Firefox.app/Contents/MacOS/Firefox/'
+    FIREFOXFOLDER=~/Library/Application\ Support/Firefox
+    APPLICATIONFOLDER='/Applications/Firefox.app/Contents/MacOS/Firefox'
 else
-    FIREFOXFOLDER=/home/$USER/.mozilla/firefox/
-    APPLICATIONFOLDER='/usr/lib*/firefox/'
+    FIREFOXFOLDER=/home/$USER/.mozilla/firefox
+    APPLICATIONFOLDER='/usr/lib64/firefox'
 fi
 
 CHROMEFOLDER="chrome";

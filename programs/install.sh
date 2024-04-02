@@ -10,11 +10,11 @@ APPLICATIONFOLDER=""
 
 # Check the operating system and set paths accordingly
 if [ "$os_type" == "Darwin" ]; then
-    FIREFOXFOLDER=~/Library/Application\ Support/Firefox/
-    APPLICATIONFOLDER='/Applications/Firefox.app/Contents/MacOS/Firefox/'
+    FIREFOXFOLDER=~/Library/Application\ Support/Firefox
+    APPLICATIONFOLDER='/Applications/Firefox.app/Contents/MacOS/Firefox'
 else
-    FIREFOXFOLDER=/home/$USER/.mozilla/firefox/
-    APPLICATIONFOLDER='/usr/lib*/firefox/'
+    FIREFOXFOLDER=/home/$USER/.mozilla/firefox
+    APPLICATIONFOLDER='/usr/lib64/firefox'
 fi
 
 PROFILENAME="";
@@ -120,8 +120,12 @@ if [ "$FXACEXTRAS" = true ] ; then
 
     echo
     echo "Copying mozilla.cfg, local-settings.js, config.js and config-pref.js to ${APPLICATIONFOLDER}"
-    chmod +x "${PWD}/programs/install-cfg.sh"
-    sudo "${PWD}/programs/install-cfg.sh" ${APPLICATIONFOLDER} || { echo "Exiting..."; exit 1; }
+
+    sudo cp ./programs/mozilla.cfg "${APPLICATIONFOLDER}/"
+    sudo cp ./programs/config.js "${APPLICATIONFOLDER}/"
+
+    sudo cp ./programs/config-prefs.js "${APPLICATIONFOLDER}/defaults/pref/"
+    sudo cp ./programs/local-settings.js "${APPLICATIONFOLDER}/defaults/pref/"
 fi
 
 echo
