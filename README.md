@@ -218,6 +218,15 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 </details>
 
+- 🗑️ If you want to remove the Theme:
+
+    # GNU/Linux & MacOS
+    ./programs/uninstall.sh
+    
+    # Windows
+    Not Released Yet....
+    
+
 #### 🔧 Follow-up changes
 
 1. In Firefox

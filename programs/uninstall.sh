@@ -84,7 +84,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     # Remove user.js symbolic link
     if [ -f "../user.js" ]; then
-        rm "$../user.js"
+        rm "../user.js"
     fi
 
     # Restore backup of user.js if exists
@@ -93,9 +93,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     fi
 
     echo "Removing mozilla.cfg, local-settings.js, config.js and config-pref.js from ${APPLICATIONFOLDER}"
-    chmod +x "${PWD}/programs/uninstall-cfg.sh"
-    sudo "${PWD}/programs/uninstall-cfg.sh" ${APPLICATIONFOLDER} || { echo "Exiting..."; exit 1; }
 
+    rm -f "${APPLICATIONFOLDER}/mozilla.cfg"
+    rm -f "${APPLICATIONFOLDER}/config.js"
+    rm -f "${APPLICATIONFOLDER}/defaults/pref/config-prefs.js"
+    rm -f "${APPLICATIONFOLDER}/defaults/pref/local-settings.js"
+    
     echo "RealFire! theme and associated configuration files have been removed."
 else
     echo "Uninstallation aborted."
