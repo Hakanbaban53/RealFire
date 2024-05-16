@@ -4,12 +4,6 @@ findbar {
   background: var(--uc-base-colour) !important;
 }
 
-
-.findbar-textbox:focus {
-  transition: transform 13555ms !important;
-  border-radius: var(--uc-border-radius) !important;
-}
-
 .findbar-button:hover {
   background: var(--uc-highlight-colour) !important;
 }
@@ -17,15 +11,12 @@ findbar {
 .textbox-search-sign,
 .textbox-search-icon,
 .findbar-textbox {
-  border: none !important;
-  fill-opacity: 1 !important;
-  box-shadow: none !important;
-  margin-inline-start: 2px !important;
+  fill: var(--uc-inverted-colour);
   padding-inline-start: 28px !important;
   background-repeat: no-repeat !important;
   background-color: transparent !important;
   background-position: 5px center !important;
-  background-image: url(../icons/search.svg) !important;
+  -moz-context-properties: fill, fill-opacity;
 }
 
 

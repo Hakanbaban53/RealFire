@@ -39,11 +39,6 @@
   margin: -1px var(--container-tabs-indicator-margin) 0 var(--container-tabs-indicator-margin) !important;
 }
 
-.tab-throbber:not([pinned]),
-.tab-icon-pending:not([pinned]) {
-  list-style-image: url("../icons/tab-loading.png") !important;
-}
-
 /* show favicon when media is playing but tab is hovered */
 .tab-icon-image:not([pinned]) {
   opacity: 1 !important;

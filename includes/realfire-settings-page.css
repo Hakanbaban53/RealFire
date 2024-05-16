@@ -81,8 +81,7 @@ textarea:focus-visible,
 tree:focus-visible,
 richlistbox:focus-visible,
 #searchInput[focused="true"] {
-  outline: none !important;
-  border: var(--settings-color) solid 2px !important;
+  outline: var(--settings-color) solid 2px !important;
 }
 
 #searchInput {

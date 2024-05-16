@@ -114,6 +114,7 @@ menuitem[data-l10n-id*="bookmark-"]:not(.menuitem-iconic),
 
 #appMenuSearchHistory,
 #menu_find,
+.findbar-textbox,
 #context-searchselect,
 #panelMenu_searchBookmarks,
 #appMenu-find-button2,

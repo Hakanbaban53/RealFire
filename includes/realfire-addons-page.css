@@ -40,7 +40,6 @@
 }
 
 @media not (prefers-contrast) {
-
   #categories>.category[selected],
   #categories>.category.selected {
     color: var(--settings-color) !important;
@@ -84,8 +83,7 @@ search-textbox[focused],
 richlistbox:focus-visible,
 input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
 #searchInput[focused="true"] {
-  outline: none !important;
-  border: var(--settings-color) solid 2px !important;
+  outline: var(--settings-color) solid 2px !important;
 }
 
 #searchInput {

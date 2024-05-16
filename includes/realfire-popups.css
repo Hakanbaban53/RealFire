@@ -7,12 +7,9 @@ menupopup menuseparator {
 
 menupopup,
 panel[type="autocomplete-richlistbox"] {
-  /*! --panel-padding: 0px !important; */
   -moz-window-shadow: none !important;
-  /*! background: 0 !important; */
   border: none !important;
-  /*! color: var(--uc-inverted-colour) !important; */
-  /*! box-sizing: content-box !important; */
+
 }
 
 :is(menupopup, panel)[type=arrow] {
@@ -60,7 +57,6 @@ menupopup menu,
 .autocomplete-richlistitem {
   padding: 4px 10px !important;
   margin: 4px 4px !important;
-  /* background: 0 !important; */
   height: var(--menupopup-height) !important;
   color: var(--uc-inverted-colour) !important;
   border-radius: var(--uc-border-radius) !important;
@@ -81,7 +77,6 @@ menupopup:not(.in-menulist, [aria-label])>menuitem:not(.menuitem-iconic) {
   fill: var(--accent-color);
 }
 
-/* , [type="checkbox"] */
 menu:not([type="checkbox"], [type="radio"])>.menu-iconic-left,
 menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
   margin-inline: calc(1em - 4px) !important;
@@ -133,21 +128,6 @@ menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
   -moz-box-ordinal-group: 0 !important;
   margin-inline-end: 8px;
 }
-
-/* menupopup menuitem:hover:not([disabled="true"]),
-menupopup menu:hover:not([disabled="true"]),
-.autocomplete-richlistitem:hover:not([disabled="true"]):not([selected="true"]) {
-  background-color: var(--uc-base-colour) !important;
-}
-
-menupopup menuitem:hover:active:not([disabled="true"]),
-menupopup menu:hover:active:not([disabled="true"]),
-.autocomplete-richlistitem:hover:active:not([disabled="true"]),
-.autocomplete-richlistitem[selected="true"] {
-  background-color: var(--uc-base-colour) !important;
-} */
-
-
 
 menupopup menuitem[disabled="true"],
 menupopup menu[disabled="true"],
@@ -262,21 +242,6 @@ menubar>menu[open] {
   height: 16px !important;
 }
 
-/* #context-navigation .menuitem-iconic:hover:not([disabled]) {
-  background-color: var(--uc-base-colour) !important;
-}
-
-#context-navigation .menuitem-iconic:hover:active:not([disabled]) {
-  background-color: var(--uc-base-colour) !important;
-} */
-
-/* needs to align with textbox/bookmark-button but can't overlap it */
-/* panel[type="autocomplete-richlistbox"],
-.bookmark-item:not(menu) > menupopup[placespopup] {
-  padding: 1px 14px 18px !important;
-  margin: 0 -14px 0 !important;
-} */
-
 /* Box Background*/
 .context-menu,
 .popup-internal-box,
@@ -354,18 +319,6 @@ panel[type="arrow"] {
   border: 1.5px solid var(--accent-color) !important;
 
 }
-
-/* panel[type="arrow"][side="top"],
-panel[type="arrow"][side="bottom"] {
-  margin-left: -39px !important;
-  margin-right: -39px !important;
-}
-
-panel[type="arrow"][side="left"],
-panel[type="arrow"][side="right"] {
-  margin-top: -44px !important;
-  margin-bottom: -44px !important;
-} */
 
 .panel-arrowcontent {
   background: var(--uc-base-colour) !important;
@@ -818,15 +771,6 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
 #protections-popup-main-header-label {
   color: var(--uc-inverted-colour) !important;
 }
-
-/*
-#downloadsPanel-multiView {
-  padding-top: 8px !important;
-}*/
-
-/* #downloadsListBox .download-state {
-  padding-top: 8px !important;
-} */
 
 @media not (prefers-contrast) {
   .downloadProgress::-moz-progress-bar {
