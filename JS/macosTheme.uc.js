@@ -30,6 +30,9 @@
       left: -8px;
   }
   }
+  #toolbar-menubar .titlebar-buttonbox-container {
+    display: none;
+  }
   
   #TabsToolbar .toolbar-items {
     order: 1 !important; 
@@ -38,7 +41,7 @@
   #TabsToolbar .titlebar-buttonbox-container {
     order: 0 !important; 
   }
-  
+
   :root[sizemode="maximized"] .titlebar-buttonbox-container{
     padding-top: 0px !important;
   }
@@ -69,6 +72,9 @@
     gap: 10px;
       margin-right: 12px !important;
       margin-left: 12px !important;
+  }
+  .toolbarbutton-icon {
+    background-image: none !important;
   }
   
   .titlebar-close {

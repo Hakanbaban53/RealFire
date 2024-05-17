@@ -5,12 +5,12 @@ menupopup menuseparator {
   -moz-appearance: none !important;
 }
 
-menupopup,
+/* menupopup,
 panel[type="autocomplete-richlistbox"] {
   -moz-window-shadow: none !important;
   border: none !important;
 
-}
+} */
 
 :is(menupopup, panel)[type=arrow] {
   --panel-border-color: none !important;
@@ -74,7 +74,7 @@ menupopup:not(.in-menulist, [aria-label])>menuitem:not(.menuitem-iconic) {
   background-repeat: no-repeat;
   background-size: 16px;
   -moz-context-properties: fill, fill-opacity;
-  fill: var(--accent-color);
+  fill: var(--uc-inverted-colour);
 }
 
 menu:not([type="checkbox"], [type="radio"])>.menu-iconic-left,
@@ -86,7 +86,7 @@ menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
   width: 16px;
   height: 16px;
   -moz-context-properties: fill, fill-opacity;
-  fill: var(--accent-color);
+  fill: var(--uc-inverted-colour);
 }
 
 #appMenu-zoom-controls2>label,
@@ -187,7 +187,7 @@ menuitem[type="checkbox"]:not([checked="true"])>.menu-iconic-left::before {
 
 
 .menu-iconic-icon {
-  fill: var(--accent-color) !important;
+  fill: var(--uc-inverted-colour) !important;
   -moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
 }
 
@@ -486,7 +486,7 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
 }
 
 .subviewbutton .toolbarbutton-text {
-  margin-inline: 0px !important;
+  margin-inline: 10px !important;
 }
 
 /* .subviewbutton .toolbarbutton-icon {

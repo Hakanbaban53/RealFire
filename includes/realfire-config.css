@@ -130,6 +130,11 @@
    */
   --show-tab-close-button: none;
 
+  /*Set the tab position
+  * 0px is stuck the bottom
+  */
+  --uc-tab-block-margin: 6px;
+
   /*  Enable this to only show the Tab Close button on tab hover
    *  possible values:
    *  show: -moz-inline-block

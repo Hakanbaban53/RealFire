@@ -13,6 +13,12 @@
   box-shadow: 0 0 0 4px var(--accent-field-color) !important;
 }
 
+div.title span{
+  background-color: var(--uc-base-colour);
+  border-radius: var(--uc-border-radius);
+  padding: 2px 2px 4px 2px;
+}
+
 .top-site-outer .top-site-icon,
 .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner>a .tile {
   transition: ease-out 200ms;
