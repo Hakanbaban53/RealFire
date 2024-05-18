@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           MacOS Window Control & Font Theme
-// @version        1.0.1
+// @version        1.1.0
 // @author         Hakanbaban53
 // @homepage       https://github.com/Hakanbaban53/RealFire
 // @description    Move the window control to the left and recolor it and change the font.

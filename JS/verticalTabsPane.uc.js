@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Vertical Tabs Pane
-// @version        1.8.0
+// @version        1.8.1
 // @author         aminomancer (Customized for RealFire *Hakanbaban53*)
 // @homepageURL    https://github.com/aminomancer/uc.css.js
 // @long-description
@@ -2376,6 +2376,11 @@ When you collapse the pane with the unpin button, it collapses to a small width 
   :is(.all-tabs-item, .subviewbutton)
   .toolbarbutton-text {
   opacity: 0 !important;
+}
+#vertical-tabs-pane[unpinned]:not([expanded])
+  :is(.all-tabs-item, .subviewbutton)
+  .toolbarbutton-icon {
+  margin-left: 20px !important;
 }
 #vertical-tabs-pane .subviewbutton-iconic > .toolbarbutton-icon {
   -moz-context-properties: fill, fill-opacity;
