@@ -90,8 +90,9 @@
 
 /* Order and appearance of titlebar buttons */
 .titlebar-close {
-    order: 0 !important;
-    padding: 0 !important;
+  order: 0 !important;
+  padding: 0 !important;
+  list-style-image: url(chrome://userchrome/content/material/close.svg) !important;
 }
 
 .titlebar-min {
