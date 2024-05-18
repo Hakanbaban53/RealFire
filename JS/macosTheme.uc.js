@@ -13,152 +13,116 @@
   // CSS rules to apply
   var css = `
   html, body {
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    text-shadow: 0px 0px 0px !important;
-    -webkit-text-stroke-width: 0.1px !important;
-    }
-    *:not([class*="FokDXb"]):not([class*="upload"]):not([class*="icon"]):not([class*="mui-amount"]):not([class*="chaoshi"]):not([class*="top-nav"]):not([href*="ju.taobao.com"]):not([class*="Icon"]):not(b):not(ins):not(i):not(s){
-    font-family:"PingFang SC"!important;
-    }
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-shadow: 0px 0px 0px;
+    -webkit-text-stroke-width: 0.1px;
+}
 
-  @media (min-width: 1000px) {
-  #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
-    visibility: visible !important;
-    display: block !important;
-    position: absolute !important;
-      top: 12px;
-      left: -8px;
-  }
-  }
-  #toolbar-menubar .titlebar-buttonbox-container {
+*:not([class*="FokDXb"]):not([class*="upload"]):not([class*="icon"]):not([class*="mui-amount"]):not([class*="chaoshi"]):not([class*="top-nav"]):not([href*="ju.taobao.com"]):not([class*="Icon"]):not(b):not(ins):not(i):not(s) {
+    font-family: "PingFang SC" !important;
+}
+
+/* Responsive adjustments for toolbar */
+@media (max-width: 1000px) {
+    #toolbar-menubar .titlebar-buttonbox-container {
+        display: flex !important;
+    }
+    #toolbar-menubar {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 1000px) {
+    #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
+        visibility: visible !important;
+        display: block !important;
+        position: absolute !important;
+        top: 12px;
+        left: -8px;
+    }
+}
+
+#toolbar-menubar .titlebar-buttonbox-container {
     display: none;
-  }
-  
-  #TabsToolbar .toolbar-items {
+}
+
+/* Reorder toolbar items */
+#TabsToolbar .toolbar-items {
     order: 1 !important; 
-  }
+}
 
-  #TabsToolbar .titlebar-buttonbox-container {
+#TabsToolbar .titlebar-buttonbox-container {
     order: 0 !important; 
-  }
+}
 
-  :root[sizemode="maximized"] .titlebar-buttonbox-container{
-    padding-top: 0px !important;
-  }
-   
-  :root:-moz-window-inactive:not([customizing])
-      :is(.titlebar-buttonbox)
-      > toolbarbutton:not(:hover) {
+/* Styling for titlebar buttons */
+:root[sizemode="maximized"] .titlebar-buttonbox-container {
+    padding-top: 0 !important;
+}
+
+:root:-moz-window-inactive:not([customizing]) .titlebar-buttonbox > toolbarbutton:not(:hover) {
     opacity: 0.65 !important;
-      list-style-image: url(chrome://userchrome/content/material/inactive.svg) !important;
-  }
-  
-  :is(.titlebar-buttonbox) .toolbarbutton-icon {
+    list-style-image: url(chrome://userchrome/content/material/inactive.svg) !important;
+}
+
+.titlebar-buttonbox {
+    gap: 10px;
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+}
+
+.titlebar-button > .toolbarbutton-icon,
+.toolbarbutton-icon {
     opacity: 1 !important;
-      appearance: none !important;
-  }
-  
-  .titlebar-button > .toolbarbutton-icon {
+    appearance: none !important;
+    background-image: none !important;
+}
+
+.titlebar-button > .toolbarbutton-icon {
     height: 15px !important;
     min-height: 25px !important;
     width: 15px !important;
     min-width: 25px !important;
     padding-left: 6px !important;
     padding-right: 6px !important;
-  }
-  
-  
-  .titlebar-buttonbox {
-    gap: 10px;
-      margin-right: 12px !important;
-      margin-left: 12px !important;
-  }
-  .toolbarbutton-icon {
-    background-image: none !important;
-  }
-  
-  .titlebar-close {
-      appearance: none !important;
-      padding: 0px !important;
-      order : 0 !important;
-  }
-  
-  .titlebar-min {
-      appearance: none !important;
-      padding: 0px !important;
-      order :1 !important;
-  }
-  
-  .titlebar-max,
-  .titlebar-restore {
-      appearance: none !important;
-      padding: 0px !important;
-      order : 2 !important;
-  }
+}
 
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-min,
-  .titlebar-min{
-	position: relative !important;
+/* Order and appearance of titlebar buttons */
+.titlebar-close {
+    order: 0 !important;
+    padding: 0 !important;
+}
+
+.titlebar-min {
+    order: 1 !important;
+    padding: 0 !important;
     list-style-image: url(chrome://userchrome/content/material/minimize.svg) !important;	
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-min:hover,
-  .titlebar-min:hover{
-	position: relative !important;
-	list-style-image: url(chrome://userchrome/content/material/minimize-hover.svg) !important;
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-max,
-  .titlebar-max{
-	position: relative !important;
+}
+
+.titlebar-max, .titlebar-restore {
+    order: 2 !important;
+    padding: 0 !important;
     list-style-image: url(chrome://userchrome/content/material/maximize.svg) !important;
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover,
-  .titlebar-max:hover{
-	position: relative !important;
-	list-style-image: url(chrome://userchrome/content/material/maximize-hover.svg) !important;
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-restore,
-  .titlebar-restore{
-	position: relative !important;
-    list-style-image: url(chrome://userchrome/content/material/maximize.svg) !important;
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover,
-  .titlebar-restore:hover{
-	position: relative !important;
-	list-style-image: url(chrome://userchrome/content/material/maximize-restore.svg) !important;
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-close,
-  .titlebar-close{
-	position: relative !important;
-    list-style-image: url(chrome://userchrome/content/material/close.svg) !important;
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
-  
-  #TabsToolbar .titlebar-buttonbox-container .titlebar-close:hover,
-  .titlebar-close:hover{
-	position: relative !important;
-	list-style-image: url(chrome://userchrome/content/material/close-hover.svg) !important;
-	list-style-type: square !important;
-	list-style-position: inherit !important;
-  }
+}
+
+/* Hover states for titlebar buttons */
+.titlebar-min:hover {
+    list-style-image: url(chrome://userchrome/content/material/minimize-hover.svg) !important;
+}
+
+.titlebar-max:hover {
+    list-style-image: url(chrome://userchrome/content/material/maximize-hover.svg) !important;
+}
+
+.titlebar-restore:hover {
+    list-style-image: url(chrome://userchrome/content/material/maximize-restore.svg) !important;
+}
+
+.titlebar-close:hover {
+    list-style-image: url(chrome://userchrome/content/material/close-hover.svg) !important;
+}
+
   
   `;
 
