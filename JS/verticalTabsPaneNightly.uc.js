@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name           Vertical Tabs Pane
-// @version        1.8.0
-// @author         aminomancer
+// @name           Vertical Tabs Pane Nightly
+// @version        1.8.1
+// @author         aminomancer (Customized for RealFire *Hakanbaban53*)
 // @homepageURL    https://github.com/aminomancer/uc.css.js
 // @long-description
 // @description
@@ -16,8 +16,8 @@ Like the sidebar, the state of the pane is stored between windows and recorded i
 
 When you collapse the pane with the unpin button, it collapses to a small width and then temporarily expands if you hover it, after a delay of 100ms. Then when your mouse leaves the pane, it collapses again, after a delay of 100ms. Both of these delays can be changed with the "Configure Hover Delay" and "Configure Hover Out Delay" options in the context menu, or in about:config. For languages other than English, the labels and tooltips can be modified directly in the l10n object below.
 */
-// @downloadURL    https://cdn.jsdelivr.net/gh/aminomancer/uc.css.js@master/JS/verticalTabsPane.uc.js
-// @updateURL      https://cdn.jsdelivr.net/gh/aminomancer/uc.css.js@master/JS/verticalTabsPane.uc.js
+// @downloadURL    https://cdn.jsdelivr.net/gh/Hakanbaban53/RealFire@main/JS/verticalTabsPaneNightly.uc.js
+// @updateURL      https://cdn.jsdelivr.net/gh/Hakanbaban53/RealFire@main/JS/verticalTabsPaneNightly.uc.js
 // @license        This Source Code Form is subject to the terms of the Creative Commons Attribution-NonCommercial-ShareAlike International License, v. 4.0. If a copy of the CC BY-NC-SA 4.0 was not distributed with this file, You can obtain one at http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 // ==/UserScript==
 
