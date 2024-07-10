@@ -1,4 +1,4 @@
-/* Hides the list-all-tabs button*/
+/* Hides the list-all-tabs button */
 #alltabs-button {
   display: var(--uc-show-all-tabs-button) !important;
 }
@@ -22,6 +22,9 @@
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   display: var(--show-tab-close-button-hover) !important;
+}
+.tab-stack {
+  padding-right: 4px !important;
 }
 
 /* adaptive tab width */
@@ -64,7 +67,6 @@
   opacity: 1 !important;
   fill-opacity: 0.8 !important;
   stroke: transparent !important;
-  /* background: transparent !important; */
   color: var(--accent-color) !important;
   stroke: var(--toolbar-bgcolor) !important;
   background-color: var(--toolbar-bgcolor) !important;
@@ -110,7 +112,6 @@
 }
 
 #PersonalToolbar:not([customizing]) {
-  /* The following properties should allow the themes with trasparent toolbars to work */
   background-color: transparent !important;
   border-radius: var(--uc-border-radius) !important;
   border: 1.5px solid var(--accent-color) !important;
@@ -121,25 +122,49 @@
 }
 
 #PersonalToolbar:not([customizing]):-moz-window-inactive {
-  border: 2px solid var(--accent-field-color) !important;
+  border: 1.5px solid var(--accent-field-color) !important;
 }
 
-.tabbrowser-tab .tab-stack .tab-background[selected] {
+.tabbrowser-tab .tab-stack .tab-background:is([selected], [multiselected]) {
   border: 2px solid var(--accent-color) !important;
+  background-color: var(--uc-base-colour) !important;
 }
 
-.tabbrowser-tab .tab-stack .tab-background[selected=]:-moz-window-inactive {
-  border: 2px solid var(--accent-field-color) !important;
+/* Border for selected tab in inactive window */
+.tabbrowser-tab .tab-stack .tab-background[selected=]:-moz-window-inactive::after {
+  content: "";
+  display: block;
+  height: 50%; /* Adjust this value to control the length of the border */
+  width: 1.5px; /* Width of the border */
+  position: absolute;
+  right: 0;
+  top: 25%; /* Adjust this value to control the vertical position */
+  background-color: var(--accent-field-color);
 }
 
 /* Background tabs design */
-/* .tabbrowser-tab .tab-stack .tab-background:not([selected]) {
-  border: 2px solid color-mix(in srgb, field 95%, var(--accent-color)) !important;
+.tabbrowser-tab .tab-stack .tab-background:not([selected])::after {
+  content: "";
+  display: block;
+  height: 50%; /* Adjust this value to control the length of the border */
+  width: 1.5px; /* Width of the border */
+  position: absolute;
+  right: 0;
+  top: 25%; /* Adjust this value to control the vertical position */
+  background-color: var(--accent-color);
 }
 
-.tabbrowser-tab .tab-stack .tab-background:not([selected]):-moz-window-inactive {
-  border: 2px solid color-mix(in srgb, field 99%, var(--accent-color)) !important;
-} */
+/* Background tabs design in inactive window */
+.tabbrowser-tab .tab-stack .tab-background:not([selected]):-moz-window-inactive::after {
+  content: "";
+  display: block;
+  height: 50%; /* Adjust this value to control the length of the border */
+  width: 1.5px; /* Width of the border */
+  position: absolute;
+  right: 0;
+  top: 25%; /* Adjust this value to control the vertical position */
+  background-color: var(--accent-field-color);
+}
 
 /* Fixing Multiselect */
 .tab-background[multiselected="true"]:not([selected="true"])>.tab-background-inner {

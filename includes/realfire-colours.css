@@ -1,56 +1,52 @@
-/*---+---+---+---+---+---+---+
- | C | O | L | O | U | R | S |
- +---+---+---+---+---+---+---*/
+/* ---+---+---+---+---+---+---+
+   | C | O | L | O | U | R | S |
+   +---+---+---+---+---+---+---+ */
 
+/* Dark Mode Color Scheme */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* These colours are (mainly) used by the
-     Container Tabs Plugin */
-
-     --uc-identity-colour-red: #fc5c65;
-     --uc-identity-colour-pink: #f78fb3;
-     --uc-identity-colour-blue: #0078d7;
-     --uc-identity-colour-green: #b8e994;
+    /* Container Tabs Plugin Colors */
+    --uc-identity-colour-red: #fc5c65;
+    --uc-identity-colour-pink: #f78fb3;
+    --uc-identity-colour-blue: #0078d7;
+    --uc-identity-colour-green: #b8e994;
     --uc-identity-colour-purple: #786fa6;
     --uc-identity-colour-yellow: #f7d794;
     --uc-identity-colour-orange: #f19066;
     --uc-identity-colour-turquoise: #55e6c1;
 
-    /*  Cascades main Colour Scheme */
+    /* RealFire Main Color Scheme */
     --uc-base-colour: #000000;
     --uc-muted-colour: #c3c3c3;
     --uc-inverted-colour: #fafafc;
     --uc-highlight-colour: #191b1c;
-    --uc-accent-colour: var(--uc-identity-colour-purple);
+    --uc-accent-colour: AccentColor;
   }
 }
 
+/* Light Mode Color Scheme */
 @media (prefers-color-scheme: light) {
   :root {
-    /* These colours are (mainly) used by the
-     Container Tabs Plugin */
-     --uc-identity-colour-red: #fc5c65;
-     --uc-identity-colour-blue: #1d65f5;
-     --uc-identity-colour-pink: #ec83d0;
-     --uc-identity-colour-green: #40a02b;
+    /* Container Tabs Plugin Colors */
+    --uc-identity-colour-red: #fc5c65;
+    --uc-identity-colour-blue: #1d65f5;
+    --uc-identity-colour-pink: #ec83d0;
+    --uc-identity-colour-green: #40a02b;
     --uc-identity-colour-purple: #822fee;
     --uc-identity-colour-yellow: #e49320;
     --uc-identity-colour-orange: #fe640b;
     --uc-identity-colour-turquoise: #209fb5;
 
-    /*  Cascades main Colour Scheme */
+    /* RealFire Main Color Scheme */
     --uc-base-colour: #fafafc;
     --uc-muted-colour: #292929;
     --uc-inverted-colour: #1e2021;
     --uc-highlight-colour: #dadadc;
-    --uc-accent-colour: var(--uc-identity-colour-purple);
+    --uc-accent-colour: AccentColor;
   }
 }
 
-/* Down here I'm just reassigning variables based on the colours set above.
-   Feel free to play around with these but there is no editing necessary below this line. c:
-   */
-
+/* Variables for UI Density */
 :root[uidensity="compact"] {
   --sidebar-menupopup-height: 29px;
 }
@@ -59,67 +55,42 @@
   --sidebar-menupopup-height: 41px;
 }
 
+/* General UI Variables */
 :root {
   --tab-radius: 8px;
   --navbar-percent: 32vw;
   --tab-border-width: 2px;
   --toolbar-percent: 68vw;
   --sidebar-menupopup-height: 36px;
-  /*--tab-min-height: 29px !important;*/
   --subview-height: var(--tab-min-height);
-  --bookmark-block-padding: 1px !important;
+  --bookmark-block-padding: 1px;
   --menupopup-height: var(--tab-min-height);
   --navbar-margin-top: calc(0px - var(--tab-min-height));
-  --toolbarbutton-inner-padding: 6px !important;
-  --toolbarbutton-outer-padding: 3px !important;
-  /* 1px */
-  --urlbar-icon-padding: 3px !important;
-  --urlbar-min-height: calc(var(--tab-min-height) - 3px) !important;
+  --toolbarbutton-inner-padding: 6px;
+  --toolbarbutton-outer-padding: 3px;
+  --urlbar-icon-padding: 3px;
+  --urlbar-min-height: calc(var(--tab-min-height) - 3px);
 
-  /*
-  More gradients to try out
-  Usage:
-  --tabbar-gradient-color: url();
-  --tabbar-gradient-color: linear-gradient();
-
-  - url("../icons/animation.svg")
-
-  - linear-gradient(90deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);linear-gradient(90deg, #f79533 0%, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82, #f79533 50%, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82, #f79533 100%);
-  !Note
-  !Above linear gradient can be use with css/tabbar.css@177-198 to resemble the SVG animation
-
-  - linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);
-  - linear-gradient(90deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)
-  - linear-gradient(90deg, rgb(0,3,1),rgb(0, 140, 255),rgb(0,120,215),rgb(0,120,215),rgb(0,120,215),rgb(0,140,215), rgb(0,3,1));
-  */
-
-
-  /* Sidebar doesn't have any height variable for different densities */
-  --accent-color: AccentColor;
-  --settings-color: AccentColor;
+  /* Colors */
+  --accent-color: var(--uc-accent-colour);
+  --settings-color: var(--uc-accent-colour);
   --button-text-white: #ffffff;
   --accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
   --accent-hover-color: color-mix(in srgb, var(--accent-color) 90%, var(--uc-inverted-colour) 20%);
-
-  --lwt-frame: var(--uc-base-colour) !important;
-  --lwt-text-color: var(--uc-inverted-colour) !important;
-
-  --toolbar-field-color: var(--uc-inverted-colour) !important;
-
-  --toolbar-field-focus-border-color: transparent !important;
-  --toolbar-field-focus-color: var(--uc-inverted-colour) !important;
-
-  --urlbar-popup-url-color: var(--uc-accent-colour) !important;
-  --lwt-toolbar-field-highlight: var(--uc-inverted-colour) !important;
-
-  --lwt-tab-text: var(--lwt-text-colour) !important;
-  --toolbar-color: var(--lwt-text-color) !important;
-  --toolbarseparator-color: var(--uc-accent-colour) !important;
-  --toolbarbutton-active-background: var(--toolbarbutton-hover-background) !important;
-
-  --sidebar-background-color: var(--lwt-sidebar-background-color) !important;
-
-  --urlbar-box-text-color: var(--uc-muted-colour) !important;
-
-  --urlbar-box-hover-text-color: var(--uc-inverted-colour) !important;
+  
+  /* Light-weight Themes (LWT) */
+  --lwt-frame: var(--uc-base-colour);
+  --lwt-text-color: var(--uc-inverted-colour);
+  --toolbar-field-color: var(--uc-inverted-colour);
+  --toolbar-field-focus-border-color: transparent;
+  --toolbar-field-focus-color: var(--uc-inverted-colour);
+  --urlbar-popup-url-color: var(--uc-accent-colour);
+  --lwt-toolbar-field-highlight: var(--uc-inverted-colour);
+  --lwt-tab-text: var(--lwt-text-colour);
+  --toolbar-color: var(--lwt-text-color);
+  --toolbarseparator-color: var(--uc-accent-colour);
+  --toolbarbutton-active-background: var(--toolbarbutton-hover-background);
+  --sidebar-background-color: var(--lwt-sidebar-background-color);
+  --urlbar-box-text-color: var(--uc-muted-colour);
+  --urlbar-box-hover-text-color: var(--uc-inverted-colour);
 }

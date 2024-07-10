@@ -1,122 +1,120 @@
-@-moz-document url(about:addons){
+@-moz-document url(about:addons) {
 
-/*Navigation menu*/
-#sidebar {
-  align-items: center !important;
-  -moz-appearance: none !important;
-  background-color: var(--uc-base-colour) !important;
-  border-right: 2px solid var(--settings-color) !important;
-}
+  /* Navigation menu */
+  #sidebar {
+    align-items: center !important;
+    background-color: var(--uc-base-colour) !important;
+    border-right: 2px solid var(--settings-color) !important;
+    -moz-appearance: none !important;
+  }
 
-.sticky-container {
-  -moz-appearance: none !important;
-  border-bottom: 2px solid AccentColor;
-}
+  .sticky-container {
+    border-bottom: 2px solid var(--accent-color) !important;
+    -moz-appearance: none !important;
+  }
 
-.main-heading {
-  padding: 16px !important;
-  background-color: var(--uc-base-colour) !important;
-  border-top: 2px solid var(--accent-color) !important;
-  border-inline: 2px solid var(--accent-color) !important;
-  border-radius: var(--uc-border-radius) var(--uc-border-radius) 0 0 !important;
-}
+  .main-heading {
+    padding: 16px !important;
+    background-color: var(--uc-base-colour) !important;
+    border-top: 2px solid var(--accent-color) !important;
+    border-inline: 2px solid var(--accent-color) !important;
+    border-radius: var(--uc-border-radius) var(--uc-border-radius) 0 0 !important;
+  }
 
-#content {
-  background: var(--uc-base-colour) !important;
-}
+  #content {
+    background: var(--uc-base-colour) !important;
+  }
 
-#categories {
-  width: auto !important;
-}
+  #categories {
+    width: auto !important;
+  }
 
-#categories richlistitem {
-  color: var(--uc-inverted-colour) !important;
-  border-radius: var(--uc-border-radius) !important;
-}
+  #categories richlistitem {
+    color: var(--uc-inverted-colour) !important;
+    border-radius: var(--uc-border-radius) !important;
+    margin-inline: 20px !important;
+    justify-content: center !important;
+  }
 
-.sidebar-footer-list {
-  margin-inline: 0px !important;
-  margin-inline-start: 0px !important;
-}
+  /* Sidebar footer */
+  .sidebar-footer-list {
+    margin-inline: 0 !important;
+    margin-inline-start: 0 !important;
+  }
 
-@media not (prefers-contrast) {
-  #categories>.category[selected],
-  #categories>.category.selected {
+  /* Selected category color */
+  @media not (prefers-contrast) {
+    #categories > .category[selected],
+    #categories > .category.selected {
+      color: var(--settings-color) !important;
+    }
+  }
+
+  /* Selected privacy option background */
+  .privacy-detailedoption.selected {
+    border-color: var(--settings-color) !important;
+    background-color: color-mix(var(--settings-color) 20%, transparent) !important;
+  }
+
+  /* Links */
+  a,
+  .text-link {
     color: var(--settings-color) !important;
   }
 
-}
-
-#categories>.category {
-  margin-inline: 20px !important;
-  justify-content: center !important;
-}
-
-@media not (prefers-contrast) {
-  .privacy-detailedoption.selected {
-    background-color: color-mix(in srgb, var(--settings-color) 20%, transparent) !important;
+  a:hover,
+  .text-link:hover,
+  .text-link:is(:not([disabled="true"]), :enabled):hover {
+    color: color-mix(var(--uc-inverted-colour), var(--settings-color)) !important;
   }
-}
 
-.privacy-detailedoption.selected {
-  border-color: var(--settings-color) !important;
-}
+  /* Addon card hover effect */
+  addon-card:not([expanded]) > .addon.card:hover {
+    box-shadow: 0 0 0 5px var(--accent-field-color) !important;
+  }
 
-a,
-.text-link {
-  color: var(--settings-color) !important;
-}
+  /* Focus styles */
+  tree:focus-visible,
+  textarea:focus-visible,
+  search-textbox[focused],
+  richlistbox:focus-visible,
+  input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
+  #searchInput[focused="true"] {
+    outline: 2px solid var(--settings-color) !important;
+  }
 
-a:hover,
-.text-link:hover,
-.text-link:is(:not([disabled="true"]), :enabled):hover {
-  color: color-mix(in srgb, var(--uc-inverted-colour), var(--settings-color)) !important;
-}
+  /* Search input */
+  #searchInput {
+    border-radius: var(--uc-border-radius) !important;
+  }
 
-addon-card:not([expanded])>.addon.card:hover {
-  box-shadow: 0 0 0 5px var(--accent-field-color) !important;
-}
+  /* Buttons */
+  button,
+  #row-selector.selector {
+    color: var(--uc-inverted-colour) !important;
+    border-radius: var(--uc-border-radius) !important;
+  }
 
-tree:focus-visible,
-textarea:focus-visible,
-search-textbox[focused],
-richlistbox:focus-visible,
-input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus,
-#searchInput[focused="true"] {
-  outline: var(--settings-color) solid 2px !important;
-}
+  button.primary,
+  button[default],
+  button[autofocus],
+  button[type="submit"],
+  button:not([disabled])[default="true"] {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: var(--button-text-white) !important;
+  }
 
-#searchInput {
-  border-radius: var(--uc-border-radius) !important;
-}
-
-/*buttons*/
-
-button,
-#row-selector.selector {
-  color: var(--uc-inverted-colour) !important;
-  border-radius: var(--uc-border-radius) !important;
-}
-
-button.primary,
-button[default],
-button[autofocus],
-button[type="submit"],
-button:not([disabled])[default="true"] {
-  background-color: var(--accent-color) !important;
-  border-color: var(--accent-color) !important;
-  color: var(--button-text-white) !important;
-}
-
-button:focus-visible,
-select:focus-visible,
-menulist:focus-visible,
-radio[focused="true"]>.radio-check,
-tab:focus-visible>.tab-middle>.tab-text,
-checkbox:not([native]):focus-visible>.checkbox-check,
-input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible {
-  outline: var(--uc-inverted-colour) solid 2px !important;
-  outline-offset: 0px !important;
-}
+  /* Focus styles for controls */
+  button:focus-visible,
+  select:focus-visible,
+  menulist:focus-visible,
+  radio[focused="true"] > .radio-check,
+  tab:focus-visible > .tab-middle > .tab-text,
+  checkbox:not([native]):focus-visible > .checkbox-check,
+  input:is([type="checkbox"], [type="color"], [type="radio"]):focus-visible {
+    outline: 2px solid var(--uc-inverted-colour) !important;
+    outline-offset: 0 !important;
+  }
 
 }

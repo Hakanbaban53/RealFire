@@ -1,20 +1,13 @@
-menupopup,
-menupopup menuitem,
-menupopup menu,
-menupopup menuseparator {
-  -moz-appearance: none !important;
+menupopup, panel {
+  @media (-moz-platform: linux) or (-moz-platform: windows) {
+    & {
+      --panel-shadow-margin: 0px !important;
+    }
+  }
 }
-
-/* menupopup,
-panel[type="autocomplete-richlistbox"] {
-  -moz-window-shadow: none !important;
-  border: none !important;
-
-} */
 
 :is(menupopup, panel)[type=arrow] {
   --panel-border-color: none !important;
-  ;
   --panel-border-radius: var(--uc-border-radius);
   --panel-padding: 0px !important;
 }
@@ -44,7 +37,8 @@ menuitem:not([type="checkbox"], [type="radio"])>.menu-iconic-left {
 }
 
 menupopup menuseparator {
-  color: var(--uc-inverted-colour) !important;
+  color: var(--accent-color) !important;
+  padding-block: 8px !important;
 }
 
 menulist>menupopup>menu:not([disabled="true"])[selected="true"],
@@ -52,14 +46,14 @@ menulist>menupopup>menuitem:not([disabled="true"])[selected="true"] {
   background-color: var(--accent-color) !important;
 }
 
-menupopup menuitem,
 menupopup menu,
+menupopup menuitem,
 .autocomplete-richlistitem {
-  padding: 4px 10px !important;
-  margin: 4px 4px !important;
   height: var(--menupopup-height) !important;
   color: var(--uc-inverted-colour) !important;
-  border-radius: var(--uc-border-radius) !important;
+  border-radius: 0px !important;
+  padding: 0px 6px !important;
+  margin: 0px !important;
 }
 
 #bookmarkpropertiesdialog menuitem,
@@ -344,10 +338,10 @@ panelview .toolbarbutton-1,
 .subviewbutton,
 .widget-overflow-list .toolbarbutton-1,
 .panel-banner-item {
-  transition: all 200ms;
+  margin-inline: 0px !important;
   background-color: transparent !important;
-  border-radius: var(--uc-border-radius) !important;
   background-image: none !important;
+  padding-inline: 20px !important;
 }
 
 
@@ -367,22 +361,30 @@ panelview>toolbarseparator {
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
 menuitem:where([_moz-menuactive="true"]:not([disabled="true"])),
 panelview .toolbarbutton-1:not([disabled], [open], :active):is(:hover, :focus),
-toolbarbutton.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
 .navigable.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
-toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover,
+toolbarbutton.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
 .widget-overflow-list .toolbarbutton-1:not([disabled], [open], :active):is(:hover, :focus),
-.toolbaritem-combined-buttons:is( :not([cui-areatype="toolbar"]),
-  [overflowedItem="true"])>toolbarbutton:not([disabled], [open], :active):is(:hover, :focus) {
+.toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]),
+[overflowedItem="true"])>toolbarbutton:not([disabled], [open], :active):is(:hover, :focus) {
     background-color: color-mix(in srgb, var(--uc-inverted-colour), transparent 85%) !important;
     color: var(--uc-inverted-colour) !important;
-    border-radius: var(--uc-border-radius) !important;
-    
+    border-radius: 0px !important;
+
   }
-  
-  toolbarbutton.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
-  toolbarbutton.subviewbutton.unified-extensions-item-action:not([disabled],[open],:active):is(:hover, :focus) {
-  transition: all 200ms;
-  padding: 8px !important;
+
+toolbarbutton#appMenu-fxa-label:not([disabled], [open], :active):is(:hover, :focus)
+toolbarbutton#appMenu-fxa-label2:not([disabled], [open], :active):is(:hover, :focus) {
+  border-radius: var(--uc-border-radius) !important;
+  background-color: var(--accent-field-color) !important;
+}
+
+toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover {
+  border-radius: var(--uc-border-radius) !important;
+}
+
+
+toolbarbutton.subviewbutton.unified-extensions-item-action:not([disabled],[open],:active):is(:hover, :focus) {
+  padding: 0px !important;
 }
 
 findbar toolbarbutton.tabbable:-moz-focusring,
@@ -433,19 +435,11 @@ toolbar:not(#PersonalToolbar) .toolbarbutton-1:-moz-focusring>.toolbarbutton-bad
 
 #appMenu-addon-banners:not(:empty)~#appMenu-fxa-status,
 .panel-banner-item:not([hidden])+#appMenu-fxa-status {
-  border-top: 1px solid var(--panel-separator-color) !important;
   margin-top: 5px !important;
   padding-top: 5px !important;
+  margin-inline: 10px !important;
 }
 
-#appMenu-fxa-avatar {
-  display: none !important;
-}
-
-#appMenu-popup panelview,
-#PanelUI-fxa {
-  width: 19em !important;
-}
 
 :root[fxastatus="signedin"] #appMenu-fxa-label {
   list-style-image: var(--avatar-image-url) !important;

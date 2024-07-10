@@ -30,7 +30,6 @@
     order: var(--uc-toolbar-position) !important;
   }
 
-  /* Hide buttons */
   :root:not([customizing])
     #nav-bar
     .customization-target
@@ -42,7 +41,6 @@
     transition: all 200ms !important;
   }
 
-  /* Show on hover or focus */
   :root:not([customizing])
     #nav-bar:hover
     .customization-target
@@ -69,7 +67,6 @@
     transition: all 200ms !important;
   }
 
-  /* autohide back&forward button */
   #back-button,
   #forward-button {
     transform: scale(1, 1) !important;

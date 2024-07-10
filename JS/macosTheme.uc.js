@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           MacOS Window Control & Font Theme
-// @version        1.1.0
+// @version        1.1.1
 // @author         Hakanbaban53
 // @homepage       https://github.com/Hakanbaban53/RealFire
 // @description    Move the window control to the left and recolor it and change the font.
@@ -12,17 +12,12 @@
 (function () {
   // CSS rules to apply
   var css = `
-  html, body {
-    -webkit-font-smoothing: subpixel-antialiased;
-    text-shadow: 0px 0px 0px;
-    -webkit-text-stroke-width: 0.1px;
-}
-
+/* Default font family for most elements, with fallbacks */
 *:not([class*="FokDXb"]):not([class*="upload"]):not([class*="icon"]):not([class*="mui-amount"]):not([class*="chaoshi"]):not([class*="top-nav"]):not([href*="ju.taobao.com"]):not([class*="Icon"]):not(b):not(ins):not(i):not(s) {
-    font-family: "PingFang SC" !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Ubuntu", "Cantarell", sans-serif !important;
 }
 
-/* Responsive adjustments for toolbar */
+/* Responsive adjustments for toolbar when width is less than 1000px */
 @media (max-width: 1000px) {
     #toolbar-menubar .titlebar-buttonbox-container {
         display: flex !important;
@@ -33,6 +28,7 @@
     }
 }
 
+/* Toolbar adjustments for when width is 1000px or more */
 @media (min-width: 1000px) {
     #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
         visibility: visible !important;
@@ -43,6 +39,7 @@
     }
 }
 
+/* Hide titlebar buttonbox container in toolbar menubar by default */
 #toolbar-menubar .titlebar-buttonbox-container {
     display: none;
 }
@@ -90,15 +87,15 @@
 
 /* Order and appearance of titlebar buttons */
 .titlebar-close {
-  order: 0 !important;
-  padding: 0 !important;
-  list-style-image: url(chrome://userchrome/content/material/close.svg) !important;
+    order: 0 !important;
+    padding: 0 !important;
+    list-style-image: url(chrome://userchrome/content/material/close.svg) !important;
 }
 
 .titlebar-min {
     order: 1 !important;
     padding: 0 !important;
-    list-style-image: url(chrome://userchrome/content/material/minimize.svg) !important;	
+    list-style-image: url(chrome://userchrome/content/material/minimize.svg) !important;
 }
 
 .titlebar-max, .titlebar-restore {
@@ -123,14 +120,12 @@
 .titlebar-close:hover {
     list-style-image: url(chrome://userchrome/content/material/close-hover.svg) !important;
 }
-
-  
-  `;
+`;
 
   // Function to initialize the script
   function init() {
     var root = document.documentElement;
-    var urlbarPosition = getComputedStyle(document.documentElement).getPropertyValue('--uc-urlbar-position').trim();
+    var urlbarPosition = getComputedStyle(root).getPropertyValue('--uc-urlbar-position').trim();
     console.log('URL Bar Position:', urlbarPosition);
 
     // Function to apply styles based on the media query status
@@ -145,16 +140,17 @@
       }
     }
 
+    // Initial application of styles
+    applyStyles(window.matchMedia('(min-width: 1000px)').matches);
+
     // Listen for changes in the media query status
     window.matchMedia('(min-width: 1000px)').addListener(function (event) {
       console.log('Media Query Match:', event.matches);
       applyStyles(event.matches);
     });
-
-    // Initial application of styles
-    applyStyles(window.matchMedia('(min-width: 1000px)').matches);
   }
 
+  // Check if the browser initialization is complete
   if (gBrowserInit.delayedStartupFinished) {
     init();
   } else {
@@ -164,10 +160,7 @@
         init();
       }
     };
-    Services.obs.addObserver(
-      delayedListener,
-      "browser-delayed-startup-finished"
-    );
+    Services.obs.addObserver(delayedListener, "browser-delayed-startup-finished");
   }
 
   // Create a style element and append the CSS rules
