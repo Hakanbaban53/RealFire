@@ -19,10 +19,8 @@
     max-width: var(--uc-urlbar-max-width) !important;
   }
 
-  #titlebar {
-    order: 2;
-    width: auto !important;
-    min-width: calc(100vw - var(--uc-urlbar-max-width) - 1px);
+  #TabsToolbar {
+    order: 2 !important;
   }
 
   #PersonalToolbar {

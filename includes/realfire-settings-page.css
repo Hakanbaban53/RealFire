@@ -5,6 +5,7 @@
                 url(about:preferences#search),
                 url(about:preferences#privacy),
                 url(about:preferences#sync),
+                url(about:preferences#experimental),
                 url(about:preferences#moreFromMozilla) {
 
   /* Navigation menu */

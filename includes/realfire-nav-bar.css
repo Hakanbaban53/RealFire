@@ -171,3 +171,7 @@
 .urlbar-page-action {
   padding: 0 inherit !important;
 }
+
+#toolbar-menubar {
+  min-width: 100% !important;
+}

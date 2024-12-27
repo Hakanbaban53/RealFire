@@ -14,17 +14,11 @@
 <h3 align="center">Adaptive Tab Bar Extension Support</h3>
 <p align="center"><img src="./assets/adaptive-tab-bar-extension-support.gif"></p>
 
-<h3 align="center">Horizonal Tabs</h3>
-<p align="center"><img src="./assets/horizonal_tabs.gif"></p>
-
 <h3 align="center">MacOs Window Control & Fonts</h3>
 <p align="center" style="max-heigh:250px"><img src="./assets/mac_os_theme.gif"></p>
 
 <h3 align="center">Animated Background</h3>
 <p align="center" style="max-heigh:250px"><img src="./assets/navbar.gif"></p>
-
-<h3 align="center">Tab Preview</h3>
-<p align="center" style="max-heigh:300px"><img src="./assets/tab-preview.gif"></p>
 
 <h3 align="center">Context Menu</h3>
 <p align="center"><img src="./assets/context.png"></p>
@@ -50,27 +44,13 @@ This helps to customize Firefox User Interface.
 
 This helps to customize web content like a specific site.
 
-### [`aboutUserChrome.sys.mjs by aminomancer`](https://github.com/aminomancer/uc.css.js#aboutUserChrome)
-
-This script helps to enabled or disabled browser scripts. Adding new entry the application menu named UserChrome Maneger (Shortcut `Ctrl+Shift+U`).
-
-### [`tabThumbnailTooltip.uc.js by aminomancer`](https://github.com/aminomancer/uc.css.js#tab-thumbnail-tooltip)
-
-Show a large thumbnail image to preview tab content when hovering a tab.
-
 ### [`hideScrollbar.uc.js`](./JS/hideScrollbar.uc.js)
 
 It's now possible to autohide scrollbars.
 
-### [`verticalTabsPane.uc.js by aminomancer (Edited for RealFire)`](./JS/verticalTabsPane.uc.js)
-
-This script create a vertical pane across from the sidebar that functions like the vertical tabs pane in Microsoft Edge. Writed by [aminomancer](https://github.com/aminomancer) but I edited full compatibility for RealFire.
-
 ### [`macosTheme.uc.js`](./JS/macosTheme.uc.js)
 
 This script to convert font and window controls to macos style.
-
-#### [`You can look here to find out what other scripts do.`](https://github.com/aminomancer/uc.css.js#script-conventions) 👈
 
 ## ❓ **But how does it work?**
 
@@ -78,6 +58,14 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 `mozilla.cfg` also helps in setting local webpage as your homepage. Details in [Installation](#Installation) (Currently Not Working!).
 
 ## 💡 Installation
+
+<details><summary><strong><em>GUI Installation</em></strong></summary>
+<details><summary>Firefox Theme Installer</summary><br>
+
+### [`Check This Repo`](https://github.com/Hakanbaban53/Firefox-Theme-Installer?tab=readme-ov-file#--------firefox-theme-installer--)
+
+</details>
+</details>
 
 <details><summary><strong><em>Curl based Installation (You can install this theme with one line command)</em></strong></summary>
 
@@ -224,7 +212,7 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
     ./programs/uninstall.sh
     
     #### Windows
-    Not Released Yet....
+    ./programs/uninstall.bat
     
 
 #### 🔧 Follow-up changes
@@ -270,9 +258,6 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 ├── 🖿 JS
 │  ├── 🗎 aboutUserChrome.sys.mjs
 │  ├── 🗎 navbarToolbarButtonSlider.uc.js
-│  ├── 🗎 tabThumbnailTooltip.uc.js
-│  ├── 🗎 verticalTabsPane.uc.js
-│  ├── 🗎 tabThumbnailTooltip.uc.js
 │  ├── 🗎 macosTheme.us.js
 │  └── 🗐 many script in .uc.js format
 ├── 🖿 programs
@@ -283,6 +268,8 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 │  ├── 🗎 install-curl.bat
 │  ├── 🗎 local-settings.js
 │  ├── 🗎 mozilla.cfg
+│  ├── 🗎 uninstall.bat
+│  ├── 🗎 uninstall.sh
 │  └── 🗎 user.js
 ├── 🖿 resources
 │  └── 🗐 userchrome Manager page files
