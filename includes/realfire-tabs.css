@@ -23,9 +23,6 @@
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   display: var(--show-tab-close-button-hover) !important;
 }
-.tab-stack {
-  padding-right: 4px !important;
-}
 
 /* adaptive tab width */
 .tabbrowser-tab[selected][fadein]:not([pinned]) {
@@ -132,30 +129,6 @@
 
 /* Border for selected tab in inactive window */
 .tabbrowser-tab .tab-stack .tab-background[selected=]:-moz-window-inactive::after {
-  content: "";
-  display: block;
-  height: 50%; /* Adjust this value to control the length of the border */
-  width: 1.5px; /* Width of the border */
-  position: absolute;
-  right: 0;
-  top: 25%; /* Adjust this value to control the vertical position */
-  background-color: var(--accent-field-color);
-}
-
-/* Background tabs design */
-.tabbrowser-tab .tab-stack .tab-background:not([selected])::after {
-  content: "";
-  display: block;
-  height: 50%; /* Adjust this value to control the length of the border */
-  width: 1.5px; /* Width of the border */
-  position: absolute;
-  right: 0;
-  top: 25%; /* Adjust this value to control the vertical position */
-  background-color: var(--accent-color);
-}
-
-/* Background tabs design in inactive window */
-.tabbrowser-tab .tab-stack .tab-background:not([selected]):-moz-window-inactive::after {
   content: "";
   display: block;
   height: 50%; /* Adjust this value to control the length of the border */
