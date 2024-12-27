@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Navbar Toolbar Button Slider
-// @version        2.9.7
+// @version        3.0.0
 // @author         aminomancer
 // @homepageURL    https://github.com/aminomancer
 // @long-description
@@ -151,6 +151,7 @@ class NavbarToolbarSlider {
     this.registerSheet();
     this.setupScroll();
     this.attachListeners();
+    this.modifyMethods();
     CustomizableUI.addListener(this);
     requestAnimationFrame(() => {
       let array = [...this.widgets].filter(this.filterFn, this);
@@ -199,19 +200,42 @@ class NavbarToolbarSlider {
         this.direction = value;
       // fall through...
       case exclude:
-      case springs:
+      case springs: {
         if (this.isOverflowing) break;
         this.unwrapAll();
         let array = [...this.widgets].filter(this.filterFn, this);
         this.wrapAll(array, this.inner);
         this.setMaxWidth(array);
         break;
+      }
     }
   }
   attachListeners() {
     addEventListener("unload", this, false);
     Services.prefs.addObserver("userChrome.toolbarSlider", this);
     this.contextMenu.addEventListener("popupshowing", this);
+  }
+  modifyMethods() {
+    const lazy = {};
+    ChromeUtils.defineESModuleGetters(lazy, {
+      ToolbarContextMenu: "resource:///modules/ToolbarContextMenu.sys.mjs",
+      CustomizableUI: "resource:///modules/CustomizableUI.sys.mjs",
+      SessionStore: "resource:///modules/sessionstore/SessionStore.sys.mjs",
+    });
+    if (!ToolbarContextMenu._modifiedByNavbarToolbarSlider) {
+      eval(
+        `ToolbarContextMenu.onViewToolbarsPopupShowing = function ${ToolbarContextMenu.onViewToolbarsPopupShowing
+          .toSource()
+          .replace(/^\(/, "")
+          .replace(/\)$/, "")
+          .replace(/^function /, "")
+          .replace(
+            /(parent.localName == "toolbar" \|\|)/,
+            `$1 \n parent.classList.contains("slider-inner-container") ||`
+          )}`
+      );
+      ToolbarContextMenu._modifiedByNavbarToolbarSlider = true;
+    }
   }
   setupPrefs() {
     const { prefs } = Services;
@@ -264,15 +288,15 @@ class NavbarToolbarSlider {
   filterFn(item, index, array) {
     // check if window is private and widget is disallowed in private browsing.
     // if so, filter it out.
+    let isPrivate = PrivateBrowsingUtils.isWindowPrivate(window);
     if (
-      item.showInPrivateBrowsing === false &&
-      PrivateBrowsingUtils.isWindowPrivate(window)
+      (item.showInPrivateBrowsing === false && isPrivate) ||
+      (item.hideInNonPrivateBrowsing === true && !isPrivate)
     ) {
       return false;
     }
     // exclude urlbar, searchbar, system buttons, and the slider itself.
     switch (item.id) {
-      case "unified-extensions-button":
       case "wrapper-back-button":
       case "back-button":
       case "wrapper-forward-button":
@@ -333,16 +357,21 @@ class NavbarToolbarSlider {
       let arr = array || [...this.kids];
       let widgetList = this.cuiArray;
       if (arr.length < widgetList.length && arr.length < length) {
-        // return setTimeout(() => this.setMaxWidth(), 1);
         return requestAnimationFrame(() => this.setMaxWidth());
       }
       let nodes = arr ?? widgetList.map(w => w.forWindow(window).node);
-      for (let i = 0; i < length; i++) {
-        let el = nodes[i];
-        if (!el) continue;
+      let buttonsCounted = 0;
+      for (const el of nodes) {
+        if (!el) {
+          continue;
+        }
         const style = window.getComputedStyle(el);
         if (style?.visibility === "visible" && style?.display !== "none") {
           maxWidth += NavbarToolbarSlider.parseWidth(el);
+          buttonsCounted += 1;
+        }
+        if (buttonsCounted >= length) {
+          break;
         }
       }
     } else {
@@ -611,7 +640,7 @@ class NavbarToolbarSlider {
         // for all the other widgets we just insert their nodes before the node
         // corresponding to the next widget.
         if (i + 1 === array?.length) {
-          array[i - 1]?.forWindow(window).node.after(aNode);
+          array[i - 1]?.forWindow(window)?.node?.after(aNode);
         } else {
           let next = array[i + 1]?.forWindow(window).node;
           if (next?.parentElement === container) {
@@ -644,10 +673,9 @@ class NavbarToolbarSlider {
       // to the array. so we check each widget's node's next sibling, and if
       // it's not equal to the node of the next widget in the array, we insert
       // the node before the next widget's node.
-      if (
-        item.forWindow(window).node.nextElementSibling !=
-        array[i + 1]?.forWindow(window).node
-      ) {
+      let node = item.forWindow(window)?.node;
+      let beforeNode = array[i + 1]?.forWindow(window)?.node;
+      if (node && beforeNode && node?.nextElementSibling !== beforeNode) {
         // if nextElementSibling returns null, then it's the last child of the
         // slider. if that widget is the last in the array, then array[i+1] will
         // return undefined. since null == undefined the if statement will still
@@ -657,10 +685,7 @@ class NavbarToolbarSlider {
         // which always results in inserting the node at the end. so it ends up
         // where it should be anyway. and this is faster than actually checking
         // if it's the last node for every iteration of the loop.
-        container.insertBefore(
-          item.forWindow(window)?.node,
-          array[i + 1]?.forWindow(window).node
-        );
+        container.insertBefore(node, beforeNode);
       }
     });
   }
