@@ -66,7 +66,6 @@
   stroke: transparent !important;
   color: var(--accent-color) !important;
   stroke: var(--toolbar-bgcolor) !important;
-  background-color: var(--toolbar-bgcolor) !important;
 }
 
 /* change the colours of the speaker icon on active tab to match tab colours */
@@ -74,7 +73,6 @@
   [muted],
   [activemedia-blocked]) {
   stroke: var(--toolbar-bgcolor) !important;
-  background-color: var(--toolbar-bgcolor) !important;
 }
 
 .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying],
@@ -143,18 +141,4 @@
 /* Fixing Multiselect */
 .tab-background[multiselected="true"]:not([selected="true"])>.tab-background-inner {
   background: none !important;
-}
-
-/* speaker icon colour fix */
-#TabsToolbar .tab-icon-overlay:not([crashed])[muted],
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] {
-  color: var(--toolbar-color) !important;
-}
-
-/* speaker icon colour fix on hover */
-#TabsToolbar .tab-icon-overlay:not([crashed])[muted]:hover,
-#TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-  color: var(--uc-base-colour) !important;
 }
