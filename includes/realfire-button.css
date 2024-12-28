@@ -2,7 +2,6 @@ button,
 #row-selector.selector {
     color: var(--uc-inverted-colour) !important;
     border-radius: var(--uc-border-radius) !important;
-    border: 1px solid var(--uc-muted-colour) !important;
 }
 
 button:focus-visible,
