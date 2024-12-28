@@ -94,7 +94,7 @@
   --uc-inactive-tab-width: clamp(100px, 20vw, 200px);
 
   /* Show Tab Close Button (none - hide, -moz-inline-block - show) */
-  --show-tab-close-button: none;
+  --show-tab-close-button: -moz-inline-block;
 
   /* Show Tab Close Button on Tab Hover (none - hide, -moz-inline-block - show) */
   --show-tab-close-button-hover: -moz-inline-block;

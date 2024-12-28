@@ -6,72 +6,78 @@
 @import 'includes/realfire-library.css';
 @import 'includes/realfire-addons-page.css';
 
-@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing){
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
 
-.search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
-  border: 1px solid var(--accent-color) !important;
-  box-shadow: 0 0 0 4px var(--accent-field-color) !important;
-}
+  .search-wrapper:not(.search.disabled) .search-handoff-button {
+    transition: all 0.3s ease-out;
+  }
 
-div.title span{
-  background-color: var(--uc-base-colour);
-  border-radius: var(--uc-border-radius);
-  padding: 2px 2px 4px 2px;
-}
+  .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
+    transition: all 0.3s ease-in;
+  }
 
-.top-site-outer .top-site-icon,
-.outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner>a .tile {
-  transition: ease-out 200ms;
-  background-color: var(--uc-base-colour) !important;
-}
+  div.title span {
+    background-color: var(--uc-base-colour);
+    border-radius: var(--uc-border-radius);
+    padding: 2px 4px;
+  }
 
-.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover),
-.outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner>a:is(.active, :focus, :hover) .tile {
-  transition: ease-in 200ms;
-  box-shadow: 0 0 0 1px var(--accent-color), 0 0 0 1px var(--accent-color) !important;
-}
+  .top-site-outer {
+    transition: all 0.35s ease-out;
+  }
 
-.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-  transition: ease-in 200ms;
-  background: var(--uc-base-colour) !important;
-}
+  .top-site-outer .top-site-icon,
+  .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a .tile {
+    transition: all 0.2s ease-out;
+    background-color: var(--uc-base-colour) !important;
+  }
 
-.click-target-container *,
-.top-sites-list * {
-  color: var(--uc-inverted-colour) !important;
-}
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover),
+  .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus, :hover) .tile {
+    transition: all 0.2s ease-in;
+    outline: 2px solid var(--accent-color);
+  }
 
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    transition: all 0.2s ease-in;
+    background: var(--uc-base-colour) !important;
+  }
 
-body::before {
-  content: "";
-  z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0) no-repeat url(img/new_tab_wallpaper.jpg) center;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}
-}
+  .click-target-container *,
+  .top-sites-list * {
+    color: var(--uc-inverted-colour) !important;
+  }
 
-.neterror {
-  background-color: var(--uc-base-colour) !important;
-}
+  body::before {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(img/new_tab_wallpaper.jpg) center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
 
-#neterrorTryAgainButton {
-  background-color: var(--accent-color) !important;
-  color: var(--uc-inverted-colour) !important;
-}
+  .neterror {
+    background-color: var(--uc-base-colour) !important;
+  }
 
-#neterrorTryAgainButton:hover {
-  background-color: var(--accent-hover-color) !important;
-}
+  #neterrorTryAgainButton {
+    background-color: var(--accent-color) !important;
+    color: var(--uc-inverted-colour) !important;
+  }
 
-.home-section .section input:checked+.slider {
-  background-color: var(--accent-color) !important;
-}
+  #neterrorTryAgainButton:hover {
+    background-color: var(--accent-hover-color) !important;
+  }
 
-.home-section .section .slider {
-  background-color: var(--uc-inverted-colour) !important;
+  .home-section .section input:checked + .slider {
+    background-color: var(--accent-color) !important;
+  }
+
+  .home-section .section .slider {
+    background-color: var(--uc-inverted-colour) !important;
+  }
 }

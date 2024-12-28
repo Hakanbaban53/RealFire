@@ -111,19 +111,20 @@
 #PersonalToolbar:not([customizing]) {
   background-color: transparent !important;
   border-radius: var(--uc-border-radius) !important;
-  border: 1.5px solid var(--accent-color) !important;
+  /* border: 1.5px solid var(--accent-color) !important; */
   background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);
   --uc-bg-y: calc(-2 * (var(--tab-block-margin) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding)) - var(--tab-min-height) - 16px - var(--bookmark-block-padding));
   background-position: top left, top left,
     var(--lwt-background-alignment, top left);
+    margin-bottom: 4px;
 }
 
-#PersonalToolbar:not([customizing]):-moz-window-inactive {
+/* #PersonalToolbar:not([customizing]):-moz-window-inactive {
   border: 1.5px solid var(--accent-field-color) !important;
-}
+} */
 
 .tabbrowser-tab .tab-stack .tab-background:is([selected], [multiselected]) {
-  border: 2px solid var(--accent-color) !important;
+  outline: 2px solid var(--accent-color) !important;
   background-color: var(--uc-base-colour) !important;
 }
 

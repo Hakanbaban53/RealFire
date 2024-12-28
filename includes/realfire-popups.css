@@ -51,9 +51,8 @@ menupopup menuitem,
 .autocomplete-richlistitem {
   height: var(--menupopup-height) !important;
   color: var(--uc-inverted-colour) !important;
-  border-radius: 0px !important;
-  padding: 0px 6px !important;
-  margin: 0px !important;
+  border-radius: var(--uc-border-radius) !important;
+  margin: 2px 4px !important;
 }
 
 #bookmarkpropertiesdialog menuitem,
@@ -338,10 +337,10 @@ panelview .toolbarbutton-1,
 .subviewbutton,
 .widget-overflow-list .toolbarbutton-1,
 .panel-banner-item {
-  margin-inline: 0px !important;
+  margin: 2px 4px !important;
   background-color: transparent !important;
   background-image: none !important;
-  padding-inline: 20px !important;
+  padding: 8px !important;
 }
 
 
@@ -368,8 +367,7 @@ toolbarbutton.subviewbutton:not([disabled], [open], :active):is(:hover, :focus),
 [overflowedItem="true"])>toolbarbutton:not([disabled], [open], :active):is(:hover, :focus) {
     background-color: color-mix(in srgb, var(--uc-inverted-colour), transparent 85%) !important;
     color: var(--uc-inverted-colour) !important;
-    border-radius: 0px !important;
-
+    border-radius: var(--uc-border-radius) !important;
   }
 
 toolbarbutton#appMenu-fxa-label:not([disabled], [open], :active):is(:hover, :focus)
