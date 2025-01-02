@@ -627,8 +627,8 @@ menuitem[data-l10n-id^="places-edit-"] {
 }
 
 #appmenu-developer-tools-view .subviewbutton[key="key_aboutProcesses"] {
-  list-style-image: url("chrome://userchrome/content/material/browser-task-manager.svg");
-  background-image: url("chrome://userchrome/content/material/browser-task-manager.svg");
+  list-style-image: url("chrome://global/skin/icons/performance.svg");
+  background-image: url("chrome://global/skin/icons/performance.svg");
 }
 
 #context-copyimage-contents {
