@@ -8,3 +8,4 @@ user_pref("browser.startup.preXulSkeletonUI", false);
 // user_pref("browser.uidensity", 1);
 user_pref("userChrome.toolbarSlider.width", 2);
 user_pref("layout.css.has-selector.enabled", true);
+user_pref("userChromeJS.scriptsDisabled", "macosTheme.uc.js");
