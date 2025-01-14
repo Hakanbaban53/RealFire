@@ -1033,8 +1033,8 @@ dialog#commonDialog #dialogGrid .titleIcon {
 }
 
 dialog[data-l10n-attrs="buttonlabelaccept, buttonaccesskeyaccept"],
-window#commonDialogWindow.system-font-size {
-  border: 2px solid AccentColor !important;
+hbox.dialogBox {
+  outline: 3px solid AccentColor !important;
   background-color: var(--uc-base-colour) !important;
   border-radius: var(--uc-border-radius) !important;
 }
