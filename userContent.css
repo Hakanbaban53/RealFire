@@ -80,4 +80,8 @@
   .home-section .section .slider {
     background-color: var(--uc-inverted-colour) !important;
   }
+  .weatherCard {
+    background-color: var(--uc-base-colour) !important;
+    border-radius: var(--uc-border-radius);
+  }
 }
