@@ -19,7 +19,10 @@
   div.title span {
     background-color: var(--uc-base-colour);
     border-radius: var(--uc-border-radius);
-    padding: 2px 4px;
+    white-space: nowrap !important;
+    padding: 2px 4px !important;
+    min-height: auto !important;
+    width: 9vh !important;
   }
 
   .top-site-outer {
