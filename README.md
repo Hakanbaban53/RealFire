@@ -60,11 +60,12 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 ## 💡 Installation
 
 <details><summary><strong><em>GUI Installation</em></strong></summary>
-<details><summary>Firefox Theme Installer</summary><br>
+<summary>Firefox Theme Installer</summary>
 
-### [`Check This Repo`](https://github.com/Hakanbaban53/Firefox-Theme-Installer?tab=readme-ov-file#--------firefox-theme-installer--)
+### [Check This Repo](https://github.com/Hakanbaban53/Firefox-Theme-Installer?tab=readme-ov-file#--------firefox-theme-installer--)
 
-</details>
+Explore the Firefox Theme Installer repository for an easy and efficient way to install and manage your Firefox themes.
+
 </details>
 
 <details><summary><strong><em>Curl based Installation (You can install this theme with one line command)</em></strong></summary>
@@ -229,56 +230,56 @@ Custom startup-script (aka [`mozilla.cfg`](./programs/mozilla.cfg) here) is load
 
 ## ⚙️ Configuration
 
-1. You can use the [ realfire-config.css ](https://github.com/Hakanbaban53/RealFire/blob/main/includes/realfire-config.css) change the a lot of variables.
+1. You can use the [ realfire-config.css ](/includes/realfire-config.css) change the a lot of variables.
 
 2. If you run the automatic installation script, it will install all the files in the folders where they need to be installed.
 
 3. If something breaks on your system then please raise a issue
 
+4. If you want to use `vertical tabs`, you may need to edit this line in the [realfire-config.css](/includes/realfire-config.css#L59) file.
+
 ## 📌 Known issues
 
-- Adaptive window color with windows not working on preferences page and start page (Windows only). If you want the change it use the [ realfire-config.css ](https://github.com/Hakanbaban53/RealFire/blob/main/includes/realfire-config.css) file.
+- Adaptive window color with windows not working on preferences page and start page (Windows only). If you want the change it use the [ realfire-config.css ](/includes/realfire-config.css) file.
 
 ## 📂 Folder structure
 
 ```css
 🗃 .
 ├── 🖿 assets
-│  └── 🖻 preview images
+│   └── 🖻 preview images
 ├── 🖿 img
-│  └── 🖻 new tab background image
-├── 🖿 icons
-│  ├── 🗎 animation.svg
-│  └── 🗐 many icons in .svg format
+│   └── 🖻 new tab background image
 ├── 🖿 includes
-│  ├── 🗎 realfire-checkbox.css
-│  ├── 🗎 realfire-icons.css
-│  ├── 🗎 realfire-config.css
-│  └── 🗐 other .css files
+│   ├── 🗎 realfire-checkbox.css
+│   ├── 🗎 realfire-icons.css
+│   ├── 🗎 realfire-config.css
+│   └── 🗐 other .css files
 ├── 🖿 JS
-│  ├── 🗎 aboutUserChrome.sys.mjs
-│  ├── 🗎 navbarToolbarButtonSlider.uc.js
-│  ├── 🗎 macosTheme.us.js
-│  └── 🗐 many script in .uc.js format
+│   ├── 🗎 aboutUserChrome.sys.mjs
+│   ├── 🗎 navbarToolbarButtonSlider.uc.js
+│   ├── 🗎 macosTheme.us.js
+│   └── 🗐 many script in .uc.js format
 ├── 🖿 programs
-│  ├── 🗎 install-cfg.sh
-│  ├── 🗎 install.sh
-│  ├── 🗎 install-curl.sh
-│  ├── 🗎 install.bat
-│  ├── 🗎 install-curl.bat
-│  ├── 🗎 local-settings.js
-│  ├── 🗎 mozilla.cfg
-│  ├── 🗎 uninstall.bat
-│  ├── 🗎 uninstall.sh
-│  └── 🗎 user.js
+│   ├── 🗎 install-cfg.sh
+│   ├── 🗎 install.sh
+│   ├── 🗎 install-curl.sh
+│   ├── 🗎 install.bat
+│   ├── 🗎 install-curl.bat
+│   ├── 🗎 local-settings.js
+│   ├── 🗎 mozilla.cfg
+│   ├── 🗎 uninstall.bat
+│   ├── 🗎 uninstall.sh
+│   └── 🗎 user.js
 ├── 🖿 resources
-│  └── 🗐 userchrome Manager page files
+│   └── 🖿 icons
+│       └── 🗐 many icons in .svg format
 ├── 🖿 utils
-│  ├── 🗎 .editorconfig
-│  ├── 🗎 boot.sys.mjs
-│  ├── 🗎 chrome.manifest
-│  ├── 🗎 fs.sys.mjs
-│  └── 🗎 utils.sys.mjs
+│   ├── 🗎 .editorconfig
+│   ├── 🗎 boot.sys.mjs
+│   ├── 🗎 chrome.manifest
+│   ├── 🗎 fs.sys.mjs
+│   └── 🗎 utils.sys.mjs
 ├── 🗎 README.md
 ├── 🗎 userChrome.css
 └── 🗎 userContent.css
