@@ -12,12 +12,12 @@ search-textbox[focused],
 richlistbox:focus-visible,
 #searchInput[focused="true"],
 input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]):focus {
-  transition: linear 350ms !important;
+  transition: linear var(--uc-animation-duration) !important;
   outline: var(--settings-color) solid 2px !important;
 }
 
 #searchInput {
-  transition: linear 350ms !important;
+  transition: linear var(--uc-animation-duration) !important;
     border-radius: var(--uc-border-radius) !important;
   }
 
@@ -26,7 +26,7 @@ input:is([type="email"], [type="tel"], [type="text"], [type="password"], [type="
   search-textbox#search-box:hover,
   search-textbox#search-box:focus-within,
   search-textbox.tabsFilter:focus-within {
-  transition: ease-in 200ms;
+  transition: ease-in var(--uc-animation-duration);
   border: 1px solid var(--accent-color) !important;
   background-color: var(--uc-highlight-colour) !important;
 }
@@ -38,7 +38,7 @@ image.textbox-search-sign {
 search-textbox.tabsFilter,
 search-textbox#search-box {
   padding: 4px !important;
-  transition: ease-out 200ms;
+  transition: ease-out var(--uc-animation-duration);
   appearance: none !important;
   -moz-default-appearance: none !important;
   color: var(--uc-inverted-colour) !important;

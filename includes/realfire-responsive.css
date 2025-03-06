@@ -36,7 +36,7 @@
     width: 0px !important;
     padding: 0px !important;
     min-width: 0px !important;
-    transition: all 200ms !important;
+    transition: all var(--uc-animation-duration) !important;
   }
 
   :root:not([customizing])
@@ -49,7 +49,7 @@
     > :not(#urlbar-container,#nav-bar-toolbarbutton-slider-container) {
     opacity: 1 !important;
     min-width: 28px !important;
-    transition: all 200ms !important;
+    transition: all var(--uc-animation-duration) !important;
   }
 
   :root:not([customizing])
@@ -68,8 +68,8 @@
   #back-button,
   #forward-button {
     transform: scale(1, 1) !important;
-    transition: margin-left 150ms var(--animation-easing-function),
-      transform 350ms var(--animation-easing-function) !important;
+    transition: margin-left var(--uc-animation-duration) var(--animation-easing-function),
+      transform var(--uc-animation-duration) var(--animation-easing-function) !important;
   }
 
   #forward-button[disabled="true"],

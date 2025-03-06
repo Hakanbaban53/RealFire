@@ -30,7 +30,7 @@ hbox[anonid="findbar-textbox-wrapper"] {
   border-radius: var(--uc-border-radius) !important;
   background-color: var(--uc-base-colour) !important;
   border: 2px solid rgba(217, 217, 217, 0.5) !important;
-  transition: background-color 0.2s cubic-bezier(0, -0.74, 0.25, 1) !important;
+  transition: background-color var(--uc-animation-duration) cubic-bezier(0, -0.74, 0.25, 1) !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"]:hover {
@@ -52,7 +52,7 @@ hbox[anonid="findbar-textbox-wrapper"] toolbarbutton {
   background: 0 !important;
   box-shadow: none !important;
   border-radius: 99px !important;
-  transition: background-color 0.5s ease !important;
+  transition: background-color var(--uc-animation-duration) ease !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"] toolbarbutton[disabled] {
@@ -71,7 +71,7 @@ hbox[anonid="findbar-textbox-wrapper"] toolbarbutton:not([disabled]):hover {
 hbox[anonid="findbar-textbox-wrapper"]
   toolbarbutton:not([disabled]):hover:active {
     opacity: 1 !important;
-    transition-duration: 0 !important;
+    transition-duration: var(--uc-animation-duration) !important;
     background-color: transparent !important;
 }
 

@@ -8,6 +8,9 @@
 
   /* Distance the Statuspanel floats away from the window border */
   --uc-status-panel-spacing: 12px;
+
+  /* Animation Duration */
+  --uc-animation-duration: 0.3s;
 }
 
 /* Remove window control buttons */
@@ -51,6 +54,7 @@
 
 :root {
   /* Width of the URL Bar (min-width and max-width) */
+  /* If you want to use vertical tabs, you can set the max-width to 100vh */
   --uc-urlbar-min-width: 20vw;
   --uc-urlbar-max-width: 40vw;
 

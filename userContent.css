@@ -9,11 +9,11 @@
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
 
   .search-wrapper:not(.search.disabled) .search-handoff-button {
-    transition: all 0.3s ease-out;
+    transition: all var(--uc-animation-duration) ease-out;
   }
 
   .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
-    transition: all 0.3s ease-in;
+    transition: all var(--uc-animation-duration) ease-in;
   }
 
   div.title span {
@@ -26,23 +26,23 @@
   }
 
   .top-site-outer {
-    transition: all 0.35s ease-out;
+    transition: all var(--uc-animation-duration) ease-out;
   }
 
   .top-site-outer .top-site-icon,
   .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a .tile {
-    transition: all 0.2s ease-out;
+    transition: all var(--uc-animation-duration) ease-out;
     background-color: var(--uc-base-colour) !important;
   }
 
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover),
-  .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus, :hover) .tile {
-    transition: all 0.2s ease-in;
+  .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus, :hover) {
+    transition: all var(--uc-animation-duration) ease-in;
     outline: 2px solid var(--accent-color);
   }
 
   .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-    transition: all 0.2s ease-in;
+    transition: all var(--uc-animation-duration) ease-in;
     background: var(--uc-base-colour) !important;
   }
 

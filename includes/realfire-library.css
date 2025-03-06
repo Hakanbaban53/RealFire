@@ -126,7 +126,7 @@
   #searchFilter {
     -moz-appearance: none !important;
     color: var(--uc-inverted-colour) !important;
-    transition: all 0.25s ease-in-out !important;
+    transition: all var(--uc-animation-duration) ease-in-out !important;
     border-radius: var(--uc-border-radius) !important;
     background-color: var(--uc-base-colour) !important;
     outline: 1px solid var(--uc-muted-colour) !important;
@@ -158,7 +158,7 @@
   #editBMPanel_keywordField {
     -moz-appearance: none !important;
     color: var(--uc-inverted-colour) !important;
-    transition: all 0.25s ease-in-out !important;
+    transition: all var(--uc-animation-duration) ease-in-out !important;
     border-radius: var(--uc-border-radius) !important;
     border: 1px solid var(--uc-muted-colour) !important;
   }

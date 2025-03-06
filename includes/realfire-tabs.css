@@ -24,6 +24,12 @@
   display: var(--show-tab-close-button-hover) !important;
 }
 
+/* Add animation for tab width change */
+.tabbrowser-tab[selected][fadein]:not([pinned]),
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+  transition: max-width var(--uc-animation-duration) ease-in-out !important;
+}
+
 /* adaptive tab width */
 .tabbrowser-tab[selected][fadein]:not([pinned]) {
   max-width: var(--uc-active-tab-width) !important;

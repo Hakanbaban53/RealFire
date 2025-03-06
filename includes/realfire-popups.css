@@ -775,7 +775,7 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
 
   #downloadsListBox>richlistitem {
     align-items: center !important;
-    transition: ease-out 200ms !important;
+    transition: ease-out var(--uc-animation-duration) !important;
   }
 
   #downloadsListBox:focus>richlistitem[selected="true"],
@@ -785,7 +785,7 @@ panelmultiview .toolbaritem-combined-buttons>spacer.after-label {
     outline-offset: 0px !important;
     /* four gradients for the bevel highlights on each edge, one for blue background */
     background-image: none !important;
-    transition: ease-in 200ms !important;
+    transition: ease-in var(--uc-animation-duration) !important;
     background-color: var(--accent-color) !important;
     border-radius: var(--uc-border-radius) !important;
   }
